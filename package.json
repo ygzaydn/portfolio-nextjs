@@ -9,9 +9,18 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emotion/react": "^11.9.0",
+    "@emotion/styled": "^11.8.1",
+    "@mui/icons-material": "^5.8.0",
+    "@mui/material": "^5.8.0",
     "next": "12.1.6",
     "react": "18.1.0",
-    "react-dom": "18.1.0"
+    "react-dom": "18.1.0",
+    "rehype-raw": "^6.1.1",
+    "remark-rehype": "^10.1.0",
+    "typed.js": "^2.0.12",
+    "uuid4": "^2.0.2",
+    "web-vitals": "^2.1.4"
   },
   "devDependencies": {
     "eslint": "8.16.0",
