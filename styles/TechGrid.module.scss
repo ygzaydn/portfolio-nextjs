@@ -1,0 +1,52 @@
+.techContainer {
+    padding: 5rem 0 10rem 0;
+    clip-path: polygon(
+        0% 0%,
+        100% 0%,
+        100% 90%,
+        60% 90%,
+        50% 100%,
+        40% 90%,
+        0% 90%
+    );
+    background-size: cover;
+}
+.widthGrid {
+    margin: auto;
+    max-width: 1440px;
+}
+
+@media only screen and (max-width: 900px) {
+    .techContainer {
+        clip-path: polygon(
+            0% 0%,
+            100% 0%,
+            100% 95%,
+            60% 95%,
+            50% 100%,
+            40% 95%,
+            0% 95%
+        );
+    }
+}
+
+/*
+techContainer: {
+        padding: (props) =>
+            props.width < props.limit ? "15% 0" : "15vh 0 10% 0 ",
+        justifyContent: "space-around",
+        alignItems: "center",
+        background: ` linear-gradient(#000000D1,#000000D1),url(${BackgroundImageTech})`,
+        clipPath: (props) =>
+            props.width > props.limit
+                ? "polygon(0% 0%, 100% 0%, 100% 90%, 60% 90%, 50% 100%, 40% 90%, 0% 90%)"
+                : "polygon(0% 0%, 100% 0%, 100% 95%, 60% 95%, 50% 100%, 40% 95%, 0% 95%)",
+        backgroundSize: "cover",
+    },
+    serviceContainerMaxWidthGrid: {
+        margin: "auto",
+        maxWidth: (props) => props.maxWidth,
+        justifyContent: "center",
+        alignItems: "center",
+    },
+*/

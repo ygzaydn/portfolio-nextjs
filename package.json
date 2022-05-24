@@ -18,12 +18,13 @@
     "react-dom": "18.1.0",
     "rehype-raw": "^6.1.1",
     "remark-rehype": "^10.1.0",
+    "sass": "^1.52.1",
     "typed.js": "^2.0.12",
     "uuid4": "^2.0.2",
     "web-vitals": "^2.1.4"
   },
   "devDependencies": {
     "eslint": "8.16.0",
-    "eslint-config-next": "12.1.6"
+    "eslint-config-next": "^0.2.4"
   }
 }

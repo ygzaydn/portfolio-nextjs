@@ -1,0 +1,33 @@
+.projectsContainer {
+    padding: 15vh 2rem;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.title {
+    text-align: start;
+    padding-left: 2rem;
+}
+
+.marginBottom {
+    margin-bottom: 5%;
+}
+
+.projectGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 2fr);
+    grid-gap: 2rem;
+    grid-auto-flow: row dense;
+    min-width: 300px;
+    margin: 0 auto;
+}
+
+@media only screen and (max-width: 900px) {
+    .projectsContainer {
+        padding: 5% 0;
+    }
+    .projectGrid {
+        grid-template-columns: repeat(2, 2fr);
+        max-width: 80%;
+    }
+}

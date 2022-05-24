@@ -1,0 +1,23 @@
+.servicesGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    justify-items: center;
+    grid-gap: 3rem;
+    margin: 2.5rem 0;
+    padding: 1.5rem;
+    align-items: center;
+}
+
+@media only screen and (max-width: 600px) {
+    .servicesGrid {
+        padding: 0.5rem;
+        grid-gap: 15px;
+        grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+    }
+}
+
+.overallGrid {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}

@@ -4,6 +4,9 @@ import styles from "../styles/Home.module.css";
 
 import Layout from "../components/layout/layout";
 import LandingImage from "../components/landingImage/landingImage";
+import ServicesGrid from "../components/servicesGrid/servicesGrid";
+import TechGrid from "../components/techGrid/techGrid";
+import ProjectsStack from "../components/projectsStack/projectsStack";
 
 const Home = () => {
     return (
@@ -20,6 +23,9 @@ const Home = () => {
 
                 <main className={styles.main}>
                     <LandingImage />
+                    <ServicesGrid />
+                    <TechGrid />
+                    <ProjectsStack />
                 </main>
             </div>
         </Layout>

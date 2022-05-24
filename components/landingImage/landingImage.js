@@ -1,6 +1,6 @@
-import React, { useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import { Grid, Typography } from "@mui/material";
-import styles from "../../styles/LandingImage.module.css";
+import styles from "../../styles/LandingImage.module.scss";
 import Typed from "typed.js";
 import BackgroundImage from "../../images/background6.jpg";
 
@@ -30,40 +30,21 @@ const LandingImage = () => {
             id="home"
             style={{ backgroundImage: `url(${BackgroundImage.src})` }}
         >
-            <Grid
-                item
-                xs={12}
-                style={{
-                    height: "100%",
-                    display: "flex",
-                    flexDirection: "column",
-                    alignItems: "flex-start",
-                    //marginTop: limit > width ? "0" : "5rem",
-                    paddingLeft: "10%",
-                    maxWidth: "1920px",
-                    marginRight: "auto",
-                    marginLeft: "auto",
-                }}
-            >
+            <Grid item xs={12} className={styles.contentGrid}>
                 <Typography
                     variant="h4"
-                    style={{ color: "white", textAlign: "start" }}
+                    className={styles.contentGrid__upperText}
                 >
                     Hello I&apos;m
                 </Typography>
                 <Typography
                     variant="h3"
-                    style={{
-                        textAlign: "end",
-                        color: "rgb(75, 202, 135)",
-                        fontWeight: "600",
-                        minHeight: "3.5rem",
-                    }}
+                    className={styles.contentGrid__midText}
                     ref={el}
                 />
                 <Typography
                     variant="h4"
-                    style={{ color: "white", textAlign: "end" }}
+                    className={styles.contentGrid__lowerText}
                 >
                     a web developer
                 </Typography>
