@@ -1,7 +1,7 @@
 .root {
     display: flex;
     min-height: 15rem;
-    padding: 1rem;
+    padding: 0.25rem;
     background-color: transparent;
     border: 2px solid lightgray;
     width: 100%;
@@ -29,7 +29,7 @@
 
 .content {
     display: flex;
-    flex-direction: column;
+    flex-direction: column !important;
     justify-content: space-around;
     height: 90%;
 }
@@ -38,6 +38,7 @@
     height: 100%;
     background-size: cover;
     transition: all 0.5s;
+    border-radius: 15px;
 }
 
 .coverDialog {
@@ -79,7 +80,7 @@
 
 @media only screen and (max-width: 900px) {
     .root {
-        height: 10rem;
+        height: 100%;
         padding: 0;
         &:hover {
             & h4 {

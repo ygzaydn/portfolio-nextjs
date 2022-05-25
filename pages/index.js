@@ -7,6 +7,7 @@ import LandingImage from "../components/landingImage/landingImage";
 import ServicesGrid from "../components/servicesGrid/servicesGrid";
 import TechGrid from "../components/techGrid/techGrid";
 import ProjectsStack from "../components/projectsStack/projectsStack";
+import ContactGrid from "../components/contactGrid/contactGrid";
 
 const Home = () => {
     return (
@@ -26,6 +27,7 @@ const Home = () => {
                     <ServicesGrid />
                     <TechGrid />
                     <ProjectsStack />
+                    <ContactGrid />
                 </main>
             </div>
         </Layout>

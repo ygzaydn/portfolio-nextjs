@@ -54,14 +54,6 @@ const ProjectsStack = () => {
                     link="https://ikincielproject.web.app"
                     size="big"
                 />
-                <ProjectCard
-                    title="Song Recommender"
-                    description="Song recommender is a website to help you find similar songs based on your search. This project is powered by Last.fm API."
-                    image={SongRecommenderImage.src}
-                    tech="Javascript - Redux - React - SCSS- Firebase - Material UI"
-                    link="https://song-recommender-001.web.app/"
-                    size="big"
-                />
 
                 <ProjectCard
                     title="Golden Lotus Boost Community"
@@ -77,6 +69,7 @@ const ProjectsStack = () => {
                     image={ICCImage.src}
                     tech="Javascript - React - Firebase - Material UI - Node.js"
                     link="https://icc-website-dc881.web.app"
+                    size="long"
                 />
                 <ProjectCard
                     title="Librejournal"
@@ -101,7 +94,7 @@ const ProjectsStack = () => {
                     image={MellImage.src}
                     tech="Javascript - React - Firebase - Material UI"
                     link="https://mellguzellikmerkezi.com/"
-                    size="big-end"
+                    size="big"
                 />
                 <ProjectCard
                     title="Ride'n'Rate"
@@ -111,7 +104,14 @@ const ProjectsStack = () => {
                     note=" Project is run on heroku, so it may not be loaded at first try, if this happens, please try to refresh page."
                     link="http://ridenrate.herokuapp.com/"
                 />
-
+                <ProjectCard
+                    title="Song Recommender"
+                    description="Song recommender is a website to help you find similar songs based on your search. This project is powered by Last.fm API."
+                    image={SongRecommenderImage.src}
+                    tech="Javascript - Redux - React - SCSS- Firebase - Material UI"
+                    link="https://song-recommender-001.web.app/"
+                    size="big"
+                />
                 <ProjectCard
                     title="Todo app"
                     description="Simple todo app that build with the help of typescript, redux and saas."

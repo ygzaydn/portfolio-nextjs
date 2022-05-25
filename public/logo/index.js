@@ -1,6 +1,7 @@
 export const technologies = [
     { name: "React", logo: "react-logo" },
     { name: "Redux", logo: "redux-logo" },
+    { name: "Nextjs", logo: "nextjs-logo" },
     { name: "Typescript", logo: "typescript-logo" },
     { name: "CSS", logo: "css-logo" },
     { name: "Firebase", logo: "firebase-logo" },

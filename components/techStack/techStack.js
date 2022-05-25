@@ -13,7 +13,13 @@ const TechStack = () => {
             alignItems="center"
         >
             {technologies.map((el, ind) => (
-                <Grid item xs={3} key={el.logo} className={styles.logoGrid}>
+                <Grid
+                    item
+                    xs={3}
+                    md={2}
+                    key={el.logo}
+                    className={styles.logoGrid}
+                >
                     <Image
                         height={75}
                         width={75}

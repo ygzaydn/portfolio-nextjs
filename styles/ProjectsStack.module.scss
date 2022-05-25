@@ -15,8 +15,8 @@
 
 .projectGrid {
     display: grid;
-    grid-template-columns: repeat(3, 2fr);
-    grid-gap: 2rem;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1.5rem;
     grid-auto-flow: row dense;
     min-width: 300px;
     margin: 0 auto;
@@ -27,7 +27,7 @@
         padding: 5% 0;
     }
     .projectGrid {
-        grid-template-columns: repeat(2, 2fr);
+        grid-template-columns: repeat(2, 1fr);
         max-width: 80%;
     }
 }

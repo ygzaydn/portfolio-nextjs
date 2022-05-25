@@ -15,7 +15,7 @@ import {
 } from "@mui/material";
 
 import styles from "../../styles/ProjectCard.module.scss";
-
+// huge , big
 const ProjectCard = ({
     title,
     description,
@@ -25,6 +25,7 @@ const ProjectCard = ({
     note,
     limit,
     width,
+    size,
 }) => {
     const [open, setOpen] = useState(false);
 
@@ -36,8 +37,31 @@ const ProjectCard = ({
         setOpen(false);
     };
 
+    const handleGridSize = () => {
+        switch (size) {
+            case "big":
+                return {
+                    gridColumn: "span 2",
+                    gridRow: "span 1",
+                };
+
+            case "huge":
+                return {
+                    gridColumn: "span 2",
+                    gridRow: "span 2",
+                };
+            case "long":
+                return {
+                    gridColumn: "span 1",
+                    gridRow: "span 2",
+                };
+            default:
+                return null;
+        }
+    };
+
     return (
-        <div className={styles.gridSize}>
+        <div className={styles.gridSize} style={{ ...handleGridSize() }}>
             <Dialog
                 open={open}
                 TransitionComponent={Transition}
