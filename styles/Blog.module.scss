@@ -1,0 +1,89 @@
+.main {
+    height: 100%;
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column !important;
+}
+
+.title {
+    text-align: center;
+    margin: 2rem 0 0.6rem 0;
+    color: white;
+}
+
+.subtitle {
+    text-align: center;
+    margin: 1.2rem 0;
+    color: lightgray;
+}
+
+.blogContainer {
+    padding: 2rem;
+}
+
+.grid {
+    margin: 0 0.5rem;
+    background-color: rgba(black, 0.75);
+    position: relative;
+    max-height: 55vh;
+    overflow: auto;
+}
+
+.blogTitle {
+    position: sticky;
+    top: -1%;
+    color: lightblue;
+    text-align: center;
+    background-color: black;
+    z-index: 50;
+    padding: 0.5rem;
+}
+
+.logoGrid {
+    display: flex;
+    padding: 0.5rem 2rem;
+    cursor: pointer;
+    margin: 0.75rem 0;
+    transition: all 0.4s;
+    &:hover {
+        background-color: chocolate;
+    }
+}
+
+.logoText {
+    color: lightgray;
+    cursor: pointer;
+    margin-left: 1.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.buttonGrid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media only screen and (max-width: 900px) {
+    .grid {
+        margin: 0.5rem 0;
+        height: 26vh;
+    }
+
+    .logoGrid {
+        display: flex;
+        padding: 0 0.2rem;
+    }
+    .blogContainer {
+        height: 59vh;
+    }
+    .main {
+        display: flex;
+        flex-direction: column !important;
+        justify-content: space-around;
+        padding: 0 1.5rem;
+    }
+}

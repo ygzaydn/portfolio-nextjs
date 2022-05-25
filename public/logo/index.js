@@ -13,7 +13,7 @@ export const technologies = [
 ];
 
 export const blogTechnologies = [
-    { name: "All", logo: "all-logo", key: null },
+    { name: "All", logo: "all-logo", key: "" },
     { name: "React", logo: "react-logo", key: "react" },
     { name: "Redux", logo: "redux-logo", key: "redux" },
     { name: "Javascript", logo: "javascript-logo", key: "javascript" },

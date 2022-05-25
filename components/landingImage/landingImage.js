@@ -4,7 +4,10 @@ import styles from "../../styles/LandingImage.module.scss";
 import Typed from "typed.js";
 import BackgroundImage from "../../images/background6.jpg";
 
+import Router, { useRouter } from "next/router";
+
 const LandingImage = () => {
+    const router = useRouter();
     const el = useRef("");
 
     useEffect(() => {
@@ -48,7 +51,12 @@ const LandingImage = () => {
                 >
                     a web developer
                 </Typography>
-                <button className={styles.button}>Check out my blog!</button>
+                <button
+                    className={styles.button}
+                    onClick={() => router.push("/blog")}
+                >
+                    Check out my blog!
+                </button>
             </Grid>
         </Grid>
     );

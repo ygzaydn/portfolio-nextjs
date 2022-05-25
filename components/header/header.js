@@ -3,7 +3,11 @@ import { Grid, Typography } from "@mui/material";
 
 import styles from "../../styles/Header.module.scss";
 
+import { useRouter } from "next/router";
+
 const Header = () => {
+    const router = useRouter();
+
     const scrollTo = (element) => {
         document.getElementById(`${element}`).scrollIntoView({
             behavior: "smooth",
@@ -35,6 +39,8 @@ const Header = () => {
         window.addEventListener("scroll", () => scrollFunc());
         return () => window.removeEventListener("scroll", () => scrollFunc());
     }, []);
+
+    const navigate = (path) => router.push(path);
 
     return (
         <header>
@@ -72,7 +78,11 @@ const Header = () => {
                         <Typography key="contact-desktop" id="header-contacts">
                             Contact
                         </Typography>
-                        <Typography key="blog" id="header-blog">
+                        <Typography
+                            key="blog"
+                            id="header-blog"
+                            onClick={() => navigate("/blog")}
+                        >
                             Blog
                         </Typography>
                     </Grid>
