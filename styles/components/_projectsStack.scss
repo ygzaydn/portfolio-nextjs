@@ -2,11 +2,10 @@
     padding: 15vh 2rem;
     max-width: 1440px;
     margin: 0 auto;
-}
-
-.title {
-    text-align: start;
-    padding-left: 2rem;
+    &__title {
+        text-align: start;
+        padding-left: 2rem;
+    }
 }
 
 .marginBottom {
@@ -14,7 +13,7 @@
 }
 
 .projectGrid {
-    display: grid;
+    display: grid !important;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 1.5rem;
     grid-auto-flow: row dense;

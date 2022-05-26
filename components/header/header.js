@@ -1,18 +1,21 @@
 import React, { useEffect, useState } from "react";
 import { Grid, Typography } from "@mui/material";
 
-import styles from "../../styles/Header.module.scss";
-
 import { useRouter } from "next/router";
 
 const Header = () => {
     const router = useRouter();
+    const { asPath } = useRouter();
 
     const scrollTo = (element) => {
-        document.getElementById(`${element}`).scrollIntoView({
-            behavior: "smooth",
-            block: "start",
-        });
+        if (asPath === "/") {
+            document.getElementById(`${element}`).scrollIntoView({
+                behavior: "smooth",
+                block: "start",
+            });
+        } else {
+            router.push("/");
+        }
     };
 
     useEffect(() => {
@@ -44,17 +47,17 @@ const Header = () => {
 
     return (
         <header>
-            <Grid container className={styles.headerContainer} id="header">
-                <Grid container className={styles.headerMaxWidthGrid}>
+            <Grid container className="headerContainer" id="header">
+                <Grid container className="headerMaxWidthGrid">
                     <Grid
                         item
                         xs={12}
                         sm={4}
-                        className={styles.nameGrid}
+                        className="headerContainer__nameGrid"
                         onClick={() => scrollTo("home")}
                     >
                         <Typography
-                            className={styles.name}
+                            className="headerContainer__nameGrid__name"
                             style={{ transition: "all .4s" }}
                         >
                             erolyagiz
@@ -62,7 +65,7 @@ const Header = () => {
                         <Typography color="error">aydin</Typography>
                     </Grid>
 
-                    <Grid item xs={5} className={styles.menuGrid}>
+                    <Grid item xs={5} className="headerContainer__menuGrid">
                         <Typography key="home-desktop" id="header-home">
                             Home
                         </Typography>

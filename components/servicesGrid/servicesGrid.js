@@ -1,6 +1,5 @@
 import { Grid, Typography } from "@mui/material";
 import ServiceCard from "../serviceCard/serviceCard";
-import styles from "../../styles/ServicesGrid.module.scss";
 
 import DeveloperModeIcon from "@mui/icons-material/DeveloperMode";
 import CodeIcon from "@mui/icons-material/Code";
@@ -12,13 +11,13 @@ import PolicyIcon from "@mui/icons-material/Policy";
 
 const ServicesGrid = () => {
     return (
-        <Grid container className={styles.overallGrid}>
+        <Grid container className="overallGrid">
             <Grid item xs={12} id="services-mobile">
                 <Typography color="primary" variant="h4">
                     Services
                 </Typography>
             </Grid>
-            <Grid container className={styles.servicesGrid}>
+            <Grid container className="servicesGrid">
                 <ServiceCard
                     logo={<CodeIcon />}
                     title={"Web Apps"}

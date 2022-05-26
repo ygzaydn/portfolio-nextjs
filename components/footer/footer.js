@@ -4,12 +4,10 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import SendIcon from "@mui/icons-material/Send";
 
-import styles from "../../styles/Footer.module.scss";
-
 const Footer = () => {
     return (
-        <Grid container className={styles.footer}>
-            <Grid item xs={12} className={styles.socialGrid} id="socialIcon">
+        <Grid container className="footer">
+            <Grid item xs={12} className="socialGrid" id="socialIcon">
                 <LinkedInIcon
                     onClick={() => {
                         window.open(
@@ -28,7 +26,7 @@ const Footer = () => {
                     }}
                 />
             </Grid>
-            <Grid item xs={12} className={styles.mailGrid}>
+            <Grid item xs={12} className="mailGrid">
                 <Typography variant="h6">ygzaydns@gmail.com</Typography>
             </Grid>
         </Grid>

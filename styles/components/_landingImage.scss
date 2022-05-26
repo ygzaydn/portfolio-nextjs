@@ -1,0 +1,61 @@
+.landingImage {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: min(35%, 150px) 0;
+    min-height: 750px;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 75%);
+    & h6 {
+        max-width: 50%;
+    }
+    &__button {
+        margin-top: 2rem;
+        border: none;
+        outline: none;
+        background-color: rgb(75, 202, 135);
+        padding: 1rem 2rem;
+        border-radius: 5;
+        cursor: pointer;
+        color: black;
+        font-size: 1.5rem;
+        transition: all 0.4s;
+        &:hover {
+            color: white;
+            transform: scale(1.05);
+        }
+    }
+    &__contentGrid {
+        height: 100%;
+        display: flex;
+        flex-direction: column !important;
+        align-items: flex-start;
+        padding-left: 10%;
+        max-width: 1920px;
+        margin-right: auto;
+        margin-left: auto;
+        &__upperText {
+            color: white;
+            text-align: start;
+        }
+        &__midText {
+            text-align: end;
+            color: rgb(75, 202, 135);
+            font-weight: 600;
+            min-height: 3.75rem;
+        }
+        &__lowerText {
+            color: white;
+            text-align: end;
+        }
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .landingImage {
+        clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 85%);
+        min-height: 0;
+        & h6 {
+            max-width: 80%;
+        }
+    }
+}

@@ -12,7 +12,9 @@ import {
     Typography,
 } from "@mui/material";
 
-import styles from "../../styles/ContactForm.module.scss";
+import Firebase from "../../utils/firebase";
+
+import { v4 as uuidv4 } from "uuid";
 
 const validationSchema = yup.object({
     email: yup
@@ -39,14 +41,23 @@ const Form = () => {
             message: "",
         },
         validationSchema: validationSchema,
-        onSubmit: (values) => {
-            handleClickOpen();
+        onSubmit: async (values) => {
+            const id = uuidv4();
+            const data = { email: values.email, message: values.message };
+            const firebase = new Firebase();
+
+            const res = await firebase.doPushNewMessage(id, data);
+            if (res) {
+                handleClickOpen();
+            }
         },
     });
 
+    const handleSubmit = () => {};
+
     return (
         <div>
-            <form onSubmit={formik.handleSubmit} className={styles.formGrid}>
+            <form onSubmit={formik.handleSubmit} className="formGrid">
                 <TextField
                     fullWidth
                     id="email"
@@ -56,7 +67,7 @@ const Form = () => {
                     onChange={formik.handleChange}
                     error={formik.touched.email && Boolean(formik.errors.email)}
                     helperText={formik.touched.email && formik.errors.email}
-                    className={styles.input}
+                    className="formGrid__input"
                     autoComplete="off"
                 />
                 <TextField
@@ -73,14 +84,14 @@ const Form = () => {
                         formik.touched.message && Boolean(formik.errors.message)
                     }
                     helperText={formik.touched.message && formik.errors.message}
-                    className={styles.input + " " + styles.message}
+                    className={"formGrid__input" + " " + "formGrid__message"}
                 />
                 <Button
                     color="primary"
                     variant="contained"
                     fullWidth
                     type="submit"
-                    className={styles.button}
+                    className="formGrid__button"
                 >
                     Submit
                 </Button>
@@ -88,7 +99,7 @@ const Form = () => {
             <Dialog
                 open={open}
                 onClose={handleClose}
-                className={styles.dialogBox}
+                className="formGrid__dialogBox"
             >
                 <DialogTitle
                     style={{ cursor: "move" }}

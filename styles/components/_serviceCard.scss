@@ -25,19 +25,19 @@
             transform: scale(1.25);
         }
     }
-}
 
-.logoGrid {
-    padding: 1rem 0;
-    flex: 1;
-}
+    &__logoGrid {
+        padding: 1rem 0;
+        flex: 1;
+    }
 
-.titleGrid {
-    padding: 0.5rem 0;
-    flex: 1;
-}
+    &__titleGrid {
+        padding: 0.5rem 0;
+        flex: 1;
+    }
 
-.descriptionGrid {
-    padding: 0.5rem 0;
-    flex: 3;
+    &__descriptionGrid {
+        padding: 0.5rem 0;
+        flex: 3;
+    }
 }

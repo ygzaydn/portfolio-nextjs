@@ -14,8 +14,6 @@ import {
     CardMedia,
 } from "@mui/material";
 
-import styles from "../../styles/ProjectCard.module.scss";
-// huge , big
 const ProjectCard = ({
     title,
     description,
@@ -61,7 +59,7 @@ const ProjectCard = ({
     };
 
     return (
-        <div className={styles.gridSize} style={{ ...handleGridSize() }}>
+        <div className="gridSize" style={{ ...handleGridSize() }}>
             <Dialog
                 open={open}
                 TransitionComponent={Transition}
@@ -82,15 +80,15 @@ const ProjectCard = ({
                     </Typography>
                 </DialogTitle>
                 <DialogContent>
-                    <Grid container className={styles.dialogContainer}>
-                        <Grid item xs={12} className={styles.dialogImageGrid}>
+                    <Grid container className="dialogContainer">
+                        <Grid item xs={12} className="dialogImageGrid">
                             <CardMedia
-                                className={styles.coverDialog}
+                                className="coverDialog"
                                 image={image}
                                 title={title}
                             />
                         </Grid>
-                        <Grid item xs={12} className={styles.dialogTextGrid}>
+                        <Grid item xs={12} className="dialogTextGrid">
                             <DialogContentText>
                                 <Typography variant={"subtitle1"}>
                                     {description}
@@ -130,13 +128,9 @@ const ProjectCard = ({
                     </DialogActions>
                 </DialogContent>
             </Dialog>
-            <Card className={styles.root} onClick={handleClickOpen}>
-                <Grid item xs={12} className={styles.projectCardGrid}>
-                    <CardMedia
-                        className={styles.cover}
-                        image={image}
-                        title={title}
-                    />
+            <Card className="root" onClick={handleClickOpen}>
+                <Grid item xs={12} className="projectCardGrid">
+                    <CardMedia className="cover" image={image} title={title} />
                     <Typography color="primary" variant="h4">
                         {title}
                     </Typography>

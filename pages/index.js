@@ -1,6 +1,5 @@
 import Head from "next/head";
 import Image from "next/image";
-import styles from "../styles/Home.module.css";
 
 import Layout from "../components/layout/layout";
 import LandingImage from "../components/landingImage/landingImage";
@@ -12,7 +11,7 @@ import ContactGrid from "../components/contactGrid/contactGrid";
 const Home = () => {
     return (
         <Layout>
-            <div className={styles.container}>
+            <div>
                 <Head>
                     <title>erolyagizaydin</title>
                     <meta
@@ -22,7 +21,7 @@ const Home = () => {
                     <link rel="icon" href="/favicon.ico" />
                 </Head>
 
-                <main className={styles.main}>
+                <main>
                     <LandingImage />
                     <ServicesGrid />
                     <TechGrid />

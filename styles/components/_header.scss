@@ -1,0 +1,56 @@
+.headerContainer {
+    position: fixed;
+    align-items: center;
+    top: 0;
+    transition: all 0.4s ease-out;
+    height: 10%;
+    min-height: 80px;
+    visibility: hidden;
+    &__nameGrid {
+        display: flex;
+        justify-content: center;
+        & p {
+            font-size: 2rem;
+            color: white;
+            cursor: pointer;
+        }
+        &:hover .name {
+            color: #4bffa5 !important;
+        }
+    }
+
+    &__name {
+        cursor: pointer;
+        color: lightgrey !important;
+        transition: all 0.4s;
+    }
+
+    &__menuGrid {
+        display: flex;
+        justify-content: space-around;
+        & p {
+            font: 1.2rem;
+            cursor: pointer;
+            color: white;
+            &:hover {
+                color: #4bffa5 !important;
+            }
+            transform: all 0.4s ease-out;
+        }
+    }
+}
+
+.headerMaxWidthGrid {
+    margin: auto;
+    max-width: 1440px;
+    justify-content: center;
+    align-items: center;
+}
+
+@media only screen and (max-width: 900px) {
+    .headerContainer {
+        &__menuGrid {
+            display: none;
+        }
+    }
+}

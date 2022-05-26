@@ -1,7 +1,6 @@
 import { Grid, Typography } from "@mui/material";
 
 import ProjectCard from "../projectCard/projectCard";
-import styles from "../../styles/ProjectsStack.module.scss";
 
 import ICCImage from "../../public/icc.jpg";
 import RidenrateImage from "../../public/ridenrate.jpg";
@@ -16,26 +15,17 @@ import IkinciElImage from "../../public/ikincielproject.webp";
 
 const ProjectsStack = () => {
     return (
-        <Grid
-            container
-            className={styles.projectsContainer}
-            id="project-desktop"
-        >
-            <Grid
-                item
-                xs={12}
-                className={styles.marginBottom}
-                id="project-mobile"
-            >
+        <Grid container className="projectsContainer" id="project-desktop">
+            <Grid item xs={12} className="marginBottom" id="project-mobile">
                 <Typography
                     color="primary"
                     variant="h4"
-                    className={styles.title}
+                    className="projectsContainer__title"
                 >
                     Projects
                 </Typography>
             </Grid>
-            <Grid container className={styles.projectGrid}>
+            <Grid container className="projectGrid">
                 <ProjectCard
                     title="Argbot"
                     description="Argbot is a clone of a crypto bot website. The website is not connected with any backend service, purpose is to show example cases."

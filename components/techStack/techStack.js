@@ -2,7 +2,6 @@ import React from "react";
 import Image from "next/image";
 import { Grid, Typography } from "@mui/material";
 import { technologies } from "../../public/logo";
-import styles from "../../styles/TechStack.module.scss";
 
 const TechStack = () => {
     return (
@@ -18,7 +17,7 @@ const TechStack = () => {
                     xs={3}
                     md={2}
                     key={el.logo}
-                    className={styles.logoGrid}
+                    className="techStack__logoGrid"
                 >
                     <Image
                         height={75}
@@ -27,7 +26,7 @@ const TechStack = () => {
                             require(`../../public/logo/${el.logo}.svg`).default
                         }
                         alt={`${el.logo}`}
-                        className={styles.logo}
+                        className="techStack__logo"
                     />
                     <Typography variant="h6" color="primary">
                         {el.name}

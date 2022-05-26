@@ -1,0 +1,141 @@
+.backgroundContainer {
+    height: 60vh;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+}
+
+.infoGrid {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    min-width: 50%;
+    background-color: #f1f1f191;
+    display: flex;
+    flex-direction: column !important;
+    padding: 1rem 2rem;
+    border-bottom: 1px solid black;
+    & h4 {
+        width: 100%;
+        font-size: 2.15rem;
+        margin-bottom: 1rem;
+    }
+    & h6 {
+        text-align: end;
+    }
+    & svg {
+        cursor: pointer;
+        position: absolute;
+        height: 2rem;
+        width: 2rem;
+        bottom: 5%;
+        left: 5%;
+    }
+}
+
+.markdownGrid {
+    display: flex;
+    flex-direction: column !important;
+    align-items: flex-start;
+    padding: 1vh 4rem;
+    overflow-x: auto;
+    text-align: start;
+    font-size: 120%;
+    max-width: 1440px;
+    margin: 0 auto;
+    border-right: 0.5px solid lightgray;
+    border-left: 0.5px solid lightgray;
+    border-bottom: 1px solid lightgray;
+
+    & pre {
+        border: 0.2px solid black;
+        margin: 2rem;
+        padding: 2rem 1rem;
+        background-color: #ead9d9;
+        max-width: 70vw;
+        position: relative;
+        outline-style: solid;
+        outline-width: 1rem;
+        outline-color: #ead9d9;
+        &:after {
+            content: "</> Code";
+            text-align: center;
+            background-color: #ead9d9;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 55;
+            padding: 0 1rem;
+            border-bottom: 0.1px solid black;
+            border-right: 0.1px solid black;
+        }
+        & code {
+            width: 100% !important;
+        }
+        overflow-x: auto;
+    }
+    & blockquote {
+        border: 0.2px solid black;
+        margin: 1rem 2rem;
+        padding: 2rem 1rem;
+        background-color: #cde3d7;
+        max-width: 80vw;
+        position: relative;
+        outline-style: solid;
+        outline-width: 0.5rem;
+        outline-color: #cde3d7;
+
+        &:after {
+            content: "Tip";
+            text-align: center;
+            background-color: #cde3d7;
+            position: absolute;
+            top: -0.5rem;
+            left: 1rem;
+            z-index: 55;
+            overflow: auto;
+            padding: 0 1rem;
+        }
+    }
+    & p {
+        & img {
+            max-width: 90vw;
+        }
+    }
+    & a {
+        color: blue;
+        text-decoration: underline;
+    }
+}
+
+.pageFooter {
+    padding: 1rem 4rem;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding-bottom: 10rem;
+    & p {
+        font-size: 120%;
+        & strong {
+            cursor: pointer;
+            color: #4b6587;
+        }
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .markdownGrid {
+        padding: 1vh 0.6rem;
+
+        & pre {
+            width: 70vw;
+        }
+        & blockquote {
+            width: 70vw;
+        }
+    }
+    .pageFooter {
+        padding: 1vh 0.6rem;
+        text-align: start;
+    }
+}

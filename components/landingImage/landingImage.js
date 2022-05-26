@@ -1,6 +1,5 @@
 import { useEffect, useRef } from "react";
 import { Grid, Typography } from "@mui/material";
-import styles from "../../styles/LandingImage.module.scss";
 import Typed from "typed.js";
 import BackgroundImage from "../../images/background6.jpg";
 
@@ -29,30 +28,30 @@ const LandingImage = () => {
     return (
         <Grid
             container
-            className={styles.homepageContainer}
+            className="landingImage"
             id="home"
             style={{ backgroundImage: `url(${BackgroundImage.src})` }}
         >
-            <Grid item xs={12} className={styles.contentGrid}>
+            <Grid item xs={12} className="landingImage__contentGrid">
                 <Typography
                     variant="h4"
-                    className={styles.contentGrid__upperText}
+                    className="landingImage__contentGrid__upperText"
                 >
                     Hello I&apos;m
                 </Typography>
                 <Typography
                     variant="h3"
-                    className={styles.contentGrid__midText}
+                    className="landingImage__contentGrid__midText"
                     ref={el}
                 />
                 <Typography
                     variant="h4"
-                    className={styles.contentGrid__lowerText}
+                    className="landingImage__contentGrid__lowerText"
                 >
                     a web developer
                 </Typography>
                 <button
-                    className={styles.button}
+                    className="landingImage__button"
                     onClick={() => router.push("/blog")}
                 >
                     Check out my blog!
