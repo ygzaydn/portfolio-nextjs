@@ -64,6 +64,10 @@ const BlogPost = ({ file, info }) => {
         <Layout>
             <Head>
                 <title>{info.title} - erolyagizaydin</title>
+                <meta
+                    name="description"
+                    content={`${info.title}` - erolyagizaydin}
+                />
             </Head>
             <Grid
                 container
