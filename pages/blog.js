@@ -4,7 +4,7 @@ import Image from "next/image";
 
 import Layout from "../components/layout/layout";
 
-import Background from "../public/blogBackground.jpg";
+import Background from "../public/webP/blogBackground.webp";
 import { Typography, Grid, Button } from "@mui/material";
 
 import { blogTechnologies } from "../public/logo";

@@ -6,13 +6,16 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "predeploy": "next build && next export",
+    "deploy": "firebase deploy"
   },
   "dependencies": {
     "@emotion/react": "^11.9.0",
+    "@emotion/server": "^11.4.0",
     "@emotion/styled": "^11.8.1",
     "@mui/icons-material": "^5.8.0",
-    "@mui/material": "^5.8.0",
+    "@mui/material": "^5.8.1",
     "firebase": "^9.8.1",
     "formik": "^2.2.9",
     "next": "12.1.6",

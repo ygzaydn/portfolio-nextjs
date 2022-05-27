@@ -7,13 +7,16 @@ In this article I'll dive into React Context and its usage thanks to `useContext
 ---
 ## Table of Contents
 
-- [React Context](#react-context)
-  - [Creating Context](#creating-context)
-  - [Providing Context](#providing-context)
-  - [Consuming Context](#consuming-context)
-    - [Context.Consumer](#context-consumer)
-    - [useContext hook](#usecontext-hook)
-- [React Context with useContext](#react-context-with-usecontext--)
+- [React Context and useContext() Hook](#react-context-and-usecontext-hook)
+  - [Table of Contents](#table-of-contents)
+  - [- React Context with useContext](#--react-context-with-usecontext)
+  - [React Context](#react-context)
+    - [Creating Context](#creating-context)
+    - [Providing Context](#providing-context)
+    - [Consuming Context](#consuming-context)
+      - [Context.Consumer](#contextconsumer)
+      - [useContext hook](#usecontext-hook)
+  - [React Context with useContext()](#react-context-with-usecontext)
 ---
 
 
@@ -154,7 +157,7 @@ export default App;
 
 Here is the result.
 
-![res](/context-1.jpg)
+![res](/blogPost/context-1.jpg)
 
 If you want to check the code & structure, you can use [this sandbox link](https://codesandbox.io/s/dreamy-babycat-vlg4do).
 

@@ -16,9 +16,10 @@
         }
 
         &:hover {
-            .logo {
+            .techStack__logo {
                 filter: blur(1rem) brightness(5%);
             }
+
             & h6 {
                 display: inherit;
             }

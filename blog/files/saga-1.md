@@ -304,7 +304,7 @@ export default connect(mapStateToProps, mapDispatchToProps)(App);
 
 Now we should be able to observe that buttons working as we want.
 
-![counter-gif](/counter.gif)
+![counter-gif](/blogPost/counter.gif)
 
 #### First Async Saga
 
@@ -408,7 +408,7 @@ export default connect(mapStateToProps, mapDispatchToProps)(App);
 
 Let's check output now.
 
-![counter-with-delay-gif](/counterdelay.gif)
+![counter-with-delay-gif](/blogPost/counterdelay.gif)
 
 #### Fetch Call with Saga
 
@@ -592,7 +592,7 @@ export default connect(mapStateToProps, mapDispatchToProps)(App);
 
 Now output should look like:
 
-![fetch-gif](/fetch.gif)
+![fetch-gif](/blogPost/fetch.gif)
 
 
 As a result, we've managed to run our sagas for 3 different cases. I hope this post helped you to digest saga concept on React environment. Using sagas is cutting-edge way to deal with async event and I highly recommend them.

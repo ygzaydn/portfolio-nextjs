@@ -108,5 +108,5 @@ But if we don't need any of that and consider uncontrolled to be simpler, we can
 
 Both the controlled and uncontrolled form fields have their merit. We have to ecaluate specific situation and pick the approach — what works for us is good enough.
 
-![table](/table.png)
+![table](/blogPost/table.png)
 

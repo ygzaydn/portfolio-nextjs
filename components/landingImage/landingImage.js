@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 import { Grid, Typography } from "@mui/material";
 import Typed from "typed.js";
-import BackgroundImage from "../../images/background6.jpg";
+import BackgroundImage from "../../public/webP/landingBackground.webp";
 
 import Router, { useRouter } from "next/router";
 

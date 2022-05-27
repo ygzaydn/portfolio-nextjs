@@ -8,13 +8,13 @@ const Header = () => {
     const { asPath } = useRouter();
 
     const scrollTo = (element) => {
-        if (asPath === "/") {
+        if (asPath !== "/") {
+            router.push({ pathname: "/", query: { element } }, "/");
+        } else {
             document.getElementById(`${element}`).scrollIntoView({
                 behavior: "smooth",
                 block: "start",
             });
-        } else {
-            router.push("/");
         }
     };
 
@@ -66,19 +66,39 @@ const Header = () => {
                     </Grid>
 
                     <Grid item xs={5} className="headerContainer__menuGrid">
-                        <Typography key="home-desktop" id="header-home">
+                        <Typography
+                            key="home-desktop"
+                            id="header-home"
+                            onClick={() => scrollTo("home")}
+                        >
                             Home
                         </Typography>
-                        <Typography key="services-desktop" id="header-services">
+                        <Typography
+                            key="services-desktop"
+                            id="header-services"
+                            onClick={() => scrollTo("servicesGrid")}
+                        >
                             Services
                         </Typography>
-                        <Typography key="stack-desktop" id="header-stack">
+                        <Typography
+                            key="stack-desktop"
+                            id="header-stack"
+                            onClick={() => scrollTo("techStack")}
+                        >
                             Tech
                         </Typography>
-                        <Typography key="project-desktop" id="header-projects">
+                        <Typography
+                            key="project-desktop"
+                            id="header-projects"
+                            onClick={() => scrollTo("projectsGrid")}
+                        >
                             Projects
                         </Typography>
-                        <Typography key="contact-desktop" id="header-contacts">
+                        <Typography
+                            key="contact-desktop"
+                            id="header-contacts"
+                            onClick={() => scrollTo("contactGrid")}
+                        >
                             Contact
                         </Typography>
                         <Typography

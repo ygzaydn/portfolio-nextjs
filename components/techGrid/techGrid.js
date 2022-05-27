@@ -1,13 +1,13 @@
 import { Grid, Typography } from "@mui/material";
 import TechStack from "../techStack/techStack";
-import TechStackBackground from "../../public/techStackBackground.jpg";
+import TechStackBackground from "../../public/webP/techStackBackground.webp";
 
 const TechGrid = () => {
     return (
         <Grid
             container
             className="techContainer"
-            id="stack-desktop"
+            id="techStack"
             style={{
                 background: ` linear-gradient(#000000D1,#000000D1),url(${TechStackBackground.src})`,
                 backgroundSize: "cover",

@@ -2,7 +2,7 @@
 
 React is an open-source JavaScript UI library designed by Facebook, it has gained a lot of popularity in the front-end developer community.
 
-![1](./react18-1.jpg)
+![1](./blogPost/react18-1.jpg)
 
 React 18 is shifting from alpha to beta and has some exciting features and updates for the React.js development community. All updates are primarily aimed to maintain third-party libraries by introducing out-of-the-box features and improvements.
 

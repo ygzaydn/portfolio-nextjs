@@ -11,8 +11,8 @@ import PolicyIcon from "@mui/icons-material/Policy";
 
 const ServicesGrid = () => {
     return (
-        <Grid container className="overallGrid">
-            <Grid item xs={12} id="services-mobile">
+        <Grid container className="overallGrid" id="servicesGrid">
+            <Grid item xs={12}>
                 <Typography color="primary" variant="h4">
                     Services
                 </Typography>

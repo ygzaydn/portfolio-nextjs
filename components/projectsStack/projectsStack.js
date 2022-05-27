@@ -2,21 +2,21 @@ import { Grid, Typography } from "@mui/material";
 
 import ProjectCard from "../projectCard/projectCard";
 
-import ICCImage from "../../public/icc.jpg";
-import RidenrateImage from "../../public/ridenrate.jpg";
-import MellImage from "../../public/mell.jpg";
-import LibrejournalImage from "../../public/librejournal.jpg";
-import CrownImage from "../../public/CrownImage.jpg";
-import GoldenLotusImage from "../../public/goldenlotus.jpg";
-import TodoImage from "../../public/todo.jpg";
-import SongRecommenderImage from "../../public/song-recommender.jpg";
-import ArgbotImage from "../../public/argbot.jpg";
-import IkinciElImage from "../../public/ikincielproject.webp";
+import ICCImage from "../../public/webP/icc.webp";
+import RidenrateImage from "../../public/webP/ridenrate.webp";
+import MellImage from "../../public/webP/mell.webp";
+import LibrejournalImage from "../../public/webP/librejournal.webp";
+import CrownImage from "../../public/webP/CrownImage.webp";
+import GoldenLotusImage from "../../public/webP/goldenlotus.webp";
+import TodoImage from "../../public/webP/todo.webp";
+import SongRecommenderImage from "../../public/webP/song-recommender.webp";
+import ArgbotImage from "../../public/webP/argbot.webp";
+import IkinciElImage from "../../public/webP/ikincielproject.webp";
 
 const ProjectsStack = () => {
     return (
-        <Grid container className="projectsContainer" id="project-desktop">
-            <Grid item xs={12} className="marginBottom" id="project-mobile">
+        <Grid container className="projectsContainer" id="projectsGrid">
+            <Grid item xs={12} className="marginBottom">
                 <Typography
                     color="primary"
                     variant="h4"
