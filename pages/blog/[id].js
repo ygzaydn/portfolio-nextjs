@@ -66,8 +66,9 @@ const BlogPost = ({ file, info }) => {
                 <title>{info.title} - erolyagizaydin</title>
                 <meta
                     name="description"
-                    content={`${info.title}` - erolyagizaydin}
+                    content={`${info.title} erolyagizaydin`}
                 />
+                <link rel="icon" href="/favicon/favicon.ico" />
             </Head>
             <Grid
                 container

@@ -35,6 +35,7 @@ const Home = () => {
                         name="description"
                         content="Blog page of Erol Yağız Aydın"
                     />
+                    <link rel="icon" href="/favicon/favicon.ico" />
                 </Head>
 
                 <main className="blog__main" style={gridStyle}>

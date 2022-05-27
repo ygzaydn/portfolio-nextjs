@@ -33,6 +33,7 @@ const Home = (props) => {
                         name="description"
                         content="Portfolio page of Erol Yağız Aydın"
                     />
+                    <link rel="icon" href="/favicon/favicon.ico" />
                 </Head>
 
                 <main>
