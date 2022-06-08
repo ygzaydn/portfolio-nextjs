@@ -128,10 +128,12 @@
         padding: 1vh 0.6rem;
 
         & pre {
-            width: 70vw;
+            max-width: 100vw;
+            width: 80vw;
         }
         & blockquote {
-            width: 70vw;
+            max-width: 100vw;
+            width: 80vw;
         }
     }
     .pageFooter {

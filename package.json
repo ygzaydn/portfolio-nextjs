@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "next lint",
     "predeploy": "next build && next export",
-    "deploy": "firebase deploy"
+    "deploy": "firebase deploy",
+    "export": "next export"
   },
   "dependencies": {
     "@emotion/react": "^11.9.0",
