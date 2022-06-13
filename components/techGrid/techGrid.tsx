@@ -2,7 +2,7 @@ import { Grid, Typography } from "@mui/material";
 import TechStack from "../techStack/techStack";
 import TechStackBackground from "../../public/webP/techStackBackground.webp";
 
-const TechGrid = () => {
+const TechGrid: React.FC = () => {
     return (
         <Grid
             container

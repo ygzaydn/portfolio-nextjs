@@ -12,8 +12,9 @@ import TodoImage from "../../public/webP/todo.webp";
 import SongRecommenderImage from "../../public/webP/song-recommender.webp";
 import ArgbotImage from "../../public/webP/argbot.webp";
 import IkinciElImage from "../../public/webP/ikincielproject.webp";
+import React from "react";
 
-const ProjectsStack = () => {
+const ProjectsStack: React.FC = () => {
     return (
         <Grid container className="projectsContainer" id="projectsGrid">
             <Grid item xs={12} className="marginBottom">

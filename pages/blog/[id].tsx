@@ -26,12 +26,23 @@ function HeadingRenderer(props) {
     return React.createElement("h" + props.level, { id: slug }, props.children);
 }
 
-const BlogPost = ({ file, info }) => {
+interface infoObject {
+    title: string;
+    createDate: string;
+}
+
+interface BlogPostProps {
+    file: string;
+    info: infoObject;
+}
+
+const BlogPost: React.FC<BlogPostProps> = ({ file, info }) => {
     const router = useRouter();
 
     useEffect(() => {
+        let documents;
         if (document.querySelectorAll('a[href^="#"]')) {
-            const documents = document.querySelectorAll('a[href^="#"]');
+            documents = document.querySelectorAll('a[href^="#"]');
 
             [].forEach.call(documents, function (el) {
                 el.addEventListener("click", (e) => {

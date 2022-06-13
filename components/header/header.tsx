@@ -1,13 +1,13 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { Grid, Typography } from "@mui/material";
 
 import { useRouter } from "next/router";
 
-const Header = () => {
+const Header: React.FC = () => {
     const router = useRouter();
     const { asPath } = useRouter();
 
-    const scrollTo = (element) => {
+    const scrollTo = (element: string): void => {
         if (asPath !== "/") {
             router.push({ pathname: "/", query: { element } }, "/");
         } else {
@@ -19,7 +19,7 @@ const Header = () => {
     };
 
     useEffect(() => {
-        const scrollFunc = () => {
+        const scrollFunc = (): void => {
             let y = window.pageYOffset;
             let header = document.getElementById("header");
             if (header) {
@@ -40,10 +40,11 @@ const Header = () => {
         scrollFunc();
 
         window.addEventListener("scroll", () => scrollFunc());
-        return () => window.removeEventListener("scroll", () => scrollFunc());
+        return (): void =>
+            window.removeEventListener("scroll", () => scrollFunc());
     }, []);
 
-    const navigate = (path) => router.push(path);
+    const navigate = (path: string): Promise<boolean> => router.push(path);
 
     return (
         <header>
@@ -62,7 +63,15 @@ const Header = () => {
                         >
                             erolyagiz
                         </Typography>
-                        <Typography color="error">aydin</Typography>
+                        <Typography
+                            className="headerContainer__nameGrid__name"
+                            style={{
+                                transition: "all .4s",
+                                color: "rgb(75, 202, 135)",
+                            }}
+                        >
+                            aydin
+                        </Typography>
                     </Grid>
 
                     <Grid item xs={5} className="headerContainer__menuGrid">

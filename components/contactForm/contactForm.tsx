@@ -18,20 +18,20 @@ import { v4 as uuidv4 } from "uuid";
 
 const validationSchema = yup.object({
     email: yup
-        .string("Enter your email")
+        .string()
         .email("Enter a valid email")
         .required("Email is required"),
-    message: yup.string("Enter your message").required("Message is required"),
+    message: yup.string().required("Message is required"),
 });
 
-const Form = () => {
-    const [open, setOpen] = useState(false);
+const Form: React.FC = () => {
+    const [open, setOpen] = useState<boolean>(false);
 
-    const handleClickOpen = () => {
+    const handleClickOpen = (): void => {
         setOpen(true);
     };
 
-    const handleClose = () => {
+    const handleClose = (): void => {
         setOpen(false);
     };
 

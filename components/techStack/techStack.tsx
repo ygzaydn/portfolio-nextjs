@@ -3,7 +3,7 @@ import Image from "next/image";
 import { Grid, Typography } from "@mui/material";
 import { technologies } from "../../public/logo";
 
-const TechStack = () => {
+const TechStack: React.FC = () => {
     return (
         <Grid
             container

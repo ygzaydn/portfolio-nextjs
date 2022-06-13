@@ -9,7 +9,7 @@ import StorageIcon from "@mui/icons-material/Storage";
 import TravelExploreIcon from "@mui/icons-material/TravelExplore";
 import PolicyIcon from "@mui/icons-material/Policy";
 
-const ServicesGrid = () => {
+const ServicesGrid: React.FC = () => {
     return (
         <Grid container className="overallGrid" id="servicesGrid">
             <Grid item xs={12}>

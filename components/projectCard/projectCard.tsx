@@ -14,28 +14,38 @@ import {
     CardMedia,
 } from "@mui/material";
 
-const ProjectCard = ({
+import { SlideProps } from "@mui/material/Slide";
+
+interface ProjectCardProps {
+    title: string;
+    description: string;
+    image: string;
+    tech: string;
+    link: string;
+    note?: string;
+    size?: "huge" | "big" | "long";
+}
+
+const ProjectCard: React.FC<ProjectCardProps> = ({
     title,
     description,
     image,
     tech,
     link,
     note,
-    limit,
-    width,
     size,
 }) => {
-    const [open, setOpen] = useState(false);
+    const [open, setOpen] = useState<boolean>(false);
 
-    const handleClickOpen = () => {
+    const handleClickOpen = (): void => {
         setOpen(true);
     };
 
-    const handleClose = () => {
+    const handleClose = (): void => {
         setOpen(false);
     };
 
-    const handleGridSize = () => {
+    const handleGridSize = (): object | null => {
         switch (size) {
             case "big":
                 return {
@@ -140,8 +150,8 @@ const ProjectCard = ({
     );
 };
 
-const Transition = React.forwardRef(function Transition(props, ref) {
-    return <Slide direction="up" ref={ref} {...props} />;
-});
+const Transition = React.forwardRef<unknown, SlideProps>((props, ref) => (
+    <Slide direction="up" {...props} ref={ref} />
+));
 
 export default ProjectCard;

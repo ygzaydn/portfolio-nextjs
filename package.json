@@ -9,7 +9,8 @@
     "lint": "next lint",
     "predeploy": "next build && next export",
     "deploy": "firebase deploy",
-    "export": "next export"
+    "export": "next export",
+    "test": "jest --watch"
   },
   "dependencies": {
     "@emotion/react": "^11.9.0",
@@ -33,7 +34,14 @@
     "yup": "^0.32.11"
   },
   "devDependencies": {
+    "@testing-library/dom": "^8.13.0",
+    "@testing-library/jest-dom": "^5.16.4",
+    "@testing-library/react": "^13.3.0",
+    "@testing-library/user-event": "^14.2.0",
     "eslint": "8.16.0",
-    "eslint-config-next": "^0.2.4"
+    "eslint-config-next": "^0.2.4",
+    "jest": "^28.1.1",
+    "jest-environment-jsdom": "^28.1.1",
+    "typescript": "^4.7.3"
   }
 }

@@ -9,13 +9,11 @@
     &__nameGrid {
         display: flex;
         justify-content: center;
+        margin: 0 1rem;
         & p {
             font-size: 2rem;
             color: white;
             cursor: pointer;
-        }
-        &:hover .name {
-            color: #4bffa5 !important;
         }
     }
 

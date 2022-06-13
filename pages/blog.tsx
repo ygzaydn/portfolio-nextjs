@@ -11,8 +11,8 @@ import { blogTechnologies } from "../public/logo";
 import { blogPosts } from "../blog";
 import { useRouter } from "next/router";
 
-const Home = () => {
-    const [topic, setTopic] = useState("");
+const Home: React.FC = () => {
+    const [topic, setTopic] = useState<string>("");
     const router = useRouter();
     const gridStyle = {
         backgroundImage: `linear-gradient(180deg, rgba(3,1,22,0.7287289915966386) 0%, rgba(61,61,113,0.7371323529411764) 17%, rgba(255,255,255,1) 100%), url(${Background.src})`,

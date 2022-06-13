@@ -12,11 +12,14 @@ import ContactGrid from "../components/contactGrid/contactGrid";
 
 import { useRouter } from "next/router";
 
-const Home = (props) => {
+const Home: React.FC = () => {
     const router = useRouter();
-
+    console.log(router.query.element);
     useEffect(() => {
-        if (router?.query?.element) {
+        if (
+            router?.query?.element &&
+            typeof router?.query?.element === "string"
+        ) {
             document.getElementById(router.query.element).scrollIntoView({
                 behavior: "smooth",
                 block: "start",

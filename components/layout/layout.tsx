@@ -1,16 +1,18 @@
-import Head from "next/head";
 import Footer from "../footer/footer";
 import Header from "../header/header";
 import { useRouter } from "next/router";
+import { ReactNode } from "react";
 
-const Layout = ({ children }) => {
+interface LayoutProps {
+    children: ReactNode;
+}
+
+const Layout: React.FC<LayoutProps> = ({ children }) => {
     const { asPath } = useRouter();
 
     return (
         <>
-            <Head></Head>
             {asPath !== "/blog" && <Header />}
-
             {children}
             <Footer />
         </>

@@ -1,8 +1,18 @@
-import React from "react";
+import React, { ReactNode } from "react";
 
 import { Grid, Typography } from "@mui/material";
 
-const ServiceCard = ({ title, description, logo }) => {
+interface ServiceCardProps {
+    title: string;
+    description: string;
+    logo: ReactNode;
+}
+
+const ServiceCard: React.FC<ServiceCardProps> = ({
+    title,
+    description,
+    logo,
+}) => {
     return (
         <Grid item className="serviceCardGrid" key={title}>
             <Grid item xs={12} className="serviceCardGrid__logoGrid">

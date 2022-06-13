@@ -2,9 +2,8 @@ import { Grid, Typography } from "@mui/material";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import TwitterIcon from "@mui/icons-material/Twitter";
-import SendIcon from "@mui/icons-material/Send";
 
-const Footer = () => {
+const Footer: React.FC = () => {
     return (
         <Grid container className="footer">
             <Grid item xs={12} className="socialGrid" id="socialIcon">

@@ -3,11 +3,11 @@ import { Grid, Typography } from "@mui/material";
 import Typed from "typed.js";
 import BackgroundImage from "../../public/webP/landingBackground.webp";
 
-import Router, { useRouter } from "next/router";
+import { useRouter } from "next/router";
 
 const LandingImage = () => {
     const router = useRouter();
-    const el = useRef("");
+    const el = useRef<HTMLHeadingElement>(null);
 
     useEffect(() => {
         const typed = new Typed(el.current, {
@@ -20,7 +20,7 @@ const LandingImage = () => {
         });
 
         // Destroying
-        return () => {
+        return (): void => {
             typed.destroy();
         };
     }, []);
@@ -31,6 +31,7 @@ const LandingImage = () => {
             className="landingImage"
             id="home"
             style={{ backgroundImage: `url(${BackgroundImage.src})` }}
+            data-testid="overallGrid"
         >
             <Grid item xs={12} className="landingImage__contentGrid">
                 <Typography
