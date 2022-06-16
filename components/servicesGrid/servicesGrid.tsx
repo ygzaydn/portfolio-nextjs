@@ -17,7 +17,7 @@ const ServicesGrid: React.FC = () => {
                     Services
                 </Typography>
             </Grid>
-            <Grid container className="servicesGrid">
+            <Grid container className="servicesGrid" data-testid="servicesGrid">
                 <ServiceCard
                     logo={<CodeIcon />}
                     title={"Web Apps"}

@@ -1,7 +1,7 @@
 import React from "react";
-import Image from "next/image";
-import { Grid, Typography } from "@mui/material";
+import { Grid } from "@mui/material";
 import { technologies } from "../../public/logo";
+import TechItem from "../techItem/techItem";
 
 const TechStack: React.FC = () => {
     return (
@@ -10,22 +10,10 @@ const TechStack: React.FC = () => {
             justifyContent="center"
             display="flex"
             alignItems="center"
+            data-testid="techItemGrid"
         >
-            {technologies.map((el, ind) => (
-                <Grid item xs={2} key={el.logo} className="techStack__logoGrid">
-                    <Image
-                        height={75}
-                        width={75}
-                        src={
-                            require(`../../public/logo/${el.logo}.svg`).default
-                        }
-                        alt={`${el.logo}`}
-                        className="techStack__logo"
-                    />
-                    <Typography variant="h6" color="primary">
-                        {el.name}
-                    </Typography>
-                </Grid>
+            {technologies.map((el) => (
+                <TechItem logo={el.logo} name={el.name} key={el.logo} />
             ))}
         </Grid>
     );

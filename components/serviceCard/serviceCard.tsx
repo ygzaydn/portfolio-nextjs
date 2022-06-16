@@ -14,14 +14,25 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
     logo,
 }) => {
     return (
-        <Grid item className="serviceCardGrid" key={title}>
-            <Grid item xs={12} className="serviceCardGrid__logoGrid">
+        <Grid
+            item
+            className="serviceCardGrid"
+            key={title}
+            data-testid="serviceCardGrid"
+        >
+            <Grid
+                item
+                xs={12}
+                className="serviceCardGrid__logoGrid"
+                data-testid="serviceCardGrid-logo"
+            >
                 {logo}
             </Grid>
             <Typography
                 variant="h6"
                 textAlign="center"
                 className="serviceCardGrid__titleGrid"
+                data-testid="serviceCardGrid-title"
             >
                 {title}
             </Typography>
@@ -30,6 +41,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
                 fontWeight="light"
                 textAlign="center"
                 className="serviceCardGrid__descriptionGrid"
+                data-testid="serviceCardGrid-description"
             >
                 {description}
             </Typography>

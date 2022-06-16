@@ -14,7 +14,7 @@ import { useRouter } from "next/router";
 
 const Home: React.FC = () => {
     const router = useRouter();
-    console.log(router.query.element);
+
     useEffect(() => {
         if (
             router?.query?.element &&
