@@ -26,7 +26,11 @@ const TechItem: React.FC<TechItemProps> = ({ logo, name }) => {
                 />
             )}
 
-            <Typography variant="h6" color="primary">
+            <Typography
+                variant="h6"
+                color="primary"
+                className="techStack__logoGrid--text"
+            >
                 {name}
             </Typography>
         </Grid>

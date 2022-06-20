@@ -8,8 +8,8 @@ describe("Test Item Component Tests", () => {
         render(<TechItem logo="react-logo" name="React" />);
     });
     it("Renders successfully", () => {});
-    it("Text is unvisible before hover", () => {
+    it("Text has correct class", () => {
         const text = screen.getByText("React");
-        console.log(text);
+        expect(text).toHaveClass("techStack__logoGrid--text");
     });
 });
