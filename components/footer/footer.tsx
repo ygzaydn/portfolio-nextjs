@@ -9,9 +9,9 @@ const Footer: React.FC = () => {
             <Grid item xs={12} className="socialGrid" id="socialIcon">
                 <LinkedInIcon
                     onClick={() => {
-                        window.open(
+                        /*window.open(
                             "https://tr.linkedin.com/in/erol-ya%C4%9F%C4%B1z-ayd%C4%B1n-208517a9"
-                        );
+                        );*/
                     }}
                 />
                 <GitHubIcon

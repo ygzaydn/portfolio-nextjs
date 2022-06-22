@@ -37,6 +37,10 @@ const Home: React.FC = () => {
                         content="Portfolio page of Erol Yağız Aydın"
                     />
                     <link rel="icon" href="/favicon/favicon.ico" />
+                    <meta
+                        name="viewport"
+                        content="initial-scale=1, width=device-width"
+                    />
                 </Head>
 
                 <main>
