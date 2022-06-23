@@ -6,6 +6,7 @@ import GoldenLotusGif from "../public/gifs/goldenlotus.webp";
 import SongRecommenderGif from "../public/gifs/song-recommender.webp";
 import ArgbotGif from "../public/gifs/argbot.webp";
 import IkinciElGif from "../public/gifs/ikinciel.webp";
+import SenozGif from "../public/gifs/senoz.webp";
 
 import RidenrateImage from "../public/webP/ridenrate.webp";
 import MellImage from "../public/webP/mell.webp";
@@ -15,6 +16,7 @@ import GoldenLotusImage from "../public/webP/goldenlotus.webp";
 import SongRecommenderImage from "../public/webP/song-recommender.webp";
 import ArgbotImage from "../public/webP/argbot.webp";
 import IkinciElImage from "../public/webP/ikincielproject.webp";
+import SenozImage from "../public/webP/senoz.webp";
 
 export const projects = [
     {
@@ -50,6 +52,7 @@ export const projects = [
         link: "https://goldenlotus-website.web.app/",
         size: null,
     },
+
     {
         title: "Librejournal",
         description:
@@ -61,6 +64,7 @@ export const projects = [
         link: "http://librejournal-fe.herokuapp.com/",
         size: null,
     },
+
     {
         title: "Crown Clothing",
         description:
@@ -73,6 +77,17 @@ export const projects = [
         size: null,
     },
     {
+        title: "Senoz",
+        description:
+            "Senoz Furniture is a company based on Istanbul. It provides furniture for its clients.",
+        image: SenozImage,
+        gif: SenozGif,
+        tech: "Javascript - React - Redux - Material UI",
+        note: null,
+        link: "https://senoz.vercel.app/",
+        size: "big",
+    },
+    {
         title: "Mell Beauty Center",
         description:
             "Mell Beauty Center is a beauty center that located at İzmir / Turkey. This is the official website for the business.",
@@ -83,6 +98,7 @@ export const projects = [
         link: "https://mellguzellikmerkezi.com/",
         size: "big",
     },
+
     {
         title: "Ride'n'Rate",
         description:
