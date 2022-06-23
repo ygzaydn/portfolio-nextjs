@@ -1,6 +1,6 @@
 import React from "react";
 import { Grid } from "@mui/material";
-import { technologies } from "../../public/logo";
+import { technologies } from "../../constants/technologies";
 import TechItem from "../techItem/techItem";
 
 const TechStack: React.FC = () => {

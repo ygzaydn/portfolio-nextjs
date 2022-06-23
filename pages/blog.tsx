@@ -7,7 +7,7 @@ import Layout from "../components/layout/layout";
 import Background from "../public/webP/blogBackground.webp";
 import { Typography, Grid, Button } from "@mui/material";
 
-import { blogTechnologies } from "../public/logo";
+import { blogTechnologies } from "../constants/blogTechnologies";
 import { blogPosts } from "../blog";
 import { useRouter } from "next/router";
 

@@ -3,7 +3,7 @@ import "@testing-library/jest-dom";
 
 import TechStack from "../components/techStack/techStack.tsx";
 
-import { technologies } from "../public/logo";
+import { technologies } from "../constants/technologies";
 
 describe("Tech Stack Component Tests", () => {
     beforeEach(() => {

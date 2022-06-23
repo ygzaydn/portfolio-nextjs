@@ -15,15 +15,17 @@ import {
 } from "@mui/material";
 
 import { SlideProps } from "@mui/material/Slide";
+import { StaticImageData } from "next/image";
 
 interface ProjectCardProps {
     title: string;
     description: string;
     image: string;
+    gif: string;
     tech: string;
     link: string;
     note?: string;
-    size?: "huge" | "big" | "long";
+    size?: string;
 }
 
 const ProjectCard: React.FC<ProjectCardProps> = ({
@@ -31,6 +33,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
     description,
     image,
     tech,
+    gif,
     link,
     note,
     size,
@@ -94,7 +97,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
                         <Grid item xs={12} className="dialogImageGrid">
                             <CardMedia
                                 className="coverDialog"
-                                image={image}
+                                image={gif}
                                 title={title}
                             />
                         </Grid>
