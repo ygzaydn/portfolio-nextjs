@@ -17,7 +17,9 @@ describe("Tech Stack Component Tests", () => {
     it("Has all technologies on screen", () => {
         technologies.map((el) => {
             const item = screen.getByText(el.name);
+            const img = screen.getByAltText(el.logo);
             expect(item).toBeVisible();
+            expect(img).toBeVisible();
         });
     });
 });

@@ -1,6 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import ServicesGrid from "../components/servicesGrid/servicesGrid.tsx";
 import "@testing-library/jest-dom";
+import { services } from "../constants/services";
 
 describe("Services Grid Tests", () => {
     beforeEach(() => {
@@ -12,5 +13,12 @@ describe("Services Grid Tests", () => {
         expect(grid).toBeInTheDocument();
         const items = screen.getAllByTestId("serviceCardGrid");
         expect(items.length).toBeGreaterThan(0);
+    });
+    it("Has All Services", () => {
+        services.map((el) => {
+            const text = screen.getByText(el.title);
+            expect(text).toBeInTheDocument();
+            expect(text).toBeVisible();
+        });
     });
 });
