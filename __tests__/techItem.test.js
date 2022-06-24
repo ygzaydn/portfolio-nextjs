@@ -17,8 +17,8 @@ describe("Test Item Component Tests", () => {
     it("Text is invisible at first", async () => {
         const img = await screen.getByAltText("react-logo");
         const imgElem = document.getElementsByClassName(img.className);
-        const style = getComputedStyle(imgElem[0], "::hover");
+        const style = getComputedStyle(imgElem[0]).content;
         //console.log(imgElem[0]);
-        console.log(imgElem[0]);
+        //console.log(style);
     });
 });
