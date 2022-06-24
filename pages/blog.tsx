@@ -1,6 +1,5 @@
 import { useState } from "react";
 import Head from "next/head";
-import Image from "next/image";
 
 import Layout from "../components/layout/layout";
 
@@ -11,7 +10,7 @@ import { blogTechnologies } from "../constants/blogTechnologies";
 import { blogPosts } from "../blog";
 import { useRouter } from "next/router";
 
-const Home: React.FC = () => {
+const Blog: React.FC = () => {
     const [topic, setTopic] = useState<string>("");
     const router = useRouter();
     const gridStyle = {
@@ -62,10 +61,10 @@ const Home: React.FC = () => {
                                     key={el.key}
                                     onClick={() => setTopic(el.key)}
                                 >
-                                    <Image
+                                    <img
                                         src={
                                             require(`../public/logo/${el.logo}.svg`)
-                                                .default
+                                                .default?.src
                                         }
                                         alt={`${el.logo}`}
                                         height={40}
@@ -99,10 +98,10 @@ const Home: React.FC = () => {
                                             router.push(`/blog/${key}`)
                                         }
                                     >
-                                        <Image
+                                        <img
                                             src={
                                                 require(`../public/logo/${logoName}.svg`)
-                                                    .default
+                                                    .default?.src
                                             }
                                             alt={`${logoName}`}
                                             height={40}
@@ -145,4 +144,4 @@ const Home: React.FC = () => {
     );
 };
 
-export default Home;
+export default Blog;

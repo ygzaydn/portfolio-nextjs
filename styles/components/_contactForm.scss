@@ -1,5 +1,6 @@
 .formGrid {
     margin: 2rem 0;
+    padding: 2rem 4rem;
     &__input {
         margin: 1rem 0;
     }
@@ -16,8 +17,9 @@
 
     &__dialogBox {
         & .MuiDialog-paperScrollPaper {
-            background-color: #c8c6c6;
-            border: 0.2px solid lightgray;
+            background-color: white;
+            border: 0.2px solid #c8c6c6;
+            padding: 2rem;
         }
     }
 }

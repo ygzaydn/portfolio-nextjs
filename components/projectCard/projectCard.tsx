@@ -15,7 +15,6 @@ import {
 } from "@mui/material";
 
 import { SlideProps } from "@mui/material/Slide";
-import { StaticImageData } from "next/image";
 
 interface ProjectCardProps {
     title: string;
@@ -79,19 +78,18 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
                 onClose={handleClose}
                 aria-describedby="alert-dialog-slide-description"
             >
-                <DialogTitle>
-                    <Typography
-                        color="primary"
-                        variant="h4"
-                        style={{
-                            textAlign: "center",
-                            padding: "1rem 2rem",
-                            borderBottom: "0.1px lightgray solid",
-                        }}
-                    >
-                        {title}
-                    </Typography>
-                </DialogTitle>
+                <Typography
+                    color="primary"
+                    variant="h4"
+                    style={{
+                        textAlign: "center",
+                        padding: "1rem 2rem",
+                        borderBottom: "0.1px lightgray solid",
+                    }}
+                >
+                    {title}
+                </Typography>
+
                 <DialogContent>
                     <Grid container className="dialogContainer">
                         <Grid item xs={12} className="dialogImageGrid">
@@ -102,28 +100,25 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
                             />
                         </Grid>
                         <Grid item xs={12} className="dialogTextGrid">
-                            <DialogContentText>
-                                <Typography variant={"subtitle1"}>
-                                    {description}
-                                </Typography>
-                            </DialogContentText>
-                            <DialogContentText>
-                                <Typography variant={"subtitle1"}>
-                                    Stack: {tech}
-                                </Typography>
-                            </DialogContentText>
+                            <Typography variant={"subtitle1"}>
+                                {description}
+                            </Typography>
+
+                            <Typography variant={"subtitle1"}>
+                                Stack: {tech}
+                            </Typography>
+
                             {note && (
-                                <DialogContentText
+                                <Typography
+                                    variant="subtitle2"
                                     style={{
                                         borderTop: "0.01px solid lightgray",
                                         padding: "12px 0",
                                         marginBottom: "0",
                                     }}
                                 >
-                                    <Typography variant="subtitle2">
-                                        Note: {note}
-                                    </Typography>
-                                </DialogContentText>
+                                    Note: {note}
+                                </Typography>
                             )}
                         </Grid>
                     </Grid>

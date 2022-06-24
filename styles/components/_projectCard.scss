@@ -66,6 +66,9 @@
 
 .dialogTextGrid {
     padding: 0.5rem;
+    & h6 {
+        margin: 0.45rem 0;
+    }
 }
 
 .dialogContainer {

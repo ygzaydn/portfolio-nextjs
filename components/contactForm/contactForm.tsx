@@ -53,8 +53,6 @@ const Form: React.FC = () => {
         },
     });
 
-    const handleSubmit = () => {};
-
     return (
         <div>
             <form onSubmit={formik.handleSubmit} className="formGrid">
@@ -101,24 +99,22 @@ const Form: React.FC = () => {
                 onClose={handleClose}
                 className="formGrid__dialogBox"
             >
-                <DialogTitle
-                    style={{ cursor: "move" }}
-                    id="draggable-dialog-title"
-                >
-                    <Typography color="primary" variant="h6">
-                        Successful
-                    </Typography>
-                </DialogTitle>
+                <Typography color="primary" variant="h6">
+                    Successful
+                </Typography>
+
                 <DialogContent>
-                    <DialogContentText>
-                        <Typography variant="subtitle1">
-                            I have received your message, you will get an e-mail
-                            as a response.
-                        </Typography>
-                    </DialogContentText>
+                    <Typography variant="subtitle1">
+                        I have received your message, you will get an e-mail as
+                        a response.
+                    </Typography>
                 </DialogContent>
                 <DialogActions>
-                    <Button onClick={handleClose} color="primary">
+                    <Button
+                        onClick={handleClose}
+                        color="primary"
+                        variant="outlined"
+                    >
                         Close
                     </Button>
                 </DialogActions>

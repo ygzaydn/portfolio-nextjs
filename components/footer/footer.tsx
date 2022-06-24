@@ -6,7 +6,13 @@ import TwitterIcon from "@mui/icons-material/Twitter";
 const Footer: React.FC = () => {
     return (
         <Grid container className="footer">
-            <Grid item xs={12} className="socialGrid" id="socialIcon">
+            <Grid
+                item
+                xs={12}
+                className="socialGrid"
+                id="socialIcon"
+                data-testid="footerGrid"
+            >
                 <LinkedInIcon
                     onClick={() => {
                         window.open(
