@@ -14,12 +14,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
     return (
         <>
             <Head>
-                <link rel="preconnect" href="https://fonts.googleapis.com" />
-                <link rel="preconnect" href="https://fonts.gstatic.com" />
-                <link
-                    href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap"
-                    rel="stylesheet"
-                />
+              
             </Head>
             {asPath !== "/blog" && <Header />}
             {children}
@@ -29,3 +24,12 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 };
 
 export default Layout;
+
+/*
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+                <link rel="preconnect" href="https://fonts.gstatic.com" />
+                <link
+                    href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap"
+                    rel="stylesheet"
+                />*/
+                
