@@ -35,7 +35,7 @@ const ProjectsStack: React.FC = () => {
                         link={project.link}
                         size={project?.size && project.size}
                         key={project.title}
-                        gif={project.gif.src}
+                      
                     />
                 ))}
             </Grid>
