@@ -12,6 +12,4 @@ export const technologies = [
     { name: "CSS", logo: "css-logo" },
     { name: "HTML", logo: "html5-logo" },
     { name: "Javascript", logo: "javascript-logo" },
-    { name: "MongoDB", logo: "mongodb-logo" },
-    { name: "NodeJS", logo: "nodejs-logo" },
 ];

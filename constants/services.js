@@ -38,8 +38,9 @@ export const services = [
     },
     {
         logo: <TravelExploreIcon />,
-        title: "SEO Optimization",
-        description: "I optimize your application for search engines.",
+        title: "Writing Tests",
+        description:
+            "I write tests for your web app, there will be no unwanted results anymore.",
     },
     {
         logo: <PolicyIcon />,
