@@ -4,6 +4,8 @@ export const technologies = [
     { name: "Nextjs", logo: "nextjs-logo" },
     { name: "Typescript", logo: "typescript-logo" },
     { name: "Material UI", logo: "mui-logo" },
+    { name: "Cypress", logo: "cypress" },
+    { name: "React Testing Library", logo: "testing-library" },
     { name: "Babel", logo: "babel-logo" },
     { name: "Webpack", logo: "webpack-logo" },
     { name: "Firebase", logo: "firebase-logo" },
