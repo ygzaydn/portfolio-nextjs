@@ -29,13 +29,12 @@ const ProjectsStack: React.FC = () => {
                     <ProjectCard
                         title={project.title}
                         description={project.description}
-                        image={project.image.src}
+                        image={project.image}
                         tech={project.tech}
                         note={project?.note && project.note}
                         link={project.link}
                         size={project?.size && project.size}
                         key={project.title}
-                      
                     />
                 ))}
             </Grid>

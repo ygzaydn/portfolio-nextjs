@@ -81,14 +81,19 @@ const BlogPost: React.FC<BlogPostProps> = ({ file, info }) => {
                 />
                 <link rel="icon" href="/favicon/favicon.ico" />
             </Head>
-            <Grid
-                container
-                className="backgroundContainer"
-                style={{
-                    backgroundImage: `url(${Background.src})`,
-                    backgroundSize: "cover",
-                }}
-            >
+            <Grid container className="backgroundContainer">
+                <img
+                    sizes="(max-width: 1200px) 100vw, 1200px"
+                    srcSet="
+                            /webP/blogPostBackground_z0aa3y_c_scale,w_300.webp 300w,
+                            /webP/blogPostBackground_z0aa3y_c_scale,w_845.webp 845w,
+                            /webP/blogPostBackground_z0aa3y_c_scale,w_1200.webp 1200w
+                        "
+                    src="/webP/blogPostBackground_z0aa3y_c_scale,w_1200.webp"
+                    alt="blogpostbackground-bg"
+                    className="backgroundContainer__image"
+                />
+
                 <Grid item xs={12} sm={6} className="infoGrid">
                     <KeyboardReturnIcon onClick={() => router.push("/blog")} />
                     <Typography variant="h4">{info.title}</Typography>

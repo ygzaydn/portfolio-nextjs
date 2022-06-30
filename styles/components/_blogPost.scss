@@ -1,9 +1,17 @@
 .backgroundContainer {
-    height: 60vh;
+    height: 70vh;
     width: 100%;
     background-repeat: no-repeat;
     background-position: center;
     position: relative;
+    &__image {
+        position: absolute;
+        top: 0;
+        z-index: -5;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
 }
 
 .infoGrid {
@@ -139,5 +147,8 @@
     .pageFooter {
         padding: 1vh 0.6rem;
         text-align: start;
+    }
+    .backgroundContainer {
+        height: 30vh;
     }
 }

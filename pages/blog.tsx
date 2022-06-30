@@ -3,7 +3,6 @@ import Head from "next/head";
 
 import Layout from "../components/layout/layout";
 
-import Background from "../public/webP/blogBackground.webp";
 import { Typography, Grid, Button } from "@mui/material";
 
 import { blogTechnologies } from "../constants/blogTechnologies";
@@ -13,10 +12,6 @@ import { useRouter } from "next/router";
 const Blog: React.FC = () => {
     const [topic, setTopic] = useState<string>("");
     const router = useRouter();
-    const gridStyle = {
-        backgroundImage: `linear-gradient(180deg, rgba(3,1,22,0.7287289915966386) 0%, rgba(61,61,113,0.7371323529411764) 17%, rgba(255,255,255,1) 100%), url(${Background.src})`,
-        backgroundSize: "cover",
-    };
 
     const filteredPosts = () => {
         if (topic != "") {
@@ -37,7 +32,12 @@ const Blog: React.FC = () => {
                     <link rel="icon" href="/favicon/favicon.ico" />
                 </Head>
 
-                <main className="blog__main" style={gridStyle}>
+                <main className="blog__main">
+                    <img
+                        src="webP/blogBackground.webp"
+                        alt="blog-page-background"
+                        className="blog__image"
+                    />
                     <Typography className="blog__title" variant="h3">
                         Blog
                     </Typography>

@@ -1,19 +1,15 @@
 import { Grid, Typography } from "@mui/material";
 import TechStack from "../techStack/techStack";
-import TechStackBackground from "../../public/webP/techStackBackground.webp";
 
 const TechGrid: React.FC = () => {
     return (
-        <Grid
-            container
-            className="techContainer"
-            id="techStack"
-            style={{
-                background: ` linear-gradient(#000000D1,#000000D1),url(${TechStackBackground.src})`,
-                backgroundSize: "cover",
-            }}
-        >
+        <Grid container className="techContainer" id="techStack">
             <Grid container className="techContainer__widthGrid">
+                <img
+                    src="webP/techStackBackground.webp"
+                    alt="techstackpage-bg"
+                    className="techContainer__image"
+                />
                 <Grid
                     item
                     xs={12}

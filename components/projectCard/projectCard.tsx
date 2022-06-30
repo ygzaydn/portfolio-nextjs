@@ -89,10 +89,10 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
                 <DialogContent>
                     <Grid container className="dialogContainer">
                         <Grid item xs={12} className="dialogImageGrid">
-                            <CardMedia
+                            <img
+                                src={`/webP/${image}.webp`}
                                 className="coverDialog"
-                                image={image}
-                                title={title}
+                                alt={`${image}-big`}
                             />
                         </Grid>
                         <Grid item xs={12} className="dialogTextGrid">
@@ -134,7 +134,11 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
             </Dialog>
             <Card className="root" onClick={handleClickOpen}>
                 <Grid item xs={12} className="projectCardGrid">
-                    <CardMedia className="cover" image={image} title={title} />
+                    <img
+                        src={`/webP/${image}.webp`}
+                        className="cover"
+                        alt={`${image}-big`}
+                    />
                     <Typography color="primary" variant="h4">
                         {title}
                     </Typography>
