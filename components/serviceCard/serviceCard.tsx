@@ -28,23 +28,31 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
             >
                 {logo}
             </Grid>
-            <Typography
-                variant="h6"
-                textAlign="center"
+            <Grid
+                item
+                xs={12}
                 className="serviceCardGrid__titleGrid"
                 data-testid="serviceCardGrid-title"
             >
-                {title}
-            </Typography>
-            <Typography
-                variant="subtitle2"
-                fontWeight="light"
-                textAlign="center"
+                <Typography variant="h6" textAlign="center">
+                    {title}
+                </Typography>
+            </Grid>
+
+            <Grid
+                item
+                xs={12}
                 className="serviceCardGrid__descriptionGrid"
                 data-testid="serviceCardGrid-description"
             >
-                {description}
-            </Typography>
+                <Typography
+                    variant="subtitle2"
+                    fontWeight="light"
+                    textAlign="center"
+                >
+                    {description}
+                </Typography>
+            </Grid>
         </Grid>
     );
 };

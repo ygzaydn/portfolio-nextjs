@@ -1,11 +1,7 @@
 .servicesGrid {
-    display: grid !important;
-    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
-    justify-items: center;
-    grid-gap: 3rem;
-    margin: 2.5rem 0 !important;
-    padding: 1.5rem;
-    align-items: center;
+    max-height: 50rem;
+    overflow-y: hidden;
+    margin: 1.5rem 0 !important;
 }
 
 @media only screen and (max-width: 600px) {
@@ -19,5 +15,5 @@
 .overallGrid {
     max-width: 1440px;
     margin: 0 auto !important;
-    padding: 5rem 1.5rem;
+    padding: 2.5rem 1.5rem;
 }
