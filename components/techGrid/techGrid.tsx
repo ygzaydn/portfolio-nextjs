@@ -4,12 +4,13 @@ import TechStack from "../techStack/techStack";
 const TechGrid: React.FC = () => {
     return (
         <Grid container className="techContainer" id="techStack">
-            <Grid container className="techContainer__widthGrid">
-                <img
+              <img
                     src="webP/techStackBackground.webp"
                     alt="techstackpage-bg"
                     className="techContainer__image"
                 />
+            <Grid container className="techContainer__widthGrid">
+              
                 <Grid
                     item
                     xs={12}
