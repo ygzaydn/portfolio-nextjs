@@ -71,7 +71,7 @@ export const blogPosts = [
         createDate: "10 May 2022",
         key: "9",
     },
-     {
+    {
         topic: "react",
         title: "Dropping Image Files on React",
         name: "drop-image-react",
@@ -102,5 +102,13 @@ export const blogPosts = [
         logoName: "react-logo",
         createDate: "16 May 2022",
         key: "13",
+    },
+    {
+        topic: "accessibility",
+        title: "Accessibility on Web and Common Practices",
+        name: "webAccessibility",
+        logoName: "accessibility-logo",
+        createDate: "6 July 2022",
+        key: "14",
     },
 ];

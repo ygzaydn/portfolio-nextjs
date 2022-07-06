@@ -5,4 +5,5 @@ export const blogTechnologies = [
     { name: "Javascript", logo: "javascript-logo", key: "javascript" },
     { name: "Typescript", logo: "typescript-logo", key: "typescript" },
     { name: "Firebase", logo: "firebase-logo", key: "firebase" },
+    { name: "Accessibility", logo: "accessibility-logo", key: "accessibility" },
 ];
