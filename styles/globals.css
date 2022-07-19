@@ -16,7 +16,19 @@ a {
 }
 
 
+@media only screen and (max-width:1200px) {
+  html, body {
+    font-size: 95%;
+  }
+}
+
 @media only screen and (max-width:900px) {
+  html, body {
+    font-size: 90%;
+  }
+}
+
+@media only screen and (max-width:600px) {
   html, body {
     font-size: 80%;
   }

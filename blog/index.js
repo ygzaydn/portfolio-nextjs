@@ -111,4 +111,12 @@ export const blogPosts = [
         createDate: "6 July 2022",
         key: "14",
     },
+    {
+        topic: "javascript",
+        title: "Managing Axios",
+        name: "axios-custom-config",
+        logoName: "javascript-logo",
+        createDate: "19 July 2022",
+        key: "15",
+    },
 ];
