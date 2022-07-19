@@ -20,16 +20,17 @@ import SenozImage from "../public/webP/senoz.webp";*/
 
 export const projects = [
     {
-        title: "Argbot",
+        title: "Coxipay",
         description:
-            "Argbot is a clone of a crypto bot website. The website is not connected with any backend service, purpose is to show example cases.",
-        image: "argbot",
+            "Coxipay is Lithuania base company, focused on safe, smart and multifunctional system which provides a full One Stop Payment Solutions for client’s needs! I have developed agent panel for the company. ",
+        image: "coxi",
+        note: null,
         // gif: ArgbotGif,
-        tech: "Javascript - Redux - React - SCSS- Firebase - Material UI",
-        note: "You can login with any id/password combination to check overall system.",
-        link: "https://argbotxyz.web.app",
+        tech: "Javascript - Redux - React - TailwindCSS",
+        link: "https://www.coxipay.com/",
         size: "huge",
     },
+    
     {
         title: "Ikinci El Project",
         description:
@@ -39,7 +40,7 @@ export const projects = [
         tech: "Javascript - Redux - React - SCSS",
         note: "Please create an accout for yourself to surf around the platform - it's free to register!",
         link: "https://ikincielproject.web.app",
-        size: "big",
+        size: null,
     },
     {
         title: "Golden Lotus Boost Community",
@@ -64,7 +65,17 @@ export const projects = [
         link: "http://librejournal-fe.herokuapp.com/",
         size: null,
     },
-
+    {
+        title: "Argbot",
+        description:
+            "Argbot is a clone of a crypto bot website. The website is not connected with any backend service, purpose is to show example cases.",
+        image: "argbot",
+        // gif: ArgbotGif,
+        tech: "Javascript - Redux - React - SCSS- Firebase - Material UI",
+        note: "You can login with any id/password combination to check overall system.",
+        link: "https://argbotxyz.web.app",
+        size: "big",
+    },
     {
         title: "Crown Clothing",
         description:
@@ -96,7 +107,7 @@ export const projects = [
         tech: "Javascript - React - Firebase - Material UI",
         note: "Project runs on heroku, so it may not be loaded at first try, if this happens, please try to refresh page.",
         link: "https://mellguzellikmerkezi.com/",
-        size: "big",
+        size: null,
     },
 
     {

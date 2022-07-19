@@ -8,7 +8,6 @@
     padding: 1rem 2rem;
     height: 100%;
     max-height: 500px;
-    width: 60%;
 
     align-items: center;
     & svg {
@@ -43,7 +42,7 @@
     }
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1200px) {
     .serviceCardGrid {
         padding: 0.5rem;
         height: 100%;

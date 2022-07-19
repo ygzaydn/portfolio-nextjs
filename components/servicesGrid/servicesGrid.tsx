@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { Grid, Typography } from "@mui/material";
 import ServiceCard from "../serviceCard/serviceCard";
 
@@ -11,6 +12,18 @@ import "swiper/css/pagination";
 import "swiper/css/grid";
 
 const ServicesGrid: React.FC = () => {
+    const [width, setWidth] = useState<number>(0);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setWidth(window.innerWidth);
+        };
+        handleResize();
+        window.addEventListener("resize", handleResize);
+        return () => window.removeEventListener("resize", handleResize);
+    }, []);
+
+    console.log(width);
     return (
         <Grid container className="overallGrid" id="servicesGrid">
             <Grid item xs={12}>
@@ -21,7 +34,7 @@ const ServicesGrid: React.FC = () => {
             <Grid container className="servicesGrid" data-testid="servicesGrid">
                 <Swiper
                     spaceBetween={25}
-                    slidesPerView={2}
+                    slidesPerView={width > 1500 ? 4 : width > 750 ? 3 : 2}
                     grid={{
                         rows: 2,
                     }}

@@ -1,14 +1,14 @@
 .servicesGrid {
-    max-height: 50rem;
+    max-height: 40rem;
     overflow-y: hidden;
-    margin: 1.5rem 0 !important;
+    margin: 3.5rem 0 0.5rem 0 !important;
 }
 
 @media only screen and (max-width: 600px) {
     .servicesGrid {
         padding: 0.5rem;
-        grid-gap: 15px;
-        grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+
+        max-height: 50rem;
     }
 }
 
