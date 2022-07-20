@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Grid, Typography } from "@mui/material";
-import ServiceCard from "../serviceCard/serviceCard";
+
+import dynamic from "next/dynamic";
 
 import { services } from "../../constants/services";
 
@@ -10,6 +11,8 @@ import { Pagination, Grid as SwiperGrid } from "swiper";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/grid";
+
+const ServiceCard = dynamic(() => import("../serviceCard/serviceCard"));
 
 const ServicesGrid: React.FC = () => {
     const [width, setWidth] = useState<number>(0);
@@ -23,7 +26,6 @@ const ServicesGrid: React.FC = () => {
         return () => window.removeEventListener("resize", handleResize);
     }, []);
 
-    console.log(width);
     return (
         <Grid container className="overallGrid" id="servicesGrid">
             <Grid item xs={12}>

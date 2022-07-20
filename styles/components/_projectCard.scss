@@ -63,6 +63,10 @@
 
 .dialogImageGrid {
     padding: 0.5rem;
+    &__coverDialog {
+        width: 100%;
+        height: auto;
+    }
 }
 
 .dialogTextGrid {

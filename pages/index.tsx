@@ -1,16 +1,25 @@
 import Head from "next/head";
-import Image from "next/image";
 
 import { useEffect } from "react";
 
 import Layout from "../components/layout/layout";
-import LandingImage from "../components/landingImage/landingImage";
-import ServicesGrid from "../components/servicesGrid/servicesGrid";
-import TechGrid from "../components/techGrid/techGrid";
-import ProjectsStack from "../components/projectsStack/projectsStack";
-import ContactGrid from "../components/contactGrid/contactGrid";
 
+import dynamic from "next/dynamic";
 import { useRouter } from "next/router";
+
+const LandingImage = dynamic(
+    () => import("../components/landingImage/landingImage")
+);
+const ServicesGrid = dynamic(
+    () => import("../components/servicesGrid/servicesGrid")
+);
+const TechGrid = dynamic(() => import("../components/techGrid/techGrid"));
+const ProjectsStack = dynamic(
+    () => import("../components/projectsStack/projectsStack")
+);
+const ContactGrid = dynamic(
+    () => import("../components/contactGrid/contactGrid")
+);
 
 const Home: React.FC = () => {
     const router = useRouter();
@@ -42,7 +51,6 @@ const Home: React.FC = () => {
                         content="initial-scale=1, width=device-width"
                     />
                 </Head>
-
                 <main>
                     <LandingImage />
                     <ServicesGrid />

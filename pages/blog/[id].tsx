@@ -3,7 +3,6 @@ import { Grid, Typography } from "@mui/material";
 
 import Head from "next/head";
 import ReactMarkdown from "react-markdown";
-import Background from "../../public/webP/blogPostBackground.webp";
 import KeyboardReturnIcon from "@mui/icons-material/KeyboardReturn";
 
 import { blogPosts } from "../../blog";

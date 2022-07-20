@@ -91,7 +91,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
                         <Grid item xs={12} className="dialogImageGrid">
                             <img
                                 src={`/webP/${image}.webp`}
-                                className="coverDialog"
+                                className="dialogImageGrid__coverDialog"
                                 alt={`${image}-big`}
                             />
                         </Grid>
