@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 import {
     Grid,
@@ -9,7 +9,6 @@ import {
     Slide,
     Button,
     Card,
-    CardMedia,
 } from "@mui/material";
 
 import { SlideProps } from "@mui/material/Slide";
@@ -34,6 +33,17 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
     size,
 }) => {
     const [open, setOpen] = useState<boolean>(false);
+
+    const [width, setWidth] = useState<number>(0);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setWidth(window.innerWidth);
+        };
+        handleResize();
+        window.addEventListener("resize", handleResize);
+        return () => window.removeEventListener("resize", handleResize);
+    }, []);
 
     const handleClickOpen = (): void => {
         setOpen(true);
@@ -67,7 +77,10 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
     };
 
     return (
-        <div className="gridSize" style={{ ...handleGridSize() }}>
+        <div
+            className="gridSize"
+            style={width > 1000 ? { ...handleGridSize() } : null}
+        >
             <Dialog
                 open={open}
                 TransitionComponent={Transition}

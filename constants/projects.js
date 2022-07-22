@@ -30,7 +30,7 @@ export const projects = [
         link: "https://www.coxipay.com/",
         size: "huge",
     },
-    
+
     {
         title: "Ikinci El Project",
         description:
@@ -63,6 +63,17 @@ export const projects = [
         tech: "Javascript - React - Redux - MongoDB - Material UI - Node.js",
         note: "Project runs on heroku, so it may not be loaded at first try, if this happens, please try to refresh page.",
         link: "http://librejournal-fe.herokuapp.com/",
+        size: null,
+    },
+    {
+        title: "Song Recommender",
+        description:
+            "Song recommender is a website to help you find similar songs based on your search. This project is powered by Last.fm API.",
+        image: "song-recommender",
+        //gif: SongRecommenderGif,
+        tech: "Javascript - Redux - React - SCSS- Firebase - Material UI",
+        note: null,
+        link: "https://song-recommender-001.web.app/",
         size: null,
     },
     {
@@ -120,16 +131,5 @@ export const projects = [
         note: "Project runs on heroku, so it may not be loaded at first try, if this happens, please try to refresh page.",
         link: "http://ridenrate.herokuapp.com/",
         size: null,
-    },
-    {
-        title: "Song Recommender",
-        description:
-            "Song recommender is a website to help you find similar songs based on your search. This project is powered by Last.fm API.",
-        image: "song-recommender",
-        //gif: SongRecommenderGif,
-        tech: "Javascript - Redux - React - SCSS- Firebase - Material UI",
-        note: null,
-        link: "https://song-recommender-001.web.app/",
-        size: "big",
     },
 ];
