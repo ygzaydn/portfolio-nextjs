@@ -119,4 +119,12 @@ export const blogPosts = [
         createDate: "19 July 2022",
         key: "15",
     },
+    {
+        topic: "react",
+        title: "React Portals",
+        name: "react-portal",
+        logoName: "react-logo",
+        createDate: "05 August 2022",
+        key: "16",
+    },
 ];
