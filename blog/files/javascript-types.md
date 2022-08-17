@@ -150,7 +150,7 @@ Error()
 
 Type conversion on JS -> Coercion. 
 
-All programming languages have type conversions, because it's absolutel necessary. You can use coericon in JS whether you admit it or not, because you have to. Some of those coercions may operate explicitly, but behind the scenes we have much more coercion operation.
+All programming languages have type conversions, because it's absolutely necessary. You can use coericon in JS whether you admit it or not, because you have to. Some of those coercions may operate explicitly, but behind the scenes we have much more coercion operation.
 
 We have `toPrimitive(hint)` abstract operation help us to coarce.
 
