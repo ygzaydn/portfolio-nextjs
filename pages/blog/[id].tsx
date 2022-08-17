@@ -104,6 +104,7 @@ const BlogPost: React.FC<BlogPostProps> = ({ file, info }) => {
             <Grid container className="markdownGrid">
                 <ReactMarkdown
                     components={{
+                        h1: HeadingRenderer,
                         h2: HeadingRenderer,
                         h3: HeadingRenderer,
                         h4: HeadingRenderer,
