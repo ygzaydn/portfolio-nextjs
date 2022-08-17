@@ -127,4 +127,12 @@ export const blogPosts = [
         createDate: "05 August 2022",
         key: "16",
     },
+    {
+        topic: "javascript",
+        title: "Types in Javascript",
+        name: "javascript-types",
+        logoName: "javascript-logo",
+        createDate: "17 August 2022",
+        key: "17",
+    },
 ];

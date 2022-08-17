@@ -106,7 +106,7 @@ const Blog: React.FC = () => {
                                             alt={`${logoName}`}
                                             height={40}
                                             width={40}
-                                            style={{ flex: 1 }}
+                                            style={{ flex: 1, margin: "auto" }}
                                         />
                                         <Typography
                                             variant="h6"
@@ -120,7 +120,8 @@ const Blog: React.FC = () => {
                                             className="blog__logoText"
                                             style={{
                                                 flex: 1,
-                                                justifyContent: "end",
+                                                justifyContent: "flex-end",
+                                                textAlign: "end",
                                             }}
                                         >
                                             {createDate}
