@@ -11,15 +11,15 @@ Many developer on Javascript community is not interested with JS specification, 
 In this post, I'll try to open a wider window about types we have on JS. This post will mainly focus on the edge cases - cases that we may struggle.
 
 
-- 
-	- [Types](#types)
-		- [undefined vs undeclared vs uninitialized](#undefined-vs-undeclared-vs-uninitialized)
-		- [NaN](#nan)
-		- [Negative Zero](#negative-zero)
-		- [Fundamental Objects](#fundamental-objects)
-	- [Coercion](#coercion)
-		- [toString](#tostring)
-	- [Equality Checks](#equality-checks)
+  
+- [Types].(#types)
+	- [undefined vs undeclared vs uninitialized](#undefined-vs-undeclared-vs-uninitialized)
+	- [NaN](#nan)
+	- [Negative Zero](#negative-zero)
+	- [Fundamental Objects](#fundamental-objects)
+- [Coercion](#coercion)
+	- [toString](#tostring)
+- [Equality Checks](#equality-checks)
 
 ## Types
 
