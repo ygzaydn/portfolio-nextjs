@@ -135,4 +135,12 @@ export const blogPosts = [
         createDate: "17 August 2022",
         key: "17",
     },
+    {
+        topic: "javascript",
+        title: "Asynchronous Javascript and Promises",
+        name: "asynchronous-js-and-promises",
+        logoName: "javascript-logo",
+        createDate: "25 August 2022",
+        key: "18",
+    },
 ];

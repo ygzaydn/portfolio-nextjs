@@ -48,7 +48,7 @@ const ServicesGrid: React.FC = () => {
                     modules={[SwiperGrid, Pagination]}
                 >
                     {services.map((service) => (
-                        <SwiperSlide>
+                        <SwiperSlide key={service.title}>
                             <ServiceCard
                                 logo={service.logo}
                                 title={service.title}
