@@ -30,6 +30,16 @@ export const projects = [
         link: "https://www.coxipay.com/",
         size: "huge",
     },
+    {
+        title: "MMOGadget",
+        description:
+            "MMOGadget is a platform to help users to find their new MMO game. This project is developed by a gaming community which they don't want to be mentioned. So I've published a previous version of the project.",
+        image: "mmogadget",
+        //gif: IkinciElGif,
+        tech: "Typescripty - Redux - Next - SCSS",
+        link: "https://mmogadget.vercel.app/",
+        size: null,
+    },
 
     {
         title: "Ikinci El Project",
