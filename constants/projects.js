@@ -109,7 +109,7 @@ export const projects = [
         size: null,
     },
     {
-        title: "Senoz",
+        title: "Senoz Mobilya",
         description:
             "Senoz Furniture is a company based on Istanbul. It provides furniture for its clients.",
         image: "senoz",
@@ -119,7 +119,7 @@ export const projects = [
         link: "https://senoz.vercel.app/",
         size: "big",
     },
-    {
+    /*     {
         title: "Mell Beauty Center",
         description:
             "Mell Beauty Center is a beauty center that located at İzmir / Turkey. This is the official website for the business.",
@@ -129,8 +129,7 @@ export const projects = [
         note: "Project runs on heroku, so it may not be loaded at first try, if this happens, please try to refresh page.",
         link: "https://mellguzellikmerkezi.com/",
         size: null,
-    },
-
+    }, */
     {
         title: "Ride'n'Rate",
         description:

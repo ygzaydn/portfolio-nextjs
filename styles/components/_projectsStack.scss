@@ -20,7 +20,6 @@
 .projectGrid {
     display: grid !important;
     grid-template-columns: repeat(4, 1fr);
-    grid-gap: 1.5rem;
     grid-auto-flow: row dense;
     min-width: 300px;
     margin: 0 auto;
