@@ -20,6 +20,17 @@ import SenozImage from "../public/webP/senoz.webp";*/
 
 export const projects = [
     {
+        title: "Globe VPN",
+        description:
+            "Globe VPN is an IPSec VPN with cutting edge features. Currently available in android.",
+        image: "globevpn",
+        note: null,
+        // gif: ArgbotGif,
+        tech: "React Native",
+        link: "https://www.globevpn.net/",
+        size: "huge",
+    },
+    {
         title: "Coxipay",
         description:
             "Coxipay is Lithuania base company, focused on safe, smart and multifunctional system which provides a full One Stop Payment Solutions for client’s needs! I have developed agent panel for the company. ",
@@ -28,7 +39,7 @@ export const projects = [
         // gif: ArgbotGif,
         tech: "Javascript - Redux - React - TailwindCSS",
         link: "https://www.coxipay.com/",
-        size: "huge",
+        size: "big",
     },
     {
         title: "MMOGadget",
