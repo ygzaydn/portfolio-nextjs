@@ -20,8 +20,8 @@ const ProjectsStack: React.FC = () => {
                     variant="h6"
                     className="projectsContainer__titleSub"
                 >
-                    Projects that I've developed are listed below, you can click
-                    images to get details.
+                    Some projects that I've worked are listed below. You can
+                    click images to get more information.
                 </Typography>
             </Grid>
             <Grid container className="projectGrid">

@@ -28,8 +28,8 @@ export const projects = [
         // gif: ArgbotGif,
         tech: "React Native",
         link: "https://www.globevpn.net/",
-        size: "huge",
     },
+
     {
         title: "Coxipay",
         description:
@@ -39,7 +39,6 @@ export const projects = [
         // gif: ArgbotGif,
         tech: "Javascript - Redux - React - TailwindCSS",
         link: "https://www.coxipay.com/",
-        size: "big",
     },
     {
         title: "MMOGadget",
@@ -51,8 +50,27 @@ export const projects = [
         link: "https://mmogadget.vercel.app/",
         size: null,
     },
-
     {
+        title: "LoA Companion",
+        description:
+            "LoA Companion is an app to help players who plays Lost Ark.",
+        image: "loa-companion",
+        note: null,
+        // gif: ArgbotGif,
+        tech: "React Native",
+        link: "https://play.google.com/store/apps/details?id=com.loacompanion",
+    },
+    {
+        title: "Cargopanel",
+        description:
+            "Cargopanel, which aims to digitize international logistics services and is one of the leading brands in Turkey with its entrepreneur-friendly solutions it offers, is a technology-centered logistics company that came to life after a group of friends discussed various problems in the field of international logistics and then laid the foundations of a team of experts in the field.",
+        image: "cargopanel",
+        note: null,
+        // gif: ArgbotGif,
+        tech: "Nextjs, Material UI",
+        link: "https://www.cargopanel.co/",
+    },
+    /*     {
         title: "Ikinci El Project",
         description:
             "İkinci el project is a platform to buy and sell products that've been used before.",
@@ -62,7 +80,7 @@ export const projects = [
         note: "Please create an accout for yourself to surf around the platform - it's free to register!",
         link: "https://ikincielproject.web.app",
         size: null,
-    },
+    }, */
     {
         title: "Golden Lotus Boost Community",
         description:
@@ -75,7 +93,7 @@ export const projects = [
         size: null,
     },
 
-    {
+    /*     {
         title: "Librejournal",
         description:
             "Librejournal is a social media platform for local journalists. You can easily share stories about the events around you to react people.",
@@ -85,7 +103,7 @@ export const projects = [
         note: "Project runs on heroku, so it may not be loaded at first try, if this happens, please try to refresh page.",
         link: "http://librejournal-fe.herokuapp.com/",
         size: null,
-    },
+    }, */
     {
         title: "Song Recommender",
         description:
@@ -98,6 +116,16 @@ export const projects = [
         size: null,
     },
     {
+        title: "F1 Wiki",
+        description:
+            "F1 is an app to help players who loves Formula 1. It contains all information for all formula seasons (from 1950 to 2023)",
+        image: "f1-wiki",
+        note: null,
+        // gif: ArgbotGif,
+        tech: "React Native",
+        link: "https://play.google.com/store/apps/details?id=com.f1wiki",
+    },
+    {
         title: "Argbot",
         description:
             "Argbot is a clone of a crypto bot website. The website is not connected with any backend service, purpose is to show example cases.",
@@ -106,9 +134,8 @@ export const projects = [
         tech: "Javascript - Redux - React - SCSS- Firebase - Material UI",
         note: "You can login with any id/password combination to check overall system.",
         link: "https://argbotxyz.web.app",
-        size: "big",
     },
-    {
+    /*     {
         title: "Crown Clothing",
         description:
             "Crown Clothing is a mimic of e-commerce website that is completely build on React.",
@@ -118,7 +145,7 @@ export const projects = [
         note: "Project runs on heroku, so it may not be loaded at first try, if this happens, please try to refresh page.",
         link: "https://crown-clothing-fe.herokuapp.com/",
         size: null,
-    },
+    }, */
     {
         title: "Senoz Mobilya",
         description:
@@ -127,9 +154,9 @@ export const projects = [
         //gif: SenozGif,
         tech: "Javascript - React - Redux - Material UI",
         note: null,
-        link: "https://senoz.vercel.app/",
-        size: "big",
+        link: "https://www.senozmobilya.com/",
     },
+
     /*     {
         title: "Mell Beauty Center",
         description:
@@ -141,7 +168,7 @@ export const projects = [
         link: "https://mellguzellikmerkezi.com/",
         size: null,
     }, */
-    {
+    /*     {
         title: "Ride'n'Rate",
         description:
             "Ride'n'Rate is a platform for users to evaluate their trips. Users can check those evaluations & ratings for future trips to have a better time on travel.",
@@ -151,5 +178,5 @@ export const projects = [
         note: "Project runs on heroku, so it may not be loaded at first try, if this happens, please try to refresh page.",
         link: "http://ridenrate.herokuapp.com/",
         size: null,
-    },
+    }, */
 ];
