@@ -143,12 +143,20 @@ export const blogPosts = [
         createDate: "25 August 2022",
         key: "18",
     },
-        {
+    {
         topic: "javascript",
         title: "Generators in Javascript",
         name: "generators-in-js",
         logoName: "javascript-logo",
         createDate: "25 August 2022",
         key: "19",
+    },
+    {
+        topic: "redux",
+        title: "React with RTK Query",
+        name: "creatingRTKReducer",
+        logoName: "redux-logo",
+        createDate: "31 May 2023",
+        key: "20",
     },
 ];
