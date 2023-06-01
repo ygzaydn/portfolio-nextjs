@@ -1,5 +1,5 @@
 export const technologies = [
-    { name: "React", logo: "react-logo" },
+    { name: "React - React Native", logo: "react-logo" },
     { name: "Redux", logo: "redux-logo" },
     { name: "Nextjs", logo: "nextjs-logo" },
     { name: "Typescript", logo: "typescript-logo" },
