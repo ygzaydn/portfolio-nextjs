@@ -159,4 +159,12 @@ export const blogPosts = [
         createDate: "31 May 2023",
         key: "20",
     },
+    {
+        topic: "redux",
+        title: "RTK Query Mutation Operation",
+        name: "mutationonRTK",
+        logoName: "redux-logo",
+        createDate: "01 June 2023",
+        key: "21",
+    },
 ];

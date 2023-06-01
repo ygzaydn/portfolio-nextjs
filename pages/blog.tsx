@@ -15,7 +15,7 @@ const Blog: React.FC = () => {
 
     const filteredPosts = () => {
         if (topic != "") {
-            return blogPosts.filter((el) => el.topic === topic);
+            return blogPosts.filter((el) => el.topic === topic).reverse();
         }
         return blogPosts;
     };

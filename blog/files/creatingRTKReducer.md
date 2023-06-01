@@ -1,6 +1,6 @@
 # React with RTK Query
 
-RTK Query is a library that manages fetch operations. It also provides caching and working well with Redux. In this blog post, we'll learn basics of *RTK Query*. \\
+RTK Query is a library that manages fetch operations. It also provides caching and working well with Redux. In this blog post, we'll learn basics of *RTK Query*.
 
 - [React with RTK Query](#react-with-rtk-query)
   - [Creating API for RTK Query](#creating-api-for-rtk-query)
@@ -11,10 +11,8 @@ RTK Query is a library that manages fetch operations. It also provides caching a
 
 ## Creating API for RTK Query
 
-First thing we need to create is an API for RTK Query. In this blog post, I'll use [JSON Placeholder API]("https://jsonplaceholder.typicode.com/"). Let's create API. RTK Query serves us an API called `createAPI()` to accomplish this goal.\\
-
-createAPI is the core of RTK Query's functionality. It allows you to define a set of endpoints describe how to retrieve data from a series of endpoints, including configuration of how to fetch and transform that data. In most cases, you should use this once per app, with "one API slice per base URL" as a rule of thumb.
-
+First thing we need to create is an API for RTK Query. In this blog post, I'll use [JSON Placeholder API]("https://jsonplaceholder.typicode.com/"). Let's create API. RTK Query serves us an API called `createAPI()` to accomplish this goal.\
+createAPI is the core of RTK Query's functionality. It allows you to define a set of endpoints describe how to retrieve data from a series of endpoints, including configuration of how to fetch and transform that data. In most cases, you should use this once per app, with "one API slice per base URL" as a rule of thumb.\
 Lets create a file called `postsApi.js` under `/src/features` and write some code.
 
 ```js
@@ -107,8 +105,7 @@ Now, we are ready to connect our Redux store to Nextjs app.
 
 ## Using RTK Query Hooks on React
 
-Using the hooks on react components are easy. \\
-
+Using the hooks on react components are easy. \
 You need to import the auto-generated React hooks from the API slice into your component file, and call the hooks in your component with any needed parameters. RTK Query will automatically fetch data on mount, re-fetch when parameters change, provide {data, isFetching} values in the result, and re-render the component as those values change:
 
 ```jsx
@@ -123,6 +120,5 @@ export default function App() {
 
 ```
 
-
- 
+The above code fetches the data whenever it renders. You can track fetch status and show loading spinner by using `isLoading` parameter. Please note the parameters shown here is not the whole options that hook serves us. You should check documentary to see further details.
 
