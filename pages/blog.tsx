@@ -6,7 +6,7 @@ import Layout from "../components/layout/layout";
 import { Typography, Grid, Button } from "@mui/material";
 
 import { blogTechnologies } from "../constants/blogTechnologies";
-import { blogPosts } from "../blog";
+import blogPosts from "../blog";
 import { useRouter } from "next/router";
 
 const Blog: React.FC = () => {
@@ -14,10 +14,12 @@ const Blog: React.FC = () => {
     const router = useRouter();
 
     const filteredPosts = () => {
-        if (topic != "") {
-            return blogPosts.filter((el) => el.topic === topic).reverse();
+        if (blogPosts) {
+            if (topic != "") {
+                return blogPosts.reverse()?.filter((el) => el.topic === topic);
+            }
+            return blogPosts;
         }
-        return blogPosts;
     };
 
     return (

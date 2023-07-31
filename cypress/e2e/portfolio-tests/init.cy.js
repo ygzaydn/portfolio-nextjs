@@ -2,7 +2,7 @@
 
 import "@testing-library/cypress/add-commands";
 
-import { blogPosts } from "../../../blog";
+import blogPosts from "../../../blog";
 
 describe("E2E Tests of Portfolio Page", () => {
     it("Animation should work on hover blog button", () => {

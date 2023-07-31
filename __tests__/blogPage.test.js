@@ -3,7 +3,7 @@ import "@testing-library/jest-dom";
 
 import Blog from "../pages/blog";
 import { blogTechnologies } from "../constants/blogTechnologies";
-import { blogPosts } from "../blog";
+import blogPosts from "../blog";
 
 jest.mock("next/router", () => ({
     useRouter: () => ({

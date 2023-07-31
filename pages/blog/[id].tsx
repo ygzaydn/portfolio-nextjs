@@ -5,7 +5,7 @@ import Head from "next/head";
 import ReactMarkdown from "react-markdown";
 import KeyboardReturnIcon from "@mui/icons-material/KeyboardReturn";
 
-import { blogPosts } from "../../blog";
+import blogPosts from "../../blog";
 
 import { readMarkdownFile } from "../../utils/readMarkdown";
 import Layout from "../../components/layout/layout";
