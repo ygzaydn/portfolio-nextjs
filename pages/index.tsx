@@ -6,6 +6,7 @@ import Layout from "../components/layout/layout";
 
 import dynamic from "next/dynamic";
 import { useRouter } from "next/router";
+import BlogGrid from "../components/blogGrid/blogGrid";
 
 const LandingImage = dynamic(
     () => import("../components/landingImage/landingImage")
@@ -55,7 +56,9 @@ const Home: React.FC = () => {
                     <LandingImage />
                     <ServicesGrid />
                     <TechGrid />
+                    <BlogGrid />
                     <ProjectsStack />
+
                     <ContactGrid />
                 </main>
             </div>
