@@ -183,6 +183,14 @@ const blogPosts = [
         createDate: "31 July 2023",
         key: "23",
     },
+    {
+        topic: "graphql",
+        title: "GraphQL - Schema Definition and Integration",
+        name: "schema-definitions",
+        logoName: "graphql-logo",
+        createDate: "31 July 2023",
+        key: "24",
+    },
 ];
 
 export default blogPosts.reverse();
