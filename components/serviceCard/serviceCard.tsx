@@ -1,60 +1,31 @@
 import React, { ReactNode } from "react";
 
-import { Grid, Typography } from "@mui/material";
-
 interface ServiceCardProps {
-    title: string;
-    description: string;
-    logo: ReactNode;
+  title: string;
+  description: string;
+  logo: ReactNode;
 }
 
 const ServiceCard: React.FC<ServiceCardProps> = ({
-    title,
-    description,
-    logo,
+  title,
+  description,
+  logo,
 }) => {
-    return (
-        <Grid
-            item
-            className="serviceCardGrid"
-            key={title}
-            data-testid="serviceCardGrid"
-        >
-            <Grid
-                item
-                xs={12}
-                className="serviceCardGrid__logoGrid"
-                data-testid="serviceCardGrid-logo"
-            >
-                {logo}
-            </Grid>
-            <Grid
-                item
-                xs={12}
-                className="serviceCardGrid__titleGrid"
-                data-testid="serviceCardGrid-title"
-            >
-                <Typography variant="h6" textAlign="center">
-                    {title}
-                </Typography>
-            </Grid>
+  return (
+    <div
+      className="flex flex-col rounded-md px-2 py-4 border-2 border-gray-300 items-center transition hover:bg-blue-400 hover:text-slate-50 [&>div]:hover:scale-150"
+      key={title}
+      data-testid="serviceCardGrid"
+    >
+      <div className="my-4" data-testid="serviceCardGrid-logo">
+        {logo}
+      </div>
 
-            <Grid
-                item
-                xs={12}
-                className="serviceCardGrid__descriptionGrid"
-                data-testid="serviceCardGrid-description"
-            >
-                <Typography
-                    variant="subtitle2"
-                    fontWeight="light"
-                    textAlign="center"
-                >
-                    {description}
-                </Typography>
-            </Grid>
-        </Grid>
-    );
+      <h5 className="text-center text-xl my-2">{title}</h5>
+
+      <h6 className="text-center text-sm my-2">{description}</h6>
+    </div>
+  );
 };
 
 export default ServiceCard;
