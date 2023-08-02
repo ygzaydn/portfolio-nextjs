@@ -30,10 +30,13 @@ const Home: React.FC = () => {
         <Head>
           <title>erolyagizaydin</title>
           <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+          ></meta>
+          <meta
             name="description"
             content="Portfolio page of Erol Yağız Aydın"
           />
-          <meta name="viewport" content="width=device-width, initial-scale=1" />
 
           <link rel="icon" href="/favicon/favicon.ico" />
         </Head>

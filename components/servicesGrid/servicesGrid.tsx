@@ -1,9 +1,5 @@
 import { services } from "../../constants/services";
 
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/grid";
-
 import ServiceCard from "../serviceCard/serviceCard";
 
 const ServicesGrid: React.FC = () => {

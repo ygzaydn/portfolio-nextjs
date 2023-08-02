@@ -48,7 +48,7 @@ const LandingImage = () => {
         <h3 className="text-4xl text-green-300 h-10 my-1" ref={el} />
         <h4 className="text-3xl text-slate-50 my-1">a web developer</h4>
         <button
-          className="bg-indigo-500 my-5 px-6 py-5 rounded-md font-semibold text-slate-50 hover:bg-green-400 transition-all"
+          className="bg-blue-400 my-5 px-6 py-5 rounded-md font-semibold text-slate-50 hover:bg-blue-500 transition-all"
           onClick={() => router.push("/blog")}
         >
           Check out my blog!

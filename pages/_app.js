@@ -1,34 +1,12 @@
-import React, { useEffect } from "react";
-import { CacheProvider } from "@emotion/react";
-import {
-    ThemeProvider,
-    CssBaseline,
-    StyledEngineProvider,
-} from "@mui/material";
-
-import createEmotionCache from "../utils/createEmotionCache";
+import React from "react";
 
 import "../styles/main.scss";
 import "../styles/globals.css";
-import Head from "next/head";
-
-const clientSideEmotionCache = createEmotionCache();
 
 function MyApp(props) {
-    const {
-        Component,
-        emotionCache = clientSideEmotionCache,
-        pageProps,
-    } = props;
+  const { Component, pageProps } = props;
 
-    return (
-        <StyledEngineProvider injectFirst>
-            <CacheProvider value={emotionCache}>
-                <CssBaseline />
-                <Component {...pageProps} />
-            </CacheProvider>
-        </StyledEngineProvider>
-    );
+  return <Component {...pageProps} />;
 }
 
 export default MyApp;
