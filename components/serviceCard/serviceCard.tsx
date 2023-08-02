@@ -13,12 +13,12 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
 }) => {
   return (
     <div
-      className=" group flex flex-col shadow-lg rounded-md px-2 py-4 border-2 border-gray-100 items-center transition hover:bg-blue-400 hover:text-slate-50 [&>div]:hover:scale-150"
+      className=" group flex flex-col shadow-lg rounded-md px-2 py-4 border-2 border-gray-100 items-center transition hover:bg-blue-400 hover:text-slate-50"
       key={title}
       data-testid="serviceCardGrid"
     >
       <div
-        className="my-4 text-indigo-500 [&>svg]:text-4xl group-hover:text-slate-50"
+        className="my-4 text-indigo-500 [&>svg]:text-4xl group-hover:text-slate-50 transform group-hover:scale-150"
         data-testid="serviceCardGrid-logo"
       >
         {logo}

@@ -1,19 +1,23 @@
-import { Grid, Typography } from "@mui/material";
+import { Grid } from "@mui/material";
 import Form from "../contactForm/contactForm";
 
 const ContactGrid: React.FC = () => {
-    return (
-        <Grid container className="contactGrid" id="contactGrid">
-            <Grid item xs={12} className="contactGrid__titleGrid">
-                <Typography variant="h4" style={{ margin: "4rem 0 2rem 0" }}>
-                    Contact
-                </Typography>
-            </Grid>
-            <Grid item xs={12} className="contactGrid__formGrid">
-                <Form />
-            </Grid>
-        </Grid>
-    );
+  return (
+    <div
+      className="flex flex-col max-w-7xl mx-auto px-8 mb-16 bg-slate-100"
+      id="contactGrid"
+    >
+      <h4
+        className="text-blue-400 pl-8 text-4xl"
+        style={{ margin: "4rem 0 2rem 0" }}
+      >
+        Contact Form
+      </h4>
+      <div className="max-w-80">
+        <Form />
+      </div>
+    </div>
+  );
 };
 
 export default ContactGrid;

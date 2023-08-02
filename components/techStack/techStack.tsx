@@ -5,7 +5,7 @@ import TechItem from "../techItem/techItem";
 const TechStack: React.FC = () => {
   return (
     <div
-      className="flex flex-wrap gap-16 max-w-6xl mx-auto items-center justify-center"
+      className="flex flex-wrap gap-16 max-w-6xl mx-auto items-center justify-center "
       data-testid="techItemGrid"
     >
       {technologies.map((el) => (

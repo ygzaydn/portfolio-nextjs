@@ -1,168 +1,135 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
-import {
-    Grid,
-    Typography,
-    Dialog,
-    DialogActions,
-    DialogContent,
-    Slide,
-    Button,
-    Card,
-} from "@mui/material";
+import { Dialog, DialogActions, DialogContent, Slide } from "@mui/material";
 
 import { SlideProps } from "@mui/material/Slide";
 
 interface ProjectCardProps {
-    title: string;
-    description: string;
-    image: string;
-    tech: string;
-    link: string;
-    note?: string;
-    size?: string;
+  title: string;
+  description: string;
+  image: string;
+  tech: string;
+  link: string;
+  note?: string;
+  size?: string;
 }
 
 const ProjectCard: React.FC<ProjectCardProps> = ({
-    title,
-    description,
-    image,
-    tech,
-    link,
-    note,
-    size,
+  title,
+  description,
+  image,
+  tech,
+  link,
+  note,
 }) => {
-    const [open, setOpen] = useState<boolean>(false);
+  const [open, setOpen] = useState<boolean>(false);
 
-    const [width, setWidth] = useState<number>(0);
+  const handleClickOpen = (): void => {
+    setOpen(true);
+  };
 
-    useEffect(() => {
-        const handleResize = () => {
-            setWidth(window.innerWidth);
-        };
-        handleResize();
-        window.addEventListener("resize", handleResize);
-        return () => window.removeEventListener("resize", handleResize);
-    }, []);
+  const handleClose = (): void => {
+    setOpen(false);
+  };
 
-    const handleClickOpen = (): void => {
-        setOpen(true);
-    };
+  return (
+    <div>
+      <Dialog
+        open={open}
+        TransitionComponent={Transition}
+        onClose={handleClose}
+        aria-describedby="alert-dialog-slide-description"
+      >
+        <h4 className="text-blue-400 text-2xl mb-6 text-center px-8 py-4 border-b">
+          {title}
+        </h4>
 
-    const handleClose = (): void => {
-        setOpen(false);
-    };
+        <DialogContent>
+          <div className="flex flex-col">
+            <img
+              src={`/webP/${image}.webp`}
+              className="align-center max-h-80 object-contain"
+              alt={`${image}-big`}
+            />
 
-    const handleGridSize = (): object | null => {
-        switch (size) {
-            case "big":
-                return {
-                    gridColumn: "span 2",
-                    gridRow: "span 1",
-                };
+            <div className="flex flex-col">
+              <p className="my-6 text-md">{description}</p>
 
-            case "huge":
-                return {
-                    gridColumn: "span 2",
-                    gridRow: "span 2",
-                };
-            case "long":
-                return {
-                    gridColumn: "span 1",
-                    gridRow: "span 2",
-                };
-            default:
-                return null;
-        }
-    };
+              <p className="my-2 text-md">Stack: {tech}</p>
 
-    return (
-        <div
-            className="gridSize"
-            style={width > 1000 ? { ...handleGridSize() } : null}
-        >
-            <Dialog
-                open={open}
-                TransitionComponent={Transition}
-                onClose={handleClose}
-                aria-describedby="alert-dialog-slide-description"
-            >
-                <Typography
-                    color="primary"
-                    variant="h4"
-                    style={{
-                        textAlign: "center",
-                        padding: "1rem 2rem",
-                        borderBottom: "0.1px lightgray solid",
-                    }}
+              {note && (
+                <p
+                  className="my-2 text-md"
+                  style={{
+                    borderTop: "0.01px solid lightgray",
+                    padding: "12px 0",
+                    marginBottom: "0",
+                  }}
                 >
-                    {title}
-                </Typography>
+                  Note: {note}
+                </p>
+              )}
+            </div>
+          </div>
 
-                <DialogContent>
-                    <Grid container className="dialogContainer">
-                        <Grid item xs={12} className="dialogImageGrid">
-                            <img
-                                src={`/webP/${image}.webp`}
-                                className="dialogImageGrid__coverDialog"
-                                alt={`${image}-big`}
-                            />
-                        </Grid>
-                        <Grid item xs={12} className="dialogTextGrid">
-                            <Typography variant={"subtitle1"}>
-                                {description}
-                            </Typography>
-
-                            <Typography variant={"subtitle1"}>
-                                Stack: {tech}
-                            </Typography>
-
-                            {note && (
-                                <Typography
-                                    variant="subtitle2"
-                                    style={{
-                                        borderTop: "0.01px solid lightgray",
-                                        padding: "12px 0",
-                                        marginBottom: "0",
-                                    }}
-                                >
-                                    Note: {note}
-                                </Typography>
-                            )}
-                        </Grid>
-                    </Grid>
-
-                    <DialogActions>
-                        <Button
-                            onClick={() => {
-                                window.open(link, "_blank");
-                            }}
-                            color="primary"
-                            variant="contained"
-                        >
-                            Click to proceed
-                        </Button>
-                    </DialogActions>
-                </DialogContent>
-            </Dialog>
-            <Card className="root" onClick={handleClickOpen}>
-                <Grid item xs={12} className="projectCardGrid">
-                    <img
-                        src={`/webP/${image}.webp`}
-                        className="cover"
-                        alt={`${image}-big`}
-                    />
-                    <Typography color="primary" variant="h4">
-                        {title}
-                    </Typography>
-                </Grid>
-            </Card>
+          <DialogActions>
+            <button
+              className="bg-blue-400 my-5 px-6 py-3 rounded-md font-semibold text-slate-50 hover:bg-blue-500 transition-all"
+              onClick={() => {
+                window.open(link, "_blank");
+              }}
+            >
+              Click to proceed
+            </button>
+          </DialogActions>
+        </DialogContent>
+      </Dialog>
+      <div
+        className="group flex cursor-pointer min-h-full bg-transparent w-100 h-60 relative  rounded-sm hover:z-30 border-2 border-black"
+        onClick={handleClickOpen}
+      >
+        <div className="projectCardGrid">
+          <img
+            src={`/webP/${image}.webp`}
+            className="group-hover:scale-150 group-hover:rounded-xl transition cover group-hover:brightness-50"
+            alt={`${image}-big`}
+          />
+          <h4 className=" group-hover:flex group-hover:text-slate-50 text-3xl group-hover:z-50 tracking-wider drop-shadow-xl">
+            {title}
+          </h4>
         </div>
-    );
+      </div>
+    </div>
+  );
 };
 
 const Transition = React.forwardRef<unknown, SlideProps>((props, ref) => (
-    <Slide direction="up" {...props} ref={ref} />
+  <Slide direction="up" {...props} ref={ref} />
 ));
 
 export default ProjectCard;
+
+/*
+.root {
+  
+    &:hover {
+        cursor: pointer;
+        & h4 {
+            text-shadow: 2px 2px 0 #4b6587, 2px -2px 0 #4b6587,
+                -2px 2px 0 #4b6587, -2px -2px 0 #4b6587, 2px 0px 0 #4b6587,
+                0px 2px 0 #4b6587, -2px 0px 0 #4b6587, 0px -2px 0 #4b6587;
+            display: inherit;
+            z-index: 50;
+            color: black;
+        }
+        & div {
+            & img {
+                transform: scale(1.5);
+                overflow: hidden;
+                filter: brightness(10%);
+            }
+        }
+    }
+}
+
+*/

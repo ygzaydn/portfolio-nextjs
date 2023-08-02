@@ -26,7 +26,7 @@ const TechItem: React.FC<TechItemProps> = ({ logo, name }) => {
         />
       )}
 
-      <h6 className="my-auto text-blue-400 hidden absolute text-center h-16 items-center -rotate-6 text-xl">
+      <h6 className="my-auto text-blue-400 hidden absolute text-center h-16 items-center -rotate-6 text-xl cursor-default">
         {name}
       </h6>
     </div>
