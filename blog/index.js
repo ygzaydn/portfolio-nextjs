@@ -191,6 +191,30 @@ const blogPosts = [
         createDate: "31 July 2023",
         key: "24",
     },
+    {
+        topic: "graphql",
+        title: "GraphQL - Dealing with Dynamic Data",
+        name: "dealing-with-dynamic-data",
+        logoName: "graphql-logo",
+        createDate: "04 August 2023",
+        key: "25",
+    },
+    {
+        topic: "graphql",
+        title: "GraphQL - Adding More Types and Cross Relations",
+        name: "adding-more-types-and-cross-relations",
+        logoName: "graphql-logo",
+        createDate: "04 August 2023",
+        key: "26",
+    },
+    {
+        topic: "graphql",
+        title: "GraphQL - Tips on Query Writing",
+        name: "tips-on-query-writing",
+        logoName: "graphql-logo",
+        createDate: "04 August 2023",
+        key: "27",
+    },
 ];
 
 export default blogPosts.reverse();

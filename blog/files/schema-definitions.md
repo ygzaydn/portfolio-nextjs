@@ -1,5 +1,25 @@
 # Definitions 
 
+---
+GraphQL Series:\
+1.[GraphQL - Introduction and Installation](/blog/23)\
+2.[GraphQL - Schema Definition and Integration](/blog/24)\
+3.[GraphQL - Dealing with Dynamic Data](/blog/25)\
+4.[GraphQL - Adding More Types and Cross Relations](/blog/26)\
+5.[GraphQL - Tips on Query Writing](/blog/27)
+
+---
+
+
+Table of Contents
+------
+- [Definitions](#definitions)
+  - [Table of Contents](#table-of-contents)
+  - [Schema Definition](#schema-definition)
+  - [Root Query Definition](#root-query-definition)
+  - [Integration](#integration)
+
+
 ## Schema Definition
 
 Schemas include `types` (types are  like "tables" for SQL databases, "collection" for noSQL databases). Each type has different fields and types for each fields. To declare a type and its fields, we use `GraphQL` helpers (e.g `GraphQLObjectType, GraphQLString, GraphQLInt`)

@@ -54,13 +54,13 @@ const Header: React.FC = () => {
             >
                 <div className="flex flex-row mx-auto w-full max-w-7xl ">
                     <div
-                        className="flex mx-10 sm:flex-1 sm:mx-0 sm:justify-center"
+                        className="group flex mx-10 sm:flex-1 sm:mx-0 sm:justify-center cursor-pointer"
                         onClick={() => scrollTo("home")}
                     >
-                        <h3 className="text-slate-50 text-3xl sm:text-2xl transition">
+                        <h3 className="text-slate-50 text-3xl sm:text-2xl transition group group-hover:text-green-400">
                             erolyagiz
                         </h3>
-                        <h3 className="text-green-400 text-3xl sm:text-2xl transition">
+                        <h3 className="text-green-400 text-3xl sm:text-2xl transition ">
                             aydin
                         </h3>
                     </div>
