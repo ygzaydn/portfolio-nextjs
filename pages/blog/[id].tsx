@@ -109,7 +109,7 @@ const BlogPost: React.FC<BlogPostProps> = ({ file, info }) => {
                     </p>
                 </div>
             </div>
-            <div className="markdownGrid">
+            <div className="markdownGrid prose-lg sm:prose-sm">
                 <ReactMarkdown
                     components={{
                         h1: HeadingRenderer,
