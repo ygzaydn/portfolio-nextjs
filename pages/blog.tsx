@@ -3,8 +3,6 @@ import Head from "next/head";
 
 import Layout from "../components/layout/layout";
 
-import { Typography, Grid, Button } from "@mui/material";
-
 import { blogTechnologies } from "../constants/blogTechnologies";
 import blogPosts from "../blog";
 import { useRouter } from "next/router";
@@ -23,7 +21,13 @@ const Blog: React.FC = () => {
     };
 
     return (
-        <div className="blog__container">
+        <div
+            style={{
+                height: "100vh",
+                backgroundImage:
+                    "linear-gradient(180deg,rgba(3, 1, 22, 0.7287289915966386) 0%,rgba(61, 61, 113, 0.7371323529411764) 17%, rgba(255, 255, 255, 1) 100%",
+            }}
+        >
             <Layout>
                 <Head>
                     <title>Blog - erolyagizaydin</title>
@@ -34,34 +38,30 @@ const Blog: React.FC = () => {
                     <link rel="icon" href="/favicon/favicon.ico" />
                 </Head>
 
-                <main className="blog__main">
+                <main className="py-16 px-2 sm:py-8">
                     <img
                         src="webP/blogBackground.webp"
                         alt="blog-page-background"
-                        className="blog__image"
+                        className="absolute h-full w-full object-cover -z-10 inset-0"
                     />
-                    <Typography className="blog__title" variant="h3">
-                        Blog
-                    </Typography>
-                    <Typography className="blog__subtitle" variant="h5">
+                    <h3 className="text-center text-white text-4xl">Blog</h3>
+                    <h5 className="text-center text-white text-2xl my-5">
                         You can find my blog posts here. I like writing while
                         learning new stuff!
-                    </Typography>
-                    <Grid container className="blog__blogContainer">
-                        <Grid item xs={12} md={4} className="blog__grid">
-                            <Typography
-                                variant="h6"
-                                className="blog__blogTitle"
-                            >
+                    </h5>
+                    <div
+                        className="flex justify-center sm:flex-col flex-wrap my-10 max-w-7xl mx-auto px-10 sm:px-0"
+                        style={{ height: "50vh" }}
+                    >
+                        <div className="bg-gray-900 flex-1 m-2 h-full overflow-y-auto">
+                            <h6 className="text-blue-400 text-center text-2xl py-4 border-b-2 border-blue-400 sticky inset-0 bg-gray-900">
                                 Topics
-                            </Typography>
+                            </h6>
                             {blogTechnologies.map((el) => (
-                                <Grid
-                                    item
-                                    xs={12}
-                                    className="blog__logoGrid"
+                                <div
                                     key={el.key}
                                     onClick={() => setTopic(el.key)}
+                                    className="flex my-4 pl-5 hover:bg-orange-500 transition-all cursor-pointer items-center overflow-y-auto"
                                 >
                                     <img
                                         src={
@@ -69,33 +69,23 @@ const Blog: React.FC = () => {
                                                 .default?.src
                                         }
                                         alt={`${el.logo}`}
-                                        height={40}
-                                        width={40}
-                                        className="blog__logoImage"
+                                        className="w-10 h-10"
                                     />
-                                    <Typography
-                                        variant="h6"
-                                        className="blog__logoText"
-                                    >
+                                    <h6 className="text-xl text-white ml-5">
                                         {el.name}
-                                    </Typography>
-                                </Grid>
+                                    </h6>
+                                </div>
                             ))}
-                        </Grid>
-                        <Grid item xs={12} md={7} className="blog__grid">
-                            <Typography
-                                variant="h6"
-                                className="blog__blogTitle"
-                            >
+                        </div>
+                        <div className="bg-gray-900 flex-1 m-2 h-full overflow-y-auto">
+                            <h6 className="text-blue-400 text-center text-2xl py-4 border-b-2 border-blue-400 sticky inset-0 bg-gray-900">
                                 Posts
-                            </Typography>
+                            </h6>
                             {filteredPosts().map(
                                 ({ title, logoName, createDate, key }) => (
-                                    <Grid
-                                        item
-                                        xs={12}
+                                    <div
                                         key={title}
-                                        className="blog__logoGrid"
+                                        className="flex my-4 pl-5 hover:bg-orange-500 transition-all cursor-pointer items-center overflow-y-auto"
                                         onClick={() =>
                                             router.push(`/blog/${key}`)
                                         }
@@ -106,41 +96,27 @@ const Blog: React.FC = () => {
                                                     .default?.src
                                             }
                                             alt={`${logoName}`}
-                                            height={40}
-                                            width={40}
-                                            style={{ flex: 1, margin: "auto" }}
+                                            className="w-10 h-10"
                                         />
-                                        <Typography
-                                            variant="h6"
-                                            className="blog__logoText"
-                                            style={{ flex: 2 }}
-                                        >
+                                        <h6 className="text-xl text-white ml-5">
                                             {title}
-                                        </Typography>
-                                        <Typography
-                                            variant="subtitle2"
-                                            className="blog__logoText"
-                                            style={{
-                                                flex: 1,
-                                                justifyContent: "flex-end",
-                                                textAlign: "end",
-                                            }}
-                                        >
+                                        </h6>
+                                        <p className="text-md text-gray-400 ml-auto mr-2 text-right">
                                             {createDate}
-                                        </Typography>
-                                    </Grid>
+                                        </p>
+                                    </div>
                                 )
                             )}
-                        </Grid>
-                    </Grid>
-                    <Grid item xs={12} className="blog__buttonGrid">
-                        <Button
-                            variant="outlined"
+                        </div>
+                    </div>
+                    <div className="flex my-5 justify-center">
+                        <button
+                            className="bg-blue-400 px-8 py-2 text-xl rounded-md font-semibold text-slate-50 hover:bg-blue-500 transition-all"
                             onClick={() => router.push("/")}
                         >
                             Back to Home
-                        </Button>
-                    </Grid>
+                        </button>
+                    </div>
                 </main>
             </Layout>
         </div>

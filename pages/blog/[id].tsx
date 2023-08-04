@@ -80,7 +80,10 @@ const BlogPost: React.FC<BlogPostProps> = ({ file, info }) => {
                 />
                 <link rel="icon" href="/favicon/favicon.ico" />
             </Head>
-            <Grid container className="backgroundContainer">
+            <div
+                className="flex w-full relative bg-no-repeat bg-center"
+                style={{ height: "70vh" }}
+            >
                 <img
                     sizes="(max-width: 1200px) 100vw, 1200px"
                     srcSet="
@@ -90,18 +93,23 @@ const BlogPost: React.FC<BlogPostProps> = ({ file, info }) => {
                         "
                     src="/webP/blogPostBackground_z0aa3y_c_scale,w_1200.webp"
                     alt="blogpostbackground-bg"
-                    className="backgroundContainer__image"
+                    className="absolute inset-0 -z-5 h-full w-full object-cover"
                 />
 
-                <Grid item xs={12} sm={6} className="infoGrid">
-                    <KeyboardReturnIcon onClick={() => router.push("/blog")} />
-                    <Typography variant="h4">{info.title}</Typography>
-                    <Typography variant="subtitle2">
+                <div className="absolute bottom-0 left-0 min-w-1/2 bg-gray-400/60 flex flex-col px-4 py-2 max-w-full">
+                    <KeyboardReturnIcon
+                        className="text-slate-100 mt-2 text-4xl cursor-pointer"
+                        onClick={() => router.push("/blog")}
+                    />
+                    <h4 className="my-2 text-slate-200 text-3xl mb-2 w-full line-bre">
+                        {info.title}
+                    </h4>
+                    <p className="text-left text-slate-300 text-lg">
                         {info.createDate}
-                    </Typography>
-                </Grid>
-            </Grid>
-            <Grid container className="markdownGrid">
+                    </p>
+                </div>
+            </div>
+            <div className="markdownGrid">
                 <ReactMarkdown
                     components={{
                         h1: HeadingRenderer,
@@ -112,8 +120,8 @@ const BlogPost: React.FC<BlogPostProps> = ({ file, info }) => {
                 >
                     {file}
                 </ReactMarkdown>
-            </Grid>
-            <Grid container className="pageFooter">
+            </div>
+            <div className="pageFooter">
                 <p>
                     I hope that this article will help you on your journey. You
                     can go back to{" "}
@@ -123,7 +131,7 @@ const BlogPost: React.FC<BlogPostProps> = ({ file, info }) => {
                     or{" "}
                     <strong onClick={() => router.push("/")}>homepage</strong>.
                 </p>
-            </Grid>
+            </div>
         </Layout>
     );
 };
