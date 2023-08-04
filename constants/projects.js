@@ -19,6 +19,17 @@ import IkinciElImage from "../public/webP/ikincielproject.webp";
 import SenozImage from "../public/webP/senoz.webp";*/
 
 export const projects = [
+
+  {
+        title: "Carbon Steps",
+        description:
+            "Carbos Steps is an SaaS that aims to track carbon footprint of the companies. It provides various metrics and help users to track their source waste. Also it has an smart AI system that track down the bills and verifies the results with provided records.",
+        image: "carbonsteps",
+        note: null,
+        // gif: ArgbotGif,
+        tech: "Next, MongoDB",
+        link: "https://faradai-clone.vercel.app",
+    },
     {
         title: "Globe VPN",
         description:
