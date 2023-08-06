@@ -1,0 +1,394 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><style>@charset "UTF-8";
+/* Workaround for 'break-before:avoid' */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+}
+
+ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+span, q {
+  display: block;
+}
+
+p {
+  margin: 0;
+}
+
+@page {
+  size: A4;
+  margin: 15mm 0 20mm 0;
+}
+@page :first {
+  margin-top: 10mm;
+}
+a {
+  color: #222222;
+  font-weight: inherit;
+  text-decoration: none;
+}
+a[href] {
+  text-decoration: underline;
+  text-decoration-color: #888888;
+}
+
+p, q {
+  line-height: 1.25em;
+}
+
+li {
+  line-height: 1.35em;
+}
+li:first-child {
+  margin-top: 0;
+}
+
+.content {
+  width: 1000px;
+  height: auto;
+  padding: 0 50px;
+  margin: 0 auto;
+  font-family: Helvetica, Arial, sans-serif;
+  color: #222222;
+}
+
+.table {
+  width: 100%;
+  display: table;
+}
+.table .main {
+  display: table-cell;
+  width: 70%;
+  padding-right: 50px;
+}
+.table .side {
+  display: table-cell;
+  width: 30%;
+  padding-left: 50px;
+  text-align: right;
+}
+
+.summary {
+  font-size: 15px;
+}
+.summary:empty {
+  display: none;
+}
+
+.section-title {
+  font-size: 26px;
+  font-weight: normal;
+  margin: 0 0 20px 0;
+}
+
+.margin-container-2:not(:first-child) {
+  margin-top: 20px;
+}
+
+.margin-container-3:not(:first-child) {
+  margin-top: 30px;
+}
+
+.margin-container-4:not(:first-child) {
+  margin-top: 50px;
+}
+
+.padding-container-2 {
+  padding: 20px 0;
+}
+
+.margin-text-1 {
+  margin-top: 2px;
+}
+.margin-text-1:empty {
+  display: none;
+}
+
+.margin-text-2 {
+  margin-top: 4px;
+}
+.margin-text-2:empty {
+  display: none;
+}
+
+.margin-text-3 {
+  margin-top: 6px;
+}
+.margin-text-3:empty {
+  display: none;
+}
+
+.margin-text-4 {
+  margin-top: 8px;
+}
+.margin-text-4:empty {
+  display: none;
+}
+
+.margin-text-5 {
+  margin-top: 14px;
+}
+.margin-text-5:empty {
+  display: none;
+}
+
+.no-break {
+  break-inside: avoid;
+}
+
+.no-alone-1 {
+  break-inside: avoid;
+}
+.no-alone-1::after {
+  content: "";
+  display: block;
+  height: 75px;
+  margin-bottom: -75px;
+}
+
+.no-alone-2 {
+  break-inside: avoid;
+}
+.no-alone-2::after {
+  content: "";
+  display: block;
+  height: 150px;
+  margin-bottom: -150px;
+}
+
+.markdown h1 {
+  font-size: 160%;
+  font-weight: bolder;
+}
+.markdown h2 {
+  font-size: 150%;
+  font-weight: bolder;
+}
+.markdown h3 {
+  font-size: 140%;
+  font-weight: bolder;
+}
+.markdown h4 {
+  font-size: 130%;
+  font-weight: bold;
+}
+.markdown h5 {
+  font-size: 120%;
+  font-weight: bold;
+}
+.markdown h6 {
+  font-size: 110%;
+  font-weight: bold;
+}
+.markdown ul, .markdown ol {
+  margin-left: 20px;
+}
+.markdown img {
+  display: block;
+  margin: 20px auto;
+  max-width: 1000px;
+  text-align: center;
+}
+.markdown blockquote {
+  margin: 20px 0;
+  padding: 15px 20px;
+}
+.markdown blockquote p {
+  display: inline;
+}
+.markdown code {
+  font-family: monospace;
+}
+
+.main .highlights {
+  width: auto;
+  display: block;
+  padding: 0 10px;
+  margin-bottom: 0;
+  columns: 2;
+  column-width: 310px;
+  column-gap: 10px;
+}
+.main .highlights li {
+  font-size: 14px;
+  list-style: none;
+}
+.main .highlights li:before {
+  content: "· ";
+  vertical-align: middle;
+}
+.main .left {
+  display: table-cell;
+}
+.main .left .title {
+  font-size: 18px;
+  font-weight: bold;
+  display: block;
+}
+.main .left .subtitle {
+  font-size: 16px;
+  font-weight: lighter;
+  display: block;
+}
+.main .right {
+  text-align: right;
+  display: table-cell;
+}
+.main .right .date {
+  font-size: 15px;
+  font-weight: lighter;
+  white-space: nowrap;
+}
+
+.basics .main {
+  vertical-align: middle;
+}
+.basics .main .name {
+  font-size: 80px;
+  line-height: 1em;
+  font-weight: bold;
+  display: block;
+  margin-left: -5.6px;
+}
+.basics .main .label {
+  font-size: 40px;
+  line-height: 1em;
+  font-weight: lighter;
+  display: block;
+  margin-left: -1.6px;
+}
+.basics .side {
+  vertical-align: middle;
+  padding-left: 0;
+  padding-top: 15px;
+}
+.basics .side .contact {
+  list-style-type: none;
+}
+.basics .side .contact li {
+  font-size: 18px;
+  line-height: 1.6em;
+}
+
+.links ul {
+  list-style: none;
+}
+.links ul li {
+  font-size: 14px;
+}
+
+.education .title {
+  font-size: 15px;
+}
+.education .institution {
+  font-size: 15px;
+  font-weight: lighter;
+}
+
+.awards .header .title {
+  font-size: 15px;
+}
+.awards .header .awarder {
+  font-size: 15px;
+  font-weight: lighter;
+}
+.awards .summary {
+  font-size: 14px;
+}
+
+.certificates .name {
+  font-size: 15px;
+}
+.certificates .issuer {
+  font-size: 15px;
+  font-weight: lighter;
+}
+
+.skills .section-title {
+  margin: 0;
+}
+.skills .container {
+  display: block;
+  columns: 2;
+  column-gap: 10px;
+}
+.skills .container .article {
+  break-inside: avoid-column;
+  min-width: 120px;
+  padding-top: 20px;
+}
+.skills .container .article span {
+  display: block;
+  font-size: 18px;
+  font-weight: lighter;
+}
+.skills .container .article li {
+  font-size: 14px;
+  list-style: none;
+}
+
+.languages ul {
+  list-style: none;
+}
+.languages ul li {
+  font-size: 14px;
+}
+
+.interests ul {
+  list-style: none;
+}
+.interests ul li {
+  font-size: 14px;
+}
+
+.references .name {
+  font-size: 15px;
+}
+.references q {
+  font-size: 14.5px;
+  font-weight: lighter;
+  font-style: italic;
+}</style><title>Resume Erol Yağız Aydın – Software Developer</title></head><body><div class="content"><div class="basics"><div class="table padding-container-2"><div class="main"><span class="name">Erol Yağız Aydın</span><span class="label">Software Developer</span></div><div class="side"><ul class="contact"><li></li><li>ygzaydns@gmail.com</li><li class="margin-text-5">Ankara, Turkey</li></ul></div></div><div class="summary markdown padding-container-2"><p>I'm a software engineer who mainly focuses on web development &amp; broadband network systems. I am a very product focussed developer who priotizes user feedback first and foremost. Also, I am very curious to learn new technologies, always tring to add values to my knowledge.
+Worked both international and domestic project with different sizes of teams.</p>
+</div></div><div class="table padding-container-2"><div class="main"><div class="work margin-container-4"><p class="section-title no-alone-2">Experience</p><div class="container"><div class="article margin-container-3"><div class="header no-alone-1"><div class="table"><div class="left"><span class="title">Senior Design Engineer</span><span class="subtitle margin-text-1"><a href="https://aselsan.com.tr">Aselsan</a> · Ankara</span></div><div class="right"><span class="date">Sep 2018 - Present</span></div></div></div><div class="summary markdown margin-text-4"><p>ASELSAN is the largest defense electronics company of Turkey whose capability/product portfolio comprises communication and information technologies, radar and electronic warfare, electro-optics, avionics, unmanned systems, land, naval and weapon systems, air defence and missile systems, command and control systems, transportation, security, traffic, automation and medical systems.</p>
+</div><ul class="highlights margin-text-4 no-break"><li>I am actively working on next generation (LTE, 5G) broadband communication systems.</li><li>Worked on project ÇINAR, which aimed to develop LTE EPC &amp; IMS systems. I have mainly worked on system architecture and user interfaces for the project. Developed series of wireframes and code into them. Project ÇINAR is actively being used as a private LTE systems both internationally and domestically. Project is developed by the guide of 3GPP LTE standarts.</li><li>Actively participating global telecommunications events such as ETSI's MCX Plugtest event or 3GPP standartization meetings.</li><li>Worked various of projects that mainly focuses to integrate broadband systems to narrowband systems. Those projects are actively used by public forces across the country.</li></ul></div><div class="article margin-container-3"><div class="header no-alone-1"><div class="table"><div class="left"><span class="title">Co-Founder</span><span class="subtitle margin-text-1"><a href="https://faradai-clone.vercel.app">Carbon Steps</a> · Turkey</span></div><div class="right"><span class="date">Jun 2023 - Present</span></div></div></div><div class="summary markdown margin-text-4"><p>Carbo Steps leverages powerful automation tools to easily capture sustainability data across your organization and transform it into a single system of record. This new level of insight will enable you to report with confidence and meet the diverse needs of both internal and external stakeholders.
+With Carbon Steps:</p>
+<ul>
+<li>Data Management &amp; Data Validation</li>
+<li>One Platform for Multi-Sites</li>
+<li>Target Tracking</li>
+<li>Audit Management</li>
+</ul>
+</div><ul class="highlights margin-text-4 no-break"><li>Nextjs, MongoDB, Nodejs</li></ul></div><div class="article margin-container-3"><div class="header no-alone-1"><div class="table"><div class="left"><span class="title">Co-Founder</span><span class="subtitle margin-text-1"><a href="https://globevpn.net">GlobeVPN</a> · Turkey</span></div><div class="right"><span class="date">Sep 2022 - Present</span></div></div></div><div class="summary markdown margin-text-4"><p>GlobeVPN is a cutting-edge VPN service for android users. Provides VPN service all around the world. The application provides IPSec architecture to make data traffic much more secure.
+I developed the application by myself. Worked on frontend, backend, devOps and application side of the project.
+Application is integrated with Google Payment to deliver premium services based on subscriptions.
+Only in android currently, will be in iOS soon.</p>
+</div><ul class="highlights margin-text-4 no-break"><li>React-Native, Strongswan, Flask</li></ul></div><div class="article margin-container-3"><div class="header no-alone-1"><div class="table"><div class="left"><span class="title">Founder</span><span class="subtitle margin-text-1"><a href="https://play.google.com/store/apps/details?id=com.loacompanion">LoA Companion</a> · Turkey</span></div><div class="right"><span class="date">May 2022 - Present</span></div></div></div><div class="summary markdown margin-text-4"><p>Lost Ark is a 2019 MMO (Massively Multiplayer Online Game) action role-playing game co-developed by Tripod Studio and Smilegate. Lost Ark Companion is an android app that aims to helps players who play Lost Ark.
+LoA Companion has multiple data sources and serves those information within the application. It utilizes the APIs, web-scrapped data from various sources.
+I have developed the whole application. Worked on backend, frontend, web-scrapping, CI/CD.
+Application is also connected with Google Admob service.
+Only in android currently, will be in iOS soon.</p>
+</div><ul class="highlights margin-text-4 no-break"><li>React, React-Native, Nodejs, Pupeteer, Google Admob</li></ul></div><div class="article margin-container-3"><div class="header no-alone-1"><div class="table"><div class="left"><span class="title">Founder</span><span class="subtitle margin-text-1"><a href="https://play.google.com/store/apps/details?id=com.f1wiki">F1 Wiki</a> · Turkey</span></div><div class="right"><span class="date">Sep 2022 - Present</span></div></div></div><div class="summary markdown margin-text-4"><p>F1 Wiki aims to be all-in-one platform for Formula 1. It has several categories (Race Information, Qualifiers Information, Driver Information, Constructor Information, Latest News etc.). The application uses several APIs and web-scrapped data as source.
+I have developed the whole application. Worked on backend, frontend, web-scrapping, CI/CD.
+Application is also connected with Google Admob service.
+Only in android currently, will be in iOS soon.</p>
+</div><ul class="highlights margin-text-4 no-break"><li>React, React-Native, Nodejs, Pupeteer, Google Admob</li></ul></div><div class="article margin-container-3"><div class="header no-alone-1"><div class="table"><div class="left"><span class="title">React Developer</span><span class="subtitle margin-text-1"><a href="https://coxipay.com">Coxipay</a> · Lithuania</span></div><div class="right"><span class="date">May 2021 - Jan 2022</span></div></div></div><div class="summary markdown margin-text-4"><p>Coxipay was established in Vilnius, Lithuania and founded in 2019 by banking experts aiming to provide the most convenient payment services at acceptable prices via all available technological channels.
+Coxipay is a safe, smart and multifunctional system which provides a full One Stop Payment Solutions to satisfy the client’s needs.
+I have developed admin panel of this project</p>
+</div><ul class="highlights margin-text-4 no-break"><li>React, Redux, Tailwind</li></ul></div><div class="article margin-container-3"><div class="header no-alone-1"><div class="table"><div class="left"><span class="title">React Developer</span><span class="subtitle margin-text-1"><a href="https://www.cargopanel.co/">Cargopanel</a> · Lithuania</span></div><div class="right"><span class="date">May 2022 - Jan 2023</span></div></div></div><div class="summary markdown margin-text-4"><p>Cargopanel, which aims to digitize international logistics services and is one of the leading brands in Turkey with its entrepreneur-friendly solutions it offers, is a technology-centered logistics company that came to life after a group of friends discussed various problems in the field of international logistics and then laid the foundations of a team of experts in the field.</p>
+</div><ul class="highlights margin-text-4 no-break"><li>Nextjs, React</li></ul></div><div class="article margin-container-3"><div class="header no-alone-1"><div class="table"><div class="left"><span class="title">React Developer</span><span class="subtitle margin-text-1"><a href="https://mmogadget.vercel.app/">MMOGadget</a> · Paris</span></div><div class="right"><span class="date">Jan 2022 - Jul 2022</span></div></div></div><div class="summary markdown margin-text-4"><p>MMOGadget is a platform to help users to find their new MMO game to play. This project is developed for a gaming community (name is hidden due to contract issues). Demo version of the project is provided here.</p>
+</div><ul class="highlights margin-text-4 no-break"><li>Typescript, Redux, Next.js, SCSS</li></ul></div><div class="article margin-container-3"><div class="header no-alone-1"><div class="table"><div class="left"><span class="title">Fullstack Developer</span><span class="subtitle margin-text-1"><a href="https://goldenlotus-url.web.app/">Golden Lotus Boost Community</a></span></div><div class="right"><span class="date">Jan 2019 - Jan 2021</span></div></div></div><div class="summary markdown margin-text-4"><p>Golden Lotus Boost Community is one of the largest EU gold boost communities in video game World of Warcraft (WoW), housing some of the best players &amp; guilds in the world.</p>
+</div><ul class="highlights margin-text-4 no-break"><li>Worked as a fullstack developer</li><li>Hosted on a mixture of Heroku Apps and Google Cloud servers.</li><li>Javascript, React, Firebase, Materlai UI</li></ul></div><div class="article margin-container-3"><div class="header no-alone-1"><div class="table"><div class="left"><span class="title">React Developer</span><span class="subtitle margin-text-1"><a href="https://argbotxyz.web.app/">ArgBot</a></span></div><div class="right"><span class="date">Jan 2019 - Jan 2020</span></div></div></div><div class="summary markdown margin-text-4"><p>Argbot is a crypto bot that is developed basis on client's demand. I have designed and developed the UI and delivered the project. Due to contract that is signed, I'm allowed to show demo version of the project.</p>
+</div><ul class="highlights margin-text-4 no-break"><li>Javascript, Redux, React, SCSS, Firebase, Material UI</li></ul></div></div></div></div><div class="side"><div class="skills margin-container-4"><p class="section-title no-alone-1">Skills</p><div class="container"><div class="article no-break"><span>Frontend</span><ul class="margin-text-2"><li>SCSS / Tailwind</li><li>Typescript</li><li>React.js / Next.js / React-Native</li><li>Redux</li><li>GraphQL</li></ul></div><div class="article no-break"><span>Backend</span><ul class="margin-text-2"><li>Node.js</li><li>MongoDB</li><li>Firebase</li></ul></div><div class="article no-break"><span>Devops &amp; Testing</span><ul class="margin-text-2"><li>Heroku</li><li>React Testing Library</li><li>Cypress</li><li>Prometheus</li><li>Grafana</li><li>Docker</li></ul></div></div></div><div class="education margin-container-4"><p class="section-title no-alone-1">Education</p><div class="container"><div class="article margin-container-2 no-break"><div class="title markdown"><p>Master's Degree, Software Engineering</p>
+</div><span class="institution margin-text-2"><a>Middle East Technical University</a></span></div><div class="article margin-container-2 no-break"><div class="title markdown"><p>Bachelors, Electrical and Electronics Engineering</p>
+</div><span class="institution margin-text-2"><a>Middle East Technical University</a></span></div></div></div><div class="certificates margin-container-4"><p class="section-title no-alone-1">Certificates</p><div class="container"><div class="article margin-container-2 no-break"><div class="name markdown"><a href="https://certificates.near.university/certificate/682266ee44284425a3f42083ab9908b9"><p>NEAR Certified Developer</p>
+</a></div><span class="issuer margin-text-2">NEAR Protocol</span></div><div class="article margin-container-2 no-break"><div class="name markdown"><a href="https://verified.cv/en/verify/15623314611908?ref=email"><p>React Bootcamp</p>
+</a></div><span class="issuer margin-text-2">patika.dev</span></div><div class="article margin-container-2 no-break"><div class="name markdown"><a href="https://verified.cv/en/verify/15623314611908?ref=email"><p>Analyzing VoLTE</p>
+</a></div><span class="issuer margin-text-2">Mprical</span></div><div class="article margin-container-2 no-break"><div class="name markdown"><a href="https://www.coursera.org/account/accomplishments/verify/DEV6NFDETQ4X"><p>Programming Fundamentals</p>
+</a></div><span class="issuer margin-text-2">Duke University</span></div><div class="article margin-container-2 no-break"><div class="name markdown"><a href="https://www.coursera.org/account/accomplishments/verify/DEV6NFDETQ4X"><p>The Bits and Bytes of Computer Networking</p>
+</a></div><span class="issuer margin-text-2">Google</span></div></div></div><div class="links margin-container-4 no-break"><p class="section-title no-alone-1">Links</p><div class="container"><ul><li class="article"><a href="https://erolyagizaydin.vercel.app"><strong>erolyagizaydin.vercel.app</strong></a></li><li class="article margin-text-4"><a href="https://twitter.com/aydnygz"><strong>twitter.com</strong>/aydnygz</a></li><li class="article margin-text-4"><a href="https://github.com/ygzaydn"><strong>github.com</strong>/ygzaydn</a></li><li class="article margin-text-4"><a href="https://linkedin.com/in/erolyagizaydin?"><strong>linkedin.com</strong>/in/erolyagizaydin?</a></li></ul></div></div></div></div></div></body></html>
