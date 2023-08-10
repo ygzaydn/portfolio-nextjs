@@ -215,6 +215,14 @@ const blogPosts = [
         createDate: "04 August 2023",
         key: "27",
     },
+    {
+        topic: "react",
+        title: "Creating React Project From Scratch",
+        name: "react-from-scratch",
+        logoName: "react-logo",
+        createDate: "10 August 2023",
+        key: "28",
+    },
 ];
 
 export default blogPosts.reverse();
