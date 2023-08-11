@@ -15,12 +15,7 @@ const nextConfig = {
                 minimizer: {
                     implementation: ImageMinimizerPlugin.imageminMinify,
                     options: {
-                        plugins: [
-                            "imagemin-gifsicle",
-                            "imagemin-mozjpeg",
-                            "imagemin-pngquant",
-                            "imagemin-svgo",
-                        ],
+                        plugins: ["imagemin-gifsicle", "imagemin-svgo"],
                     },
                 },
                 generator: [
