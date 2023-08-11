@@ -1,9 +1,10 @@
 import TechStack from "../techStack/techStack";
+import Title from "../title/title";
 
 const TechGrid: React.FC = () => {
     return (
         <div
-            className="relative pt-16 pb-36 px-10 "
+            className="group/stack relative pt-16 pb-36 px-10 "
             style={{
                 clipPath:
                     "polygon(0% 0%, 100% 0%, 100% 90%, 60% 90%, 50% 100%, 40% 90%, 0% 90%)",
@@ -16,13 +17,8 @@ const TechGrid: React.FC = () => {
                 alt="techstackpage-bg"
                 className="absolute w-full h-full object-cover -z-10 inset-0 brightness-50"
             />
-            <div className="flex flex-col max-w-7xl mx-auto">
-                <h4
-                    className="text-4xl text-blue-500 px-4 mb-10"
-                    id="stack-mobile"
-                >
-                    Tech Stack
-                </h4>
+            <div className="flex flex-col max-w-7xl mx-auto" id="stack-mobile">
+                <Title title="Tech Stack" color="white" />
 
                 <TechStack />
             </div>

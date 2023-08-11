@@ -2,6 +2,7 @@ import blogPosts from "../../blog";
 import BlogCard from "../blogCard/blogCard";
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
+import Title from "../title/title";
 
 const BlogGrid: React.FC = () => {
     const [domLoaded, setDomLoaded] = useState(false);
@@ -15,12 +16,10 @@ const BlogGrid: React.FC = () => {
     return (
         <div
             id="blogGrid"
-            className="flex flex-col max-w-7xl mx-auto px-8 mb-16"
+            className=" group/stack flex flex-col max-w-7xl mx-auto px-8 mb-16"
         >
             <div className="mb-8">
-                <h4 className="text-blue-400 text-4xl text-left mt-8 mb-4">
-                    Recent Blog Posts
-                </h4>
+                <Title title="Recent Blog Posts" color="blue" />
             </div>
             <div className="grid grid-cols-3 gap-5 items-stretch ">
                 {domLoaded &&
@@ -38,7 +37,7 @@ const BlogGrid: React.FC = () => {
             </div>
 
             <button
-                className="bg-blue-400 my-6 px-8 py-4 rounded-md font-semibold text-slate-50 hover:bg-blue-500 transition-all text-xl"
+                className="bg-blue-900 my-6 px-8 py-4 rounded-md font-semibold text-slate-50 hover:bg-blue-800 transition-all text-xl"
                 onClick={() => navigate("/blog")}
             >
                 Click to read more blog posts

@@ -81,7 +81,7 @@ const Form: React.FC = () => {
                         className="border-2 border-white my-5 py-2 px-4 focus-visible:border-blue-400 focus-visible:outline-none focus-visible:border-2 transition-all"
                     />
                     <button
-                        className="bg-blue-400 my-5 text-xl px-10 py-2 ml-auto rounded-md font-semibold text-slate-50 hover:bg-blue-500 transition-all"
+                        className="bg-blue-900 my-5 text-xl px-10 py-2 ml-auto rounded-md font-semibold text-slate-50 hover:bg-blue-800 transition-all"
                         type="submit"
                     >
                         Submit
