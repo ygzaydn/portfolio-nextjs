@@ -32,8 +32,6 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         setOpen(false);
     };
 
-    console.log(image);
-
     return (
         <div>
             <Dialog
