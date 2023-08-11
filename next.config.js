@@ -1,6 +1,3 @@
-const path = require("path");
-const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin");
-
 /** @type {import('next').NextConfig} */
 
 const nextConfig = {
