@@ -12,23 +12,23 @@ export const services = [
         logo: <CodeIcon />,
         title: "Web Apps",
         description:
-            "I develop dedicated software and applications with an efficient and functional front-end library - React & Next.",
+            "I develop dedicated software and web applications with an efficient and functional front-end library - React & Next.",
     },
     {
         logo: <DeveloperModeIcon />,
         title: "Responsive Design",
         description:
-            "I develop web-apps in responsive manner. Productions that I've created are responsive for different devices.",
+            "I develop web-apps in responsive manner. Productions that I've developed are responsive for different devices (mobile, tablet, desktop etc.).",
     },
     {
         logo: <ColorizeIcon />,
         title: "UI/UX Development",
-        description: "I develop cutting-edge wireframes for your needs.",
+        description: "I design cutting-edge wireframes for your needs.",
     },
     {
         logo: <ApiIcon />,
-        title: "API Integration",
-        description: "I integrate APIs for your applicaton.",
+        title: "API Development & Integration ",
+        description: "I develop & integrate APIs for your applicaton.",
     },
     {
         logo: <StorageIcon />,
@@ -44,9 +44,9 @@ export const services = [
     },
     {
         logo: <PolicyIcon />,
-        title: "Security",
+        title: "Performance & SEO",
         description:
-            "I develop 100% secured applications, no one can harm you.",
+            "Web applications that I develop works efficient on every browser. Your site will get good results from search engines.",
     },
     {
         logo: <SourceIcon />,
