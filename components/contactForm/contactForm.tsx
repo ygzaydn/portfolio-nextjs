@@ -59,7 +59,7 @@ const Form: React.FC = () => {
                         error={
                             formik.touched.email && Boolean(formik.errors.email)
                         }
-                        helperText={formik.touched.email && formik.errors.email}
+                        helpertext={formik.touched.email && formik.errors.email}
                         className="border-2 border-white my-5 py-2 px-4 focus-visible:border-blue-400 focus-visible:outline-none focus-visible:border-2 transition-all"
                         autoComplete="off"
                     />
@@ -75,7 +75,7 @@ const Form: React.FC = () => {
                             formik.touched.message &&
                             Boolean(formik.errors.message)
                         }
-                        helperText={
+                        helpertext={
                             formik.touched.message && formik.errors.message
                         }
                         className="border-2 border-white my-5 py-2 px-4 focus-visible:border-blue-400 focus-visible:outline-none focus-visible:border-2 transition-all"
