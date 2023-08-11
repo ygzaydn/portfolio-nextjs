@@ -12,7 +12,7 @@ const TechGrid: React.FC = () => {
             id="techStack"
         >
             <img
-                src="webP/techStackBackground.webp"
+                src="webP/techStackBackground-small.webp"
                 alt="techstackpage-bg"
                 className="absolute w-full h-full object-cover -z-10 inset-0 brightness-50"
             />

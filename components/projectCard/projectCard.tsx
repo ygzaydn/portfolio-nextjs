@@ -32,6 +32,8 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         setOpen(false);
     };
 
+    console.log(image);
+
     return (
         <div>
             <Dialog
@@ -88,9 +90,9 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
                 className="group flex cursor-pointer min-h-full bg-transparent w-100 h-60 relative rounded-sm hover:z-30 border-2 border-black"
                 onClick={handleClickOpen}
             >
-                <div className="group flex">
+                <div className="group flex w-full">
                     <img
-                        src={`/webP/${image}.webp`}
+                        src={`/webP/active/small/${image}.webp`}
                         className="group-hover:scale-150 group-hover:rounded-xl transition cover group-hover:brightness-50 h-full w-full object-cover"
                         alt={`${image}-big`}
                     />
