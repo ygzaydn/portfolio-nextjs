@@ -13,17 +13,17 @@ const ServicesGrid: React.FC = () => {
             transition={{ duration: 0.3 }}
             variants={{
                 visible: { opacity: 1, scale: 1 },
-                hidden: { opacity: 0, scale: 0 },
+                hidden: { opacity: 0, scale: 1 },
             }}
-            className="group/stack flex flex-col pt-24 max-w-7xl mx-auto px-5 py-10"
+            className="group/stack flex flex-col pt-24 max-w-7xl mx-auto px-5 py-10 "
             id="servicesGrid"
         >
             <Title title="Services" color="blue" />
             <div
-                className="grid grid-cols-3 gap-5 md:grid-cols-2"
+                className="grid grid-cols-3 gap-5 sm:grid-cols-2 mt-16 mb-24"
                 data-testid="servicesGrid"
             >
-                {services.map((service, ind) => (
+                {services.map((service) => (
                     <motion.div
                         initial="hidden"
                         whileInView="visible"

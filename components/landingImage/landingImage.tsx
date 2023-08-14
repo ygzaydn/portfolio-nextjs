@@ -6,7 +6,7 @@ const LandingImage = () => {
 
     return (
         <div
-            className="flex bg-cover bg-no-repeat bg-center py-40 min-h-550"
+            className="flex bg-cover bg-no-repeat bg-center py-48 min-h-550 pb-64"
             style={{ clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 85%)" }}
             id="home"
             data-testid="overallGrid"

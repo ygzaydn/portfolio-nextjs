@@ -33,6 +33,7 @@ const Header: React.FC = () => {
                     header.style.background = "#0005";
                     header.style.borderBottom = "none";
                     header.style.padding = "0 10rem";
+                    header.style.top = "-20rem";
                 }
             }
         };
