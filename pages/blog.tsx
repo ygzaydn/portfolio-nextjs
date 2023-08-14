@@ -23,9 +23,9 @@ const Blog: React.FC = () => {
     return (
         <div
             style={{
-                height: "100vh",
+                minHeight: "100%",
                 backgroundImage:
-                    "linear-gradient(180deg,rgba(3, 1, 22, 0.7287289915966386) 0%,rgba(61, 61, 113, 0.7371323529411764) 17%, rgba(255, 255, 255, 1) 100%",
+                    "linear-gradient(180deg,rgba(3, 1, 22, 0.7287289915966386) 0%,rgba(71, 61, 113, 0.7371323529411764) 17%, rgba(255, 255, 255, 1) 100%",
             }}
         >
             <Layout>
@@ -39,11 +39,11 @@ const Blog: React.FC = () => {
                 </Head>
 
                 <main className="py-16 px-2 sm:py-8">
-                    <img
+                    {/*<img
                         src="webP/blogBackground.webp"
                         alt="blog-page-background"
-                        className="absolute h-full w-full object-cover -z-10 inset-0"
-                    />
+                        className="absolute h-max w-full object-cover -z-10 inset-0"
+                    />*/}
                     <h3 className="text-center text-white text-4xl">Blog</h3>
                     <h5 className="text-center text-white text-2xl my-5">
                         You can find my blog posts here. I like writing while
@@ -51,9 +51,9 @@ const Blog: React.FC = () => {
                     </h5>
                     <div
                         className="flex justify-center sm:flex-col flex-wrap my-10 max-w-7xl mx-auto px-10 sm:px-0"
-                        style={{ height: "50vh" }}
+                        style={{ height: "70vh" }}
                     >
-                        <div className="bg-gray-900 flex-1 m-2 h-full overflow-y-auto">
+                        <div className="bg-gray-900 flex-1 m-2  overflow-y-auto">
                             <h6 className="text-blue-400 text-center text-2xl py-4 border-b-2 border-blue-400 sticky inset-0 bg-gray-900">
                                 Topics
                             </h6>
@@ -64,10 +64,7 @@ const Blog: React.FC = () => {
                                     className="flex my-4 pl-5 hover:bg-orange-500 transition-all cursor-pointer items-center overflow-y-auto"
                                 >
                                     <img
-                                        src={
-                                            require(`../public/logo/${el.logo}.svg`)
-                                                .default?.src
-                                        }
+                                        src={`/logo/${el.logo}.svg`}
                                         alt={`${el.logo}`}
                                         className="w-10 h-10"
                                     />
@@ -91,10 +88,7 @@ const Blog: React.FC = () => {
                                         }
                                     >
                                         <img
-                                            src={
-                                                require(`../public/logo/${logoName}.svg`)
-                                                    .default?.src
-                                            }
+                                            src={`/logo/${logoName}.svg`}
                                             alt={`${logoName}`}
                                             className="w-10 h-10"
                                         />
@@ -111,7 +105,7 @@ const Blog: React.FC = () => {
                     </div>
                     <div className="flex my-5 justify-center">
                         <button
-                            className="bg-blue-400 px-8 py-2 text-xl rounded-md font-semibold text-slate-50 hover:bg-blue-500 transition-all"
+                            className="bg-blue-400  mt-16 px-8 py-2 text-xl rounded-md font-semibold text-slate-50 hover:bg-blue-500 transition-all"
                             onClick={() => router.push("/")}
                         >
                             Back to Home
