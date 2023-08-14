@@ -1,26 +1,8 @@
-import { useEffect, useRef } from "react";
-import Typed from "typed.js";
-
+import { motion } from "framer-motion";
 import { useRouter } from "next/router";
 
 const LandingImage = () => {
     const router = useRouter();
-    const el = useRef<HTMLHeadingElement>(null);
-
-    useEffect(() => {
-        const typed = new Typed(el.current, {
-            strings: ["erolyagizaydin"],
-            typeSpeed: 50,
-            backSpeed: 50,
-            showCursor: false,
-            loop: true,
-        });
-
-        // Destroying
-        return (): void => {
-            typed.destroy();
-        };
-    }, []);
 
     return (
         <div
@@ -43,18 +25,39 @@ const LandingImage = () => {
                 alt="landing-image-background"
             />
 
-            <div className="flex flex-col items-start mx-auto  max-w-7xl px-5 w-full z-10">
-                <h4 className="text-3xl text-slate-50 my-1">Hello I&apos;m</h4>
-                <h3 className="text-4xl text-green-300 h-10 my-1" ref={el} />
-                <h4 className="text-3xl text-slate-50 my-1">a web developer</h4>
+            <div className="flex flex-col mx-auto max-w-7xl px-5 w-full z-10 items-center">
+                <motion.h4
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ ease: "easeOut", duration: 1 }}
+                    className="text-5xl text-slate-50 my-2"
+                >
+                    Hello I&apos;m
+                </motion.h4>
+                <motion.h3
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ ease: "easeIn", duration: 2 }}
+                    className="text-6xl text-green-300 my-2"
+                >
+                    erolyagizaydin
+                </motion.h3>
+                <motion.h4
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ ease: "easeOut", duration: 1 }}
+                    className="text-5xl text-slate-50 my-2"
+                >
+                    a web developer
+                </motion.h4>
                 <button
-                    className="bg-blue-900 my-2 px-8 py-3 rounded-md font-semibold text-slate-50 hover:bg-blue-800 transition-all text-xl"
+                    className="bg-blue-900 my-6 px-8 py-3 rounded-md ring-4 font-semibold text-slate-50 hover:bg-blue-800 transition-all text-xl ring-blue-800"
                     onClick={() => router.push("/blog")}
                 >
                     Check out my blog!
                 </button>
                 <button
-                    className="pr-8 pl-1 py-1 rounded-md text-slate-50  text-lg underline"
+                    className="py-1 rounded-md text-slate-50  text-lg underline"
                     onClick={() => window.open("/cv")}
                 >
                     or check my resume

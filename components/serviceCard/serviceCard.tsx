@@ -13,7 +13,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
 }) => {
     return (
         <div
-            className="group flex flex-col shadow-lg rounded-md px-2 py-4 border-2 border-gray-100 items-center transition hover:bg-blue-900 hover:text-slate-50"
+            className="group flex flex-col shadow-lg rounded-md px-2 py-4 border-2 border-gray-100 items-center transition hover:bg-blue-900 hover:text-slate-50 h-full ring-2 hover:border-blue-900 ring-blue-900"
             key={title}
             data-testid="serviceCardGrid"
         >
