@@ -227,7 +227,7 @@ const blogPosts = [
 		topic: "linux",
 		title: "Network Namespaces in Linux",
 		name: "network-namespaces",
-		logoName: "linux",
+		logoName: "linux-logo",
 		createDate: "25 March 2024",
 		key: "29",
 	},

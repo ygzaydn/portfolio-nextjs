@@ -7,6 +7,6 @@ export const blogTechnologies = [
 	{ name: "Firebase", logo: "firebase-logo", key: "firebase" },
 	{ name: "Accessibility", logo: "accessibility-logo", key: "accessibility" },
 	{ name: "GraphQL", logo: "graphql-logo", key: "graphql" },
-	{ name: "Linux", logo: "linux", key: "linux" },
+	{ name: "Linux", logo: "linux-logo", key: "linux" },
 	{ name: "Kubernetes", logo: "kubernetes-logo", key: "kubernetes" },
 ];
