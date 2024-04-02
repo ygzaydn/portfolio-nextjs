@@ -1,5 +1,6 @@
 export const technologies = [
 	{ name: "Linux", logo: "linux" },
+	{ name: "Kubernetes", logo: "kubernetes-logo" },
 	{ name: "React - React Native", logo: "react-logo" },
 	{ name: "Redux", logo: "redux-logo" },
 	{ name: "Nextjs", logo: "nextjs-logo" },

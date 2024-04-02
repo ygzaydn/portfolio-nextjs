@@ -8,4 +8,5 @@ export const blogTechnologies = [
 	{ name: "Accessibility", logo: "accessibility-logo", key: "accessibility" },
 	{ name: "GraphQL", logo: "graphql-logo", key: "graphql" },
 	{ name: "Linux", logo: "linux", key: "linux" },
+	{ name: "Kubernetes", logo: "kubernetes-logo", key: "kubernetes" },
 ];

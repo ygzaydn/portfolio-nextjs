@@ -231,6 +231,14 @@ const blogPosts = [
 		createDate: "25 March 2024",
 		key: "29",
 	},
+	{
+		topic: "kubernetes",
+		title: "DNS in Kubernetes",
+		name: "dns-in-kubernetes",
+		logoName: "kubernetes-logo",
+		createDate: "02 April 2024",
+		key: "30",
+	},
 ];
 
 export default blogPosts.reverse();
