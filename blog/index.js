@@ -239,6 +239,14 @@ const blogPosts = [
 		createDate: "02 April 2024",
 		key: "30",
 	},
+	{
+		topic: "linux",
+		title: "Network Configuration with Netplan",
+		name: "netplan",
+		logoName: "linux-logo",
+		createDate: "18 April 2024",
+		key: "31",
+	},
 ];
 
 export default blogPosts.reverse();
