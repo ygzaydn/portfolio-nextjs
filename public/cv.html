@@ -1,1241 +1,381 @@
-<!doctype html>
-<html>
-  <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
-  <title>Erol Yağız Aydın</title>
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"/>
-  <style>
-  /********************************************
-* 	reset from
-* 	http://meyerweb.com/eric/tools/css/reset/
-*******************************************/
-
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><style>@charset "UTF-8";
+/* Workaround for 'break-before:avoid' */
+* {
   margin: 0;
   padding: 0;
   border: 0;
   font-size: 100%;
-  vertical-align: baseline;
 }
 
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-  display: block;
-}
-
-body {
-  line-height: 1;
-}
-
-ol,
-ul {
-  list-style: none;
-}
-
-blockquote,
-q {
-  quotes: none;
-}
-
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-  content: none;
-}
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-/****************
-*	COMMONS
-****************/
-
-body,
-html {
-  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-  font-size: 13px;
-  color: #40484f;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1.46153846;
-  text-align: left;
-}
-
-p {
-  display: block;
-}
-
-a {
-  color: #0095ff;
-  text-decoration: none;
-}
-
-a:hover {
-  color: #0c65a5;
-  text-decoration: underline;
-}
-
-li {
-  list-style-type: square;
-  list-style-position: outside;
-  margin-left: 1.3em;
-}
-
-h1 {
-  font-size: 2rem;
-}
-
-h2 {
-  font-size: 1.67rem;
-}
-
-h3 {
-  font-size: 1.27rem;
-}
-
-em {
-  color: #757575;
-}
-
-blockquote {
-  margin-bottom: 1em;
-}
-
-strong {
-  font-weight: 700;
-}
-
-/* main container */
-
-#resume {
-  padding: 1.5rem;
-}
-
-/* every section wrapper */
-
-.section {
-  margin-bottom: 1rem;
-}
-
-section .location {
-  margin-right: 0.5em;
-  color: #606d76;
-  font-weight: 700;
-}
-
-#contact {
-  margin-top: 0.5rem;
-}
-
-#profiles .item {
+ul, li {
+  margin: 0;
   padding: 0;
 }
 
-#header > #profiles,
-#header > #contact,
-#skills,
-#languages,
-#interests {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-flex-flow: row wrap;
-  flex-flow: row wrap;
-  -webkit-justify-content: flex-start;
-  justify-content: flex-start;
+span, q {
+  display: block;
 }
 
-#header > div {
-  line-height: 1.5;
-}
-
-#header > div > div {
-  margin-right: 1.2em;
-}
-
-#header h1.name {
-  font-size: 2.8rem;
-  font-weight: 100;
-  line-height: 100%;
-}
-
-#header h2.label {
-  color: #202931;
-  font-size: 1.47rem;
-  font-weight: 300;
-}
-
-#header .image {
-  width: 11em;
-  float: right;
-  border-radius: 4px;
-}
-
-.main-summary {
-  background: #f1f8ff;
-  padding: 1.2em 1em;
-  margin-top: 1rem;
-}
-
-.main-summary p {
+p {
   margin: 0;
+}
+
+@media not print {
+  body {
+    margin: 30px 0 50px 0;
+  }
+}
+@page {
+  size: A4;
+  margin: 15mm 0 20mm 0;
+}
+a {
+  color: #222222;
+  font-weight: inherit;
+  text-decoration: none;
+}
+a[href] {
+  text-decoration: underline;
+  text-decoration-color: #888888;
+}
+
+p, q {
+  line-height: 1.25em;
+}
+
+li {
+  line-height: 1.35em;
+}
+li:first-child {
+  margin-top: 0;
+}
+
+.content {
+  width: 1000px;
+  height: auto;
+  padding: 0 50px;
+  margin: 0 auto;
+  font-family: Helvetica, Arial, sans-serif;
+  color: #222222;
+}
+
+.table {
+  width: 100%;
+  display: table;
+}
+.table .main {
+  display: table-cell;
+  width: 70%;
+  padding-right: 50px;
+}
+.table .side {
+  display: table-cell;
+  width: 30%;
+  padding-left: 50px;
+  text-align: right;
+}
+
+.summary {
+  font-size: 15px;
+}
+.summary:empty {
+  display: none;
 }
 
 .section-title {
-  display: inline-block;
-  background: #fff;
-  padding: 0 1em 0.3em 0;
-  color: #ff6d1f;
-  text-transform: uppercase;
-  font-weight: 600;
-  border: none;
-  font-size: 0.9rem;
+  font-size: 26px;
+  font-weight: normal;
+  margin: 0 0 20px 0;
 }
 
-.section > header {
-  position: relative;
+.margin-container-2:not(:first-child) {
+  margin-top: 20px;
 }
 
-.fa {
-  margin-right: 0.25em;
+.margin-container-3:not(:first-child) {
+  margin-top: 30px;
 }
 
-.section > header::after {
-  position: absolute;
-  left: 0;
-  top: 0.7em;
-  height: 1px;
-  background: #ccc;
+.margin-container-4:not(:first-child) {
+  margin-top: 50px;
+}
+
+.padding-container-2 {
+  padding: 20px 0;
+}
+
+.padding-top-container-2 {
+  padding-top: 20px;
+}
+
+.padding-bottom-container-2 {
+  padding-bottom: 20px;
+}
+
+.margin-text-1 {
+  margin-top: 2px;
+}
+.margin-text-1:empty {
+  display: none;
+}
+
+.margin-text-2 {
+  margin-top: 4px;
+}
+.margin-text-2:empty {
+  display: none;
+}
+
+.margin-text-3 {
+  margin-top: 6px;
+}
+.margin-text-3:empty {
+  display: none;
+}
+
+.margin-text-4 {
+  margin-top: 8px;
+}
+.margin-text-4:empty {
+  display: none;
+}
+
+.margin-text-5 {
+  margin-top: 14px;
+}
+.margin-text-5:empty {
+  display: none;
+}
+
+.no-break {
+  break-inside: avoid;
+}
+
+.no-alone-1 {
+  break-inside: avoid;
+}
+.no-alone-1::after {
   content: "";
-  width: 100%;
-  z-index: -100;
   display: block;
+  height: 75px;
+  margin-bottom: -75px;
 }
 
-.section.main-summary > section {
-  margin: 0;
+.no-alone-2 {
+  break-inside: avoid;
+}
+.no-alone-2::after {
+  content: "";
+  display: block;
+  height: 150px;
+  margin-bottom: -150px;
 }
 
-.section > section > header {
-  font-size: 1.38rem;
-  position: relative;
-  margin-top: 0.7em;
+.markdown h1 {
+  font-size: 160%;
+  font-weight: bolder;
 }
-
-.section > section > header:first-of-type {
-  margin: 0;
+.markdown h2 {
+  font-size: 150%;
+  font-weight: bolder;
 }
-
-.section > section > header .space-left {
-  position: absolute;
-  left: -1.56rem;
-  top: 5px;
-  color: #aaa;
-  line-height: 1;
-  opacity: 0;
+.markdown h3 {
+  font-size: 140%;
+  font-weight: bolder;
 }
-
-.position,
-.company,
-.organization,
-.institution,
-.date,
-.area,
-.studyType,
-.title,
-.awarder {
+.markdown h4 {
+  font-size: 130%;
+  font-weight: bold;
+}
+.markdown h5 {
+  font-size: 120%;
+  font-weight: bold;
+}
+.markdown h6 {
+  font-size: 110%;
+  font-weight: bold;
+}
+.markdown ul, .markdown ol {
+  margin-left: 20px;
+}
+.markdown img {
+  display: block;
+  margin: 20px auto;
+  max-width: 1000px;
+  text-align: center;
+}
+.markdown blockquote {
+  margin: 20px 0;
+  padding: 15px 20px;
+}
+.markdown blockquote p {
   display: inline;
 }
-
-.position,
-.studyType,
-.area,
-.title,
-.language,
-.name {
-  font-weight: 600;
+.markdown code {
+  font-family: monospace;
 }
 
-.company::before,
-.institution::before,
-.organization::before,
-.awarder::before {
-  content: "at ";
-}
-
-.company,
-.institution,
-.organization,
-.awarder {
-  color: #606d76;
-  font-weight: 400;
-}
-
-.section header .date {
+.main .highlights {
+  width: auto;
   display: block;
-  font-size: 1rem;
-  padding: 0.1em 0;
-  color: #606d76;
-  font-weight: 400;
+  padding: 0 10px;
+  margin-bottom: 0;
+  columns: 2;
+  column-width: 310px;
+  column-gap: 10px;
 }
-
-.keywords,
-.courses {
-  margin: 0.5em 0;
+.main .highlights li {
+  font-size: 14px;
+  list-style: none;
 }
-
-.keywords li,
-.courses li {
-  display: inline-block;
-  margin: 2px 2px 2px 0;
-  padding: 4px 5px 5px;
-  font-size: 0.9rem;
-  line-height: 1;
-  color: #3e6d8e;
-  background-color: #dfeaf1;
-  border: 0 solid #dfeaf1;
+.main .highlights li:before {
+  content: "· ";
+  vertical-align: middle;
+}
+.main .left {
+  display: table-cell;
+}
+.main .left .title {
+  font-size: 18px;
+  font-weight: bold;
+  display: block;
+}
+.main .left .subtitle {
+  font-size: 16px;
+  font-weight: lighter;
+  display: block;
+}
+.main .right {
+  text-align: right;
+  display: table-cell;
+}
+.main .right .date {
+  font-size: 15px;
+  font-weight: lighter;
   white-space: nowrap;
 }
 
-.keywords li:hover,
-.courses li:hover {
-  background: #dfeaf0;
+.basics .main {
+  vertical-align: middle;
 }
-
-.highlights {
-  margin: 1em 0 0 0;
-}
-
-.highlights > li > p {
-  margin-bottom: 0.5em;
-}
-
-.item {
-  overflow: hidden;
-}
-
-.gpa {
-  clear: both;
-  padding-bottom: 0.5em;
-}
-
-.fa.social {
-  font-size: 1.1em;
-}
-
-/* Social Media Brand Colors */
-
-.google-plus {
-  color: #dd4b39;
-}
-
-.tumblr {
-  color: #32506d;
-}
-
-.foursquare {
-  color: #0072b1;
-}
-
-.facebook {
-  color: #3b5998;
-}
-
-.linkedin {
-  color: #007bb6;
-}
-
-.pinterest {
-  color: #cb2027;
-}
-
-.dribbble {
-  color: #ea4c89;
-}
-
-.instagram {
-  color: #517fa4;
-}
-
-.twitter {
-  color: #00aced;
-}
-
-.soundcloud {
-  color: #ff3a00;
-}
-
-.wordpress {
-  color: #21759b;
-}
-
-.youtube {
-  color: #bb0000;
-}
-
-.github {
-  color: #171515;
-}
-
-.stack-overflow {
-  color: #828386;
-  position: relative;
-}
-
-.flickr {
-  color: #ff0084;
-}
-
-.reddit {
-  color: #ff4500;
-}
-
-.hacker-news {
-  color: #ff6600;
-}
-
-.stack-overflow::after {
-  position: absolute;
-  left: 0;
-  content: "\f16c";
-  color: #f68a1f;
-  overflow: hidden;
-  height: 100%;
-}
-
-.telegram {
-  color: #2291c3;
-}
-
-#languages .item,
-#skills .item,
-#interests .item {
-  width: 15em;
-  padding: 0 0.5em 0.5em 0;
-  border-bottom: none;
-}
-
-#skills .item {
-  width: 16em;
-}
-
-#skills .item .keywords {
-  width: 15em;
-}
-
-/* Skill chart */
-
-.level {
-  margin-bottom: 0.5em;
-}
-
-.level em {
-  padding-left: 0.2em;
-}
-
-.level .bar {
-  border: 1px solid #ddd;
+.basics .main .name {
+  font-size: 80px;
+  line-height: 1em;
+  font-weight: bold;
   display: block;
-  width: 10em;
-  height: 5px;
-  position: relative;
+  margin-left: -5.6px;
 }
-
-.level .bar::after {
-  position: absolute;
-  content: " ";
-  top: 0;
-  left: 0;
-  background: black;
-  height: 5px;
-}
-
-.level.beginner .bar::after {
-  background: #eb5f51;
-  width: 2.5em;
-}
-
-.level.intermediate .bar::after {
-  background: #ffdf1f;
-  width: 5em;
-}
-
-.level.advanced .bar::after,
-.level.fluent .bar::after {
-  background: #5cb85c;
-  width: 7.5em;
-}
-
-.level.master .bar::after,
-.level.native.speaker .bar::after {
-  background: #59c596;
-  width: 10em;
-}
-
-#references .item {
-  padding-left: 0.5em;
-  border-left: 5px solid #ff6d1f;
-}
-
-.section > section > section {
-  margin-bottom: 1rem;
-}
-
-/******************
-*	HELPER CLASSES
-******************/
-
-.clear::after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-.display {
+.basics .main .label {
+  font-size: 40px;
+  line-height: 1em;
+  font-weight: lighter;
   display: block;
-  opacity: 1 !important;
+  margin-left: -1.6px;
+}
+.basics .side {
+  vertical-align: middle;
+  padding-left: 0;
+  padding-top: 15px;
+}
+.basics .side .contact {
+  list-style-type: none;
+}
+.basics .side .contact li {
+  font-size: 18px;
+  line-height: 1.6em;
 }
 
-/****************
-*		TABLET
-****************/
-
-@media screen and (min-width: 602px) {
-  #resume {
-    width: 80%;
-    margin: 0 auto;
-  }
-  .section header .date {
-    float: right;
-    font-weight: 600;
-    color: #000;
-  }
+.links ul {
+  list-style: none;
+}
+.links ul li {
+  font-size: 14px;
 }
 
-/****************
-*		LAPTOP
-****************/
-
-@media screen and (min-width: 1025px) {
-  li {
-    margin-left: 1.5em;
-  }
-  #resume {
-    width: 820px;
-    margin: 2rem auto;
-  }
-  .section > section > header .space-left {
-    opacity: 1;
-    cursor: pointer;
-  }
-  .section > section:not(.main-summary) {
-    margin-left: 1.67rem;
-  }
-  .company::before,
-  .institution::before,
-  .organization::before,
-  .awarder::before {
-    content: "| ";
-  }
-  .header-left {
-    float: left;
-    width: 70%;
-    word-break: normal;
-  }
-  .section header .date {
-    padding: 0.2em;
-  }
-  .display {
-    display: none;
-  }
-  .display:not(.none) {
-    display: block;
-  }
+.education .title {
+  font-size: 15px;
+}
+.education .institution {
+  font-size: 15px;
+  font-weight: lighter;
 }
 
-@media print {
-  #profiles a:not(.hide-href-print)::after{
-    content: " (" attr(href) ") ";
-  }
-  #resume {
-    margin: 0.1em;
-    padding: 0.1em;
-    -ms-word-wrap: break-word;
-    word-wrap: break-word;
-    line-height: 1.25;
-  }
-  @page {
-    margin: 1cm 1.4cm;
-  }
-  .item-count {
-    display: none;
-  }
-  .company::before,
-  .institution::before,
-  .organization::before,
-  .awarder::before {
-    content: "at ";
-  }
-  .main-summary {
-    padding: 0;
-    background: transparent;
-  }
-  .section {
-    margin: 0.8rem 0;
-    padding: 0;
-  }
-  .section header {
-    padding-bottom: 0.15rem;
-  }
-  .section .location {
-    padding-bottom: 0.15rem;
-  }
-  .section > section > section {
-    margin: 0 0 1em 0;
-  }
-  .section > section > section:last-of-type {
-    margin: 0;
-  }
-  .stack-overflow::after {
-    content: "";
-  }
-  .fa.social {
-    color: #828386;
-  }
-  ul {
-    margin-top: 0.4em;
-  }
-  ul,
-  li {
-    padding: 0;
-  }
-  ul.keywords li,
-  ul.courses li {
-    margin: 0;
-    padding: 0;
-    font-size: 0.8rem;
-    background: transparent;
-  }
-  ul.keywords li::after,
-  ul.courses li::after {
-    padding: 0 0 0 0.1rem;
-    content: " |";
-  }
-  ul.keywords::before,
-  ul.courses::before {
-    font-size: 0.8rem;
-    font-weight: 600;
-  }
-  #skills .item {
-    width: calc(100% / 3);
-    padding: 0;
-  }
-  .highlights {
-    margin: 0.5em 0 0 0;
-  }
-  ul.keywords::before {
-    content: "Skills acquired: ";
-  }
-  #skills .keywords::before {
-    content: none;
-  }
-  .section p {
-    margin: 0;
-    padding: 0;
-  }
-  ul.courses::before {
-    content: "Major courses: ";
-  }
-  ul.keywords li:last-of-type::after,
-  ul.courses li:last-of-type::after {
-    content: "";
-  }
-  .level em {
-    font-style: normal;
-    padding: 0.1em 0;
-  }
-  .level .bar {
-    display: none;
-  }
-  #profiles .item {
-    padding: 0;
-  }
-  .item.display {
-    display: block;
-    opacity: 1 !important;
-  }
-  .fa-map-marker-alt:before {
-    padding-left: 0.1em;
-  }
+.awards .header .title {
+  font-size: 15px;
+}
+.awards .header .awarder {
+  font-size: 15px;
+  font-weight: lighter;
+}
+.awards .summary {
+  font-size: 14px;
 }
 
-  </style>
-  
-  </head>
-  <body>
-  
-  <div id="resume">
-    	<header id="header" class="clear">
-    		<div>
-    			<h1 class="name">Erol Yağız Aydın</h1>
-    			<h2 class="label">Software Developer</h2>
-    		</div>
-    
-    		<span class="location">
-    			<span class="city">Ankara,</span>
-    			<span class="countryCode">TR</span>
-    		</span>
-    
-    
-    		<div id="contact">
-    			<div class="email">
-    				<span class="far fa-envelope"></span>
-    				<a class="hide-href-print" href="mailto:ygzaydns@gmail.com">ygzaydns@gmail.com</a>
-    			</div>
-    		</div>
-    
-    		<div id="profiles">
-    			<div class="item">
-    				<div class="username">
-    					<span class="fab fa-twitter twitter social"></span>
-    					<span class="url">
-    						<a target="_blank" href="https://twitter.com/aydnygz">aydnygz</a>
-    					</span>
-    				</div>
-    			</div>
-    			<div class="item">
-    				<div class="username">
-    					<span class="fab fa-github github social"></span>
-    					<span class="url">
-    						<a target="_blank" href="https://github.com/ygzaydn">ygzaydn</a>
-    					</span>
-    				</div>
-    			</div>
-    			<div class="item">
-    				<div class="username">
-    					<span class="fab fa-linkedin linkedin social"></span>
-    					<span class="url">
-    						<a target="_blank" href="https://linkedin.com/in/erolyagizaydin?">Erol Yağız Aydın</a>
-    					</span>
-    				</div>
-    			</div>
-    		</div>
-    	</header>
-    
-    	<section class="section">
-    		<section class="main-summary">
-    			<div><p><p>I'm a software engineer who mainly focuses on web development &amp; network systems. I am a very product focussed developer who priotizes user feedback first and foremost. Also, I am very curious to learn new technologies, always tring to add values to my knowledge.</p><p>Worked both international and domestic project with different sizes of teams.</p></p></div>
-    		</section>
-    	</section>
-    
-    <section class="section">
-    	<header>
-    		<h2 class='section-title'>Skills</h2>
-    	</header>
-    	<section id="skills">
-    		<div class="item">
-    			<h3 class="name">
-    				Frontend
-    			</h3>
-    			 			<ul class="keywords">
-    				<li>SCSS / Tailwind</li>
-    				<li>Javascript / Typescript</li>
-    				<li>React.js / Next.js / React-Native</li>
-    				<li>Redux</li>
-    				<li>GraphQL</li>
-    			</ul>
-    		</div>
-    		<div class="item">
-    			<h3 class="name">
-    				Backend
-    			</h3>
-    			 			<ul class="keywords">
-    				<li>Node.js</li>
-    				<li>Firebase</li>
-    				<li>MongoDB</li>
-    			</ul>
-    		</div>
-    		<div class="item">
-    			<h3 class="name">
-    				Devops &amp; Testing
-    			</h3>
-    			 			<ul class="keywords">
-    				<li>Heroku</li>
-    				<li>React Testing Library</li>
-    				<li>Cypress</li>
-    				<li>Prometheus</li>
-    				<li>Grafana</li>
-    				<li>Docker</li>
-    			</ul>
-    		</div>
-    	</section>
-    </section>
-    <section class="section">
-      <header>
-        <h2 class='section-title'>Work Experience <span class="item-count">(7)</span></h2>
-      </header>
-    
-      <section id="work">
-        <section class="work-item">
-    
-          <label for="work-item-0"></label>
-    
-          <header class="clear">
-            <div class="date">
-              <span class="startDate">Sep 2018</span>
-              <span class="endDate">- Current</span>
-            </div>
-            <div class="position">Senior Design Engineer</div>
-            <div class="company">Aselsan</div>
-          </header>
-    
-          <span class="fas fa-map-marker-alt"></span>
-          <span class="location">Ankara</span>
-          <span class="url">
-            <span class="fas fa-external-link-alt"></span>
-            <a target="_blank" href="https://aselsan.com.tr">https://aselsan.com.tr</a>
-          </span>        <div class="item" id="work-item">
-            <div class="summary"><p><p>ASELSAN is the largest defense electronics company of Turkey whose capability/product portfolio comprises communication and information technologies, radar and electronic warfare, electro-optics, avionics, unmanned systems, land, naval and weapon systems, air defence and missile systems, command and control systems, transportation, security, traffic, automation and medical systems.</p></p></div>
-            <ul class="highlights">
-              <li><p><p>I am actively working on next generation (LTE, 5G) broadband communication systems.</p></p></li>
-              <li><p><p>Worked on project ÇINAR, which aimed to develop LTE EPC &amp; IMS systems. I have mainly worked on system architecture and user interfaces for the project. Developed series of wireframes and code into them. Project ÇINAR is actively being used as a private LTE systems both internationally and domestically. Project is developed by the guide of 3GPP LTE standarts.</p></p></li>
-              <li><p><p>Actively participating global telecommunications events such as ETSI's MCX Plugtest event or 3GPP standartization meetings.</p></p></li>
-              <li><p><p>Worked various of projects that mainly focuses to integrate broadband systems to narrowband systems. Those projects are actively used by public forces across the country.</p></p></li>
-            </ul>
-          </div>
-        </section>
-        <section class="work-item">
-    
-          <label for="work-item-1"></label>
-    
-          <header class="clear">
-            <div class="date">
-              <span class="startDate">Aug 2023</span>
-              <span class="endDate">- Current</span>
-            </div>
-            <div class="position">Co-Founder</div>
-            <div class="company">Carbon Steps</div>
-          </header>
-    
-          <span class="fas fa-map-marker-alt"></span>
-          <span class="location">Turkey</span>
-          <span class="url">
-            <span class="fas fa-external-link-alt"></span>
-            <a target="_blank" href="https://carbonsteps.vercel.app">https://carbonsteps.vercel.app</a>
-          </span>        <div class="item" id="work-item">
-            <div class="summary"><p><p>Carbon Steps leverages powerful automation tools to easily capture sustainability data across your organization and transform it into a single system of record. This new level of insight will enable you to report with confidence and meet the diverse needs of both internal and external stakeholders. With Carbon Steps:</p><p>Data Management &amp; Validation</p><p>Target Tracking</p><p>Audit Management</p></p></div>
-            <ul class="highlights">
-              <li><p><p>I have developed whole codebase.</p></p></li>
-              <li><p><p>Tech Stack: Next.js, MongoDB, Typescript</p></p></li>
-            </ul>
-          </div>
-        </section>
-        <section class="work-item">
-    
-          <label for="work-item-2"></label>
-    
-          <header class="clear">
-            <div class="date">
-              <span class="startDate">Sep 2022</span>
-              <span class="endDate">- Current</span>
-            </div>
-            <div class="position">Co-Founder</div>
-            <div class="company">GlobeVPN</div>
-          </header>
-    
-          <span class="fas fa-map-marker-alt"></span>
-          <span class="location">Turkey</span>
-          <span class="url">
-            <span class="fas fa-external-link-alt"></span>
-            <a target="_blank" href="https://globevpn.net">https://globevpn.net</a>
-          </span>        <div class="item" id="work-item">
-            <div class="summary"><p><p>GlobeVPN is a cutting-edge VPN service for android users. Provides VPN service all around the world. The application provides IPSec architecture to make data traffic much more secure. I developed the application by myself. Worked on frontend, backend, devOps and application side of the project. Application is integrated with Google Payment to deliver premium services based on subscriptions. Only in android currently, will be in iOS soon.</p></p></div>
-            <ul class="highlights">
-              <li><p><p>I have developed whole codebase.</p></p></li>
-              <li><p><p>Tech Stack: React Native, Flask, Strongswan</p></p></li>
-            </ul>
-          </div>
-        </section>
-        <section class="work-item">
-    
-          <label for="work-item-3"></label>
-    
-          <header class="clear">
-            <div class="date">
-              <span class="startDate">May 2022</span>
-              <span class="endDate">- Current</span>
-            </div>
-            <div class="position">Founder</div>
-            <div class="company">LoA Companion</div>
-          </header>
-    
-          <span class="fas fa-map-marker-alt"></span>
-          <span class="location">Turkey</span>
-          <span class="url">
-            <span class="fas fa-external-link-alt"></span>
-            <a target="_blank" href="https://play.google.com/store/apps/details?id&#x3D;com.loacompanion">https://play.google.com/store/apps/details?id&#x3D;com.loacompanion</a>
-          </span>        <div class="item" id="work-item">
-            <div class="summary"><p><p>Lost Ark is a 2019 MMO (Massively Multiplayer Online Game) action role-playing game co-developed by Tripod Studio and Smilegate. Lost Ark Companion is an android app that aims to helps players who play Lost Ark. LoA Companion has multiple data sources and serves those information within the application. It utilizes the APIs, web-scrapped data from various sources. I have developed the whole application. Worked on backend, frontend, web-scrapping, CI/CD. Application is also connected with Google Admob service. Only in android currently, will be in iOS soon.</p></p></div>
-            <ul class="highlights">
-              <li><p><p>I have developed whole codebase, have responsibility on backend &amp; frontend and deployment</p></p></li>
-              <li><p><p>Tech Stack: React-Native, Nodejs, Pupeteer, Typescript</p></p></li>
-            </ul>
-          </div>
-        </section>
-        <section class="work-item">
-    
-          <label for="work-item-4"></label>
-    
-          <header class="clear">
-            <div class="date">
-              <span class="startDate">Sep 2022</span>
-              <span class="endDate">- Current</span>
-            </div>
-            <div class="position">Founder</div>
-            <div class="company">F1 Wiki</div>
-          </header>
-    
-          <span class="fas fa-map-marker-alt"></span>
-          <span class="location">Turkey</span>
-          <span class="url">
-            <span class="fas fa-external-link-alt"></span>
-            <a target="_blank" href="https://play.google.com/store/apps/details?id&#x3D;com.f1wiki">https://play.google.com/store/apps/details?id&#x3D;com.f1wiki</a>
-          </span>        <div class="item" id="work-item">
-            <div class="summary"><p><p>F1 Wiki aims to be all-in-one platform for Formula 1. It has several categories (Race Information, Qualifiers Information, Driver Information, Constructor Information, Latest News etc.). The application uses several APIs and web-scrapped data as source. I have developed the whole application. Worked on backend, frontend, web-scrapping, CI/CD. Application is also connected with Google Admob service. Only in android currently, will be in iOS soon.</p></p></div>
-            <ul class="highlights">
-              <li><p><p>I have developed whole codebase, have responsibility on backend &amp; frontend and deployment</p></p></li>
-              <li><p><p>Tech Stack: React-Native, Nodejs, Pupeteer, Typescript</p></p></li>
-            </ul>
-          </div>
-        </section>
-        <section class="work-item">
-    
-          <label for="work-item-5"></label>
-    
-          <header class="clear">
-            <div class="date">
-              <span class="startDate">May 2021</span>
-              <span class="endDate">- Jan 2022</span>
-            </div>
-            <div class="position">React Developer</div>
-            <div class="company">Coxipay</div>
-          </header>
-    
-          <span class="fas fa-map-marker-alt"></span>
-          <span class="location">Lithuania</span>
-          <span class="url">
-            <span class="fas fa-external-link-alt"></span>
-            <a target="_blank" href="https://coxipay.com">https://coxipay.com</a>
-          </span>        <div class="item" id="work-item">
-            <div class="summary"><p><p>Coxipay was established in Vilnius, Lithuania and founded in 2019 by banking experts aiming to provide the most convenient payment services at acceptable prices via all available technological channels.</p><p>Coxipay is a safe, smart and multifunctional system which provides a full One Stop Payment Solutions to satisfy the client’s needs.</p><p>I have developed admin panel of this project</p></p></div>
-            <ul class="highlights">
-              <li><p><p>Tech Stack: React, Redux, Tailwind</p></p></li>
-            </ul>
-          </div>
-        </section>
-        <section class="work-item">
-    
-          <label for="work-item-6"></label>
-    
-          <header class="clear">
-            <div class="date">
-              <span class="startDate">May 2022</span>
-              <span class="endDate">- Jan 2023</span>
-            </div>
-            <div class="position">React Developer</div>
-            <div class="company">Cargopanel</div>
-          </header>
-    
-          <span class="fas fa-map-marker-alt"></span>
-          <span class="location">Turkey</span>
-          <span class="url">
-            <span class="fas fa-external-link-alt"></span>
-            <a target="_blank" href="https://www.cargopanel.co/">https://www.cargopanel.co/</a>
-          </span>        <div class="item" id="work-item">
-            <div class="summary"><p><p>Cargopanel, which aims to digitize international logistics services and is one of the leading brands in Turkey with its entrepreneur-friendly solutions it offers, is a technology-centered logistics company that came to life after a group of friends discussed various problems in the field of international logistics and then laid the foundations of a team of experts in the field.</p></p></div>
-            <ul class="highlights">
-              <li><p><p>Tech Stack: Nextjs, Tailwind</p></p></li>
-            </ul>
-          </div>
-        </section>
-      </section>
-    </section>
-    <section class="section">
-      <header>
-        <h2 class='section-title'>Education <span class="item-count">(2)</span></h2>
-      </header>
-    
-      <section id="education">
-        <section class="education-item">
-          <header class="clear">
-            <div class="date">
-              <span class="startDate">
-              2022
-              </span>
-              <span class="endDate">
-              - 2019
-              </span>
-            </div>
-            <div class="header-left">
-              <div class="studyType">
-                Master&#x27;s Degree
-              </div>
-              <div class="area">
-                Software Engineering
-              </div>
-              <div class="institution">
-                Middle East Technical University
-              </div>
-            </div>
-          </header>
-    
-    
-    
-          <div class="item">
-          </div>
-        </section>
-        <section class="education-item">
-          <header class="clear">
-            <div class="date">
-              <span class="startDate">
-              2018
-              </span>
-              <span class="endDate">
-              - 2013
-              </span>
-            </div>
-            <div class="header-left">
-              <div class="studyType">
-                Bachelors
-              </div>
-              <div class="area">
-                Electrical and Electronics Engineering
-              </div>
-              <div class="institution">
-                Middle East Technical University
-              </div>
-            </div>
-          </header>
-    
-    
-    
-          <div class="item">
-          </div>
-        </section>
-      </section>
-    </section>
-      <section class="section">
-        <header>
-          <h2 class="section-title">Certificates</h2>
-        </header>
-        <section id="certificates">
-            <section class="certificate-item">
-              <header class="clear">
-                  <div class="date">
-                    2022-07-01
-                  </div>
-                <div class="header-left">
-                    <div class="name">
-                      NEAR Certified Developer
-                    </div>
-                    <div class="issuer">
-                      NEAR Protocol
-                    </div>
-                </div>
-              </header>
-    
-              <div class="item">
-                  <span class="url">
-                    <span class="fas fa-external-link-alt"></span>
-                    <a target="_blank" href="https://certificates.near.university/certificate/682266ee44284425a3f42083ab9908b9">https://certificates.near.university/certificate/682266ee44284425a3f42083ab9908b9</a>
-                  </span>
-              </div>
-            </section>
-            <section class="certificate-item">
-              <header class="clear">
-                  <div class="date">
-                    2022-06-01
-                  </div>
-                <div class="header-left">
-                    <div class="name">
-                      React Bootcamp
-                    </div>
-                    <div class="issuer">
-                      patika.dev
-                    </div>
-                </div>
-              </header>
-    
-              <div class="item">
-                  <span class="url">
-                    <span class="fas fa-external-link-alt"></span>
-                    <a target="_blank" href="https://verified.cv/en/verify/15623314611908?ref&#x3D;email">https://verified.cv/en/verify/15623314611908?ref&#x3D;email</a>
-                  </span>
-              </div>
-            </section>
-            <section class="certificate-item">
-              <header class="clear">
-                  <div class="date">
-                    2019-07-01
-                  </div>
-                <div class="header-left">
-                    <div class="name">
-                      Analyzing VoLTE
-                    </div>
-                    <div class="issuer">
-                      Mprical
-                    </div>
-                </div>
-              </header>
-    
-              <div class="item">
-                  <span class="url">
-                    <span class="fas fa-external-link-alt"></span>
-                    <a target="_blank" href="https://verified.cv/en/verify/15623314611908?ref&#x3D;email">https://verified.cv/en/verify/15623314611908?ref&#x3D;email</a>
-                  </span>
-              </div>
-            </section>
-            <section class="certificate-item">
-              <header class="clear">
-                  <div class="date">
-                    2019-07-01
-                  </div>
-                <div class="header-left">
-                    <div class="name">
-                      Programming Fundamentals
-                    </div>
-                    <div class="issuer">
-                      Duke University
-                    </div>
-                </div>
-              </header>
-    
-              <div class="item">
-                  <span class="url">
-                    <span class="fas fa-external-link-alt"></span>
-                    <a target="_blank" href="https://www.coursera.org/account/accomplishments/verify/DEV6NFDETQ4X">https://www.coursera.org/account/accomplishments/verify/DEV6NFDETQ4X</a>
-                  </span>
-              </div>
-            </section>
-            <section class="certificate-item">
-              <header class="clear">
-                  <div class="date">
-                    2019-07-01
-                  </div>
-                <div class="header-left">
-                    <div class="name">
-                      The Bits and Bytes of Computer Networking
-                    </div>
-                    <div class="issuer">
-                      Google
-                    </div>
-                </div>
-              </header>
-    
-              <div class="item">
-                  <span class="url">
-                    <span class="fas fa-external-link-alt"></span>
-                    <a target="_blank" href="https://www.coursera.org/account/accomplishments/verify/DEV6NFDETQ4X">https://www.coursera.org/account/accomplishments/verify/DEV6NFDETQ4X</a>
-                  </span>
-              </div>
-            </section>
-        </section>
-      </section>
+.certificates .name {
+  font-size: 15px;
+}
+.certificates .issuer {
+  font-size: 15px;
+  font-weight: lighter;
+}
 
-  </body>
-</html>
+.skills .section-title {
+  margin: 0;
+}
+.skills .container {
+  display: block;
+  columns: 2;
+  column-gap: 10px;
+}
+.skills .container .article {
+  break-inside: avoid-column;
+  min-width: 120px;
+  padding-top: 20px;
+}
+.skills .container .article span {
+  display: block;
+  font-size: 18px;
+  font-weight: lighter;
+}
+.skills .container .article li {
+  font-size: 14px;
+  list-style: none;
+}
+
+.languages ul {
+  list-style: none;
+}
+.languages ul li {
+  font-size: 14px;
+}
+
+.interests ul {
+  list-style: none;
+}
+.interests ul li {
+  font-size: 14px;
+}
+
+.references .name {
+  font-size: 15px;
+}
+.references q {
+  font-size: 14.5px;
+  font-weight: lighter;
+  font-style: italic;
+}</style><title>Resume Erol Yağız Aydın – Telecommunications &amp; Software Engineer</title></head><body><div class="content"><div class="basics"><div class="table padding-bottom-container-2"><div class="main"><span class="name">Erol Yağız Aydın</span><span class="label">Telecommunications &amp; Software Engineer</span></div><div class="side"><ul class="contact"><li></li><li>ygzaydns@gmail.com</li><li class="margin-text-5">Ankara, Turkey</li></ul></div></div><div class="summary markdown padding-container-2"><p>Telecommunication engineer that expertised on 4G/5G Core Networks, IMS (IP Multimedia Subsystem), React &amp; MongoDB.</p>
+</div></div><div class="table padding-top-container-2"><div class="main"><div class="work margin-container-4"><p class="section-title no-alone-2">Experience</p><div class="container"><div class="article margin-container-3"><div class="header no-alone-1"><div class="table"><div class="left"><span class="title">Senior Design Engineer</span><span class="subtitle margin-text-1"><a href="https://aselsan.com.tr">Aselsan</a> · Ankara</span></div><div class="right"><span class="date">Sep 2018 - Present</span></div></div></div><div class="summary markdown margin-text-4"><p>ASELSAN is the largest defense electronics company of Turkey whose capability/product portfolio comprises communication and information technologies, radar and electronic warfare, electro-optics, avionics, unmanned systems, land, naval and weapon systems, air defence and missile systems, command and control systems, transportation, security, traffic, automation and medical systems.</p>
+</div><ul class="highlights margin-text-4 no-break"><li>Architecting cutting-edge core network solutions (EPC, IMS, 5G Core) with guide of 3GPP standarts.</li><li>Wireframing &amp; developing GUIs for both customers and operators for telecommunication projects.</li><li>Software virtualization and containerzation for telco systems.</li><li>Architecting metric and logger systems and actively follow KPIs for core networks.</li><li>Integrating cryptographic devices to hardening security of core networks.</li><li>Defining SIM Card profiles for core networks.</li><li>Deploying virtualized datacenters for local authorities</li><li>Debugging and troubleshooting core network signalling processes</li><li>Interconnecting and interworking core networks with various vendors and technologies.</li></ul></div><div class="article margin-container-3"><div class="header no-alone-1"><div class="table"><div class="left"><span class="title">Co-Founder</span><span class="subtitle margin-text-1"><a href="https://carbon-up.com">Carbon Up</a> · Turkey</span></div><div class="right"><span class="date">Aug 2023 - Present</span></div></div></div><div class="summary markdown margin-text-4"><p>Carbon Up leverages powerful automation tools to easily capture sustainability data across your organization and transform it into a single system of record. This new level of insight will enable you to report with confidence and meet the diverse needs of both internal and external stakeholders. With Carbon Up:
+Data Management &amp; Validation
+Target Tracking
+Audit Management</p>
+</div><ul class="highlights margin-text-4 no-break"><li>Architecting the system and develop system entities.</li><li>Tech Stack: Next.js, MongoDB, Typescript</li><li>Deployed on cloud based solutions</li></ul></div><div class="article margin-container-3"><div class="header no-alone-1"><div class="table"><div class="left"><span class="title">React Developer</span><span class="subtitle margin-text-1"><a href="https://coxipay.com">Coxipay</a> · Lithuania</span></div><div class="right"><span class="date">May 2021 - Jan 2022</span></div></div></div><div class="summary markdown margin-text-4"><p>Coxipay was established in Vilnius, Lithuania and founded in 2019 by banking experts aiming to provide the most convenient payment services at acceptable prices via all available technological channels.
+Coxipay is a safe, smart and multifunctional system which provides a full One Stop Payment Solutions to satisfy the client’s needs.</p>
+</div><ul class="highlights margin-text-4 no-break"><li>Tech Stack: React, Redux, Tailwind</li></ul></div><div class="article margin-container-3"><div class="header no-alone-1"><div class="table"><div class="left"><span class="title">React Developer</span><span class="subtitle margin-text-1"><a href="https://www.cargopanel.co/">Cargopanel</a> · Turkey</span></div><div class="right"><span class="date">May 2022 - Jan 2023</span></div></div></div><div class="summary markdown margin-text-4"><p>Cargopanel, which aims to digitize international logistics services and is one of the leading brands in Turkey with its entrepreneur-friendly solutions it offers, is a technology-centered logistics company that came to life after a group of friends discussed various problems in the field of international logistics and then laid the foundations of a team of experts in the field.</p>
+</div><ul class="highlights margin-text-4 no-break"><li>Tech Stack: Nextjs, Tailwind</li></ul></div></div></div></div><div class="side"><div class="skills margin-container-4"><p class="section-title no-alone-1">Skills</p><div class="container"><div class="article no-break"><span>Software Development</span><ul class="margin-text-2"><li>Javascript / Typescript</li><li>React.js / Next.js / React-Native</li><li>Redux</li><li>MongoDB, GraphQL</li></ul></div><div class="article no-break"><span>Telecommunications</span><ul class="margin-text-2"><li>EPC, IMS, MCx Services, MBMS</li><li>Virtualization (Virtual Machines, Containers, Docker Kubernetes)</li><li>Networking</li><li>Monitoring Tools (Grafana, Prometheus)</li></ul></div></div></div><div class="education margin-container-4"><p class="section-title no-alone-1">Education</p><div class="container"><div class="article margin-container-2 no-break"><div class="title markdown"><p>Master's Degree, Software Engineering</p>
+</div><span class="institution margin-text-2"><a>Middle East Technical University</a></span></div><div class="article margin-container-2 no-break"><div class="title markdown"><p>Bachelors, Electrical and Electronics Engineering</p>
+</div><span class="institution margin-text-2"><a>Middle East Technical University</a></span></div></div></div><div class="certificates margin-container-4"><p class="section-title no-alone-1">Certificates</p><div class="container"><div class="article margin-container-2 no-break"><div class="name markdown"><a href="https://verified.cv/en/verify/15623314611908?ref=email"><p>React Bootcamp</p>
+</a></div><span class="issuer margin-text-2">patika.dev</span></div><div class="article margin-container-2 no-break"><div class="name markdown"><a href="https://verified.cv/en/verify/15623314611908?ref=email"><p>Analyzing VoLTE</p>
+</a></div><span class="issuer margin-text-2">Mprical</span></div><div class="article margin-container-2 no-break"><div class="name markdown"><a href="https://www.coursera.org/account/accomplishments/verify/DEV6NFDETQ4X"><p>Programming Fundamentals</p>
+</a></div><span class="issuer margin-text-2">Duke University</span></div><div class="article margin-container-2 no-break"><div class="name markdown"><a href="https://www.coursera.org/account/accomplishments/verify/DEV6NFDETQ4X"><p>The Bits and Bytes of Computer Networking</p>
+</a></div><span class="issuer margin-text-2">Google</span></div></div></div><div class="links margin-container-4 no-break"><p class="section-title no-alone-1">Links</p><div class="container"><ul><li class="article margin-text-4"><a href="https://twitter.com/aydnygz"><strong>twitter.com</strong>/aydnygz</a></li><li class="article margin-text-4"><a href="https://github.com/ygzaydn"><strong>github.com</strong>/ygzaydn</a></li><li class="article margin-text-4"><a href="https://linkedin.com/in/erolyagizaydin?"><strong>linkedin.com</strong>/in/erolyagizaydin?</a></li></ul></div></div></div></div></div></body></html>
