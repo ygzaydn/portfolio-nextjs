@@ -48,7 +48,7 @@ const LandingImage = () => {
 					transition={{ ease: "easeOut", duration: 1 }}
 					className="text-5xl text-slate-50 my-2"
 				>
-					software developer
+					a tech guy
 				</motion.h4>
 				<button
 					className="bg-blue-900 my-6 px-8 py-3 rounded-md ring-4 font-semibold text-slate-50 hover:bg-blue-800 transition-all text-xl ring-blue-800"

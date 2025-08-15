@@ -29,17 +29,34 @@ export const projects = [
 		tech: "Next, MongoDB",
 		link: "https://www.carbon-up.com",
 	},
+	// {
+	// 	title: "Globe VPN",
+	// 	description:
+	// 		"Globe VPN is an IPSec VPN with cutting edge features. Currently available in android.",
+	// 	image: "globevpn",
+	// 	note: null,
+	// 	// gif: ArgbotGif,
+	// 	tech: "React Native",
+	// 	link: "https://www.globevpn.net/",
+	// },
 	{
-		title: "Globe VPN",
+		title: "DNSWatcher",
 		description:
-			"Globe VPN is an IPSec VPN with cutting edge features. Currently available in android.",
-		image: "globevpn",
+			"DNSWatcher is a cross-platform DNS monitoring tool written in Go. It captures and analyzes DNS traffic in real time, tracks key performance indicators (KPIs), and provides both a command-line and a desktop GUI for visualization.",
+		image: "dnswatcher",
 		note: null,
-		// gif: ArgbotGif,
-		tech: "React Native",
-		link: "https://www.globevpn.net/",
+		tech: "Golang - Fyne",
+		link: "https://github.com/ygzaydn/go-dnswatcher",
 	},
-
+	{
+		title: "SustaiMedAI",
+		description:
+			"SustaiMedAI is a modern, AI-powered web application designed to help users track their meals, water consumption, carbon footprint, and overall nutrition. Built with Next.js, Chakra UI, and Redux Toolkit, it provides a seamless and interactive experience for healthy and sustainable living. ",
+		image: "sustaimedai",
+		note: "Note: This project is developed for academic purposes and utilizes official, reputable data sources for nutritional and environmental information.",
+		tech: "Next.js - Chakra UI - Redux Toolkit",
+		link: "https://appfoodie.netlify.app/",
+	},
 	{
 		title: "Coxipay",
 		description:
