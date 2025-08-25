@@ -247,6 +247,14 @@ const blogPosts = [
 		createDate: "18 April 2024",
 		key: "31",
 	},
+	{
+		topic: "5G",
+		title: "RRC States in 5G",
+		name: "5g-rrc-states",
+		logoName: "5g-logo",
+		createDate: "25 August 2025",
+		key: "32",
+	},
 ];
 
 export default blogPosts.reverse();
