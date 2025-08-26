@@ -255,6 +255,14 @@ const blogPosts = [
 		createDate: "25 August 2025",
 		key: "32",
 	},
+	{
+		topic: "5G",
+		title: "5G QoS vs LTE QoS",
+		name: "5g-qos-vs-lte-qos",
+		logoName: "5g-logo",
+		createDate: "26 August 2025",
+		key: "33",
+	},
 ];
 
 export default blogPosts.reverse();
