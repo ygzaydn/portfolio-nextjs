@@ -263,6 +263,14 @@ const blogPosts = [
 		createDate: "26 August 2025",
 		key: "33",
 	},
+	{
+		topic: "5G",
+		title: "Service Selection and Continuty in 5G",
+		name: "5g-ssc",
+		logoName: "5g-logo",
+		createDate: "30 September 2025",
+		key: "34",
+	},
 ];
 
 export default blogPosts.reverse();
