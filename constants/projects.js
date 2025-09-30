@@ -22,12 +22,22 @@ export const projects = [
 	{
 		title: "Carbon Up",
 		description:
-			"Carbos Up is an SaaS that aims to track carbon footprint of the companies. It provides various metrics and help users to track their source waste. Also it has an smart AI system that track down the bills and verifies the results with provided records.",
+			"Carbon Up is an SaaS that aims to track carbon footprint of the companies. It provides various metrics and help users to track their source waste. Also it has an smart AI system that track down the bills and verifies the results with provided records.",
 		image: "carbonup",
 		note: null,
 		// gif: ArgbotGif,
 		tech: "Next, MongoDB",
 		link: "https://www.carbon-up.com",
+	},
+	{
+		title: "ZSS AI",
+		description:
+			"Zero software solutions is a company that provides AI based solutions for various sectors.",
+		image: "zssai",
+		note: null,
+		// gif: ArgbotGif,
+		tech: "Next, MongoDB, Tailwind",
+		link: "https://www.zss.ai",
 	},
 	// {
 	// 	title: "Globe VPN",
