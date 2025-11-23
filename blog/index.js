@@ -274,10 +274,18 @@ const blogPosts = [
   {
     topic: "Linux",
     title: "Iptables on Linux",
-    name: "iptables",
+    name: "linux-iptables",
     logoName: "linux-logo",
     createDate: "17 November 2025",
     key: "35",
+  },
+  {
+    topic: "Linux",
+    title: "GRE on Linux",
+    name: "linux-gre",
+    logoName: "linux-logo",
+    createDate: "23 November 2025",
+    key: "36",
   },
 ];
 
