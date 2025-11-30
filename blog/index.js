@@ -287,6 +287,14 @@ const blogPosts = [
     createDate: "23 November 2025",
     key: "36",
   },
+  {
+    topic: "Networking",
+    title: "Cisco CLI Usage on L3 Switches",
+    name: "networking-cisco-cli-usage-on-layer-3-switches",
+    logoName: "network-logo",
+    createDate: "30 November 2025",
+    key: "37",
+  },
 ];
 
 export default blogPosts.reverse();

@@ -15,8 +15,7 @@ Generic Routing Encapsulation (GRE) is a tunneling protocol (originally develope
   - [Advantages and Disadvantages of GRE](#advantages-and-disadvantages-of-gre)
     - [Advantages:](#advantages)
     - [Disadvantages / Limitations:](#disadvantages--limitations)
-  - [Configuring GRE on Ubuntu (Manual Setup)](#configuring-gre-on-ubuntu-manual-setup)
-  - [Configuring GRE via Netplan (YAML)](#configuring-gre-via-netplan-yaml)
+  - [Configuring GRE on Ubuntu](#configuring-gre-on-ubuntu)
   - [Testing and Verifying a GRE Tunnel](#testing-and-verifying-a-gre-tunnel)
 
 ## Use Cases
@@ -43,9 +42,9 @@ In cloud labs or virtualization setups, GRE can build an overlay network between
 
 GRE works by encapsulating the original passenger packet inside a GRE header and a new outer IP header (the delivery header). This encapsulation process wraps one packet inside another, like putting a letter inside an envelope. The steps in packet flow are:
 
-- Encapsulation on Sender: When a packet (of some protocol) needs to traverse a GRE tunnel, the sending router takes the original packet and adds a GRE header to it, followed by a new IP header (with source and destination equal to the GRE tunnel endpoints). The GRE header indicates the protocol type of the inner packet and other flags. The new outer IP header’s protocol field is set to GRE (protocol number 47) and addresses correspond to the tunnel endpoints (the “ferry” for our “car”, to use a common analogy).
-- Transit: The encapsulated packet (outer IP + GRE + inner packet) is sent over the intermediate network. Routers in the middle only see the outer IP packet (they view it just like any other IP traffic between the two tunnel endpoints) and do not need to understand or modify the GRE encapsulation. The intermediate network simply forwards the packet based on the outer IP header.
-- Decapsulation on Receiver: When the packet reaches the GRE endpoint on the far side, that router recognizes the packet as a GRE packet destined for the tunnel interface. It removes the outer IP header and GRE header, revealing the original packet, which it then processes or forwards onward as if it arrived on a direct link from the sending router.
+1. **Encapsulation on Sender:** When a packet (of some protocol) needs to traverse a GRE tunnel, the sending router takes the original packet and adds a GRE header to it, followed by a new IP header (with source and destination equal to the GRE tunnel endpoints). The GRE header indicates the protocol type of the inner packet and other flags. The new outer IP header’s protocol field is set to GRE (protocol number 47) and addresses correspond to the tunnel endpoints (the “ferry” for our “car”, to use a common analogy).
+2. **Transit:** The encapsulated packet (outer IP + GRE + inner packet) is sent over the intermediate network. Routers in the middle only see the outer IP packet (they view it just like any other IP traffic between the two tunnel endpoints) and do not need to understand or modify the GRE encapsulation. The intermediate network simply forwards the packet based on the outer IP header.
+3. **Decapsulation on Receiver:** When the packet reaches the GRE endpoint on the far side, that router recognizes the packet as a GRE packet destined for the tunnel interface. It removes the outer IP header and GRE header, revealing the original packet, which it then processes or forwards onward as if it arrived on a direct link from the sending router.
 
 This process effectively creates a logical tunnel between the two endpoints – often described metaphorically as a “tunnel through a mountain” that the packets travel inside of, unseen by the outside world. Importantly, GRE is stateless and does not by itself guarantee delivery or provide encryption: it simply encapsulates and decapsulates packets. If needed, reliability must be handled by inner protocols, and confidentiality by an additional protocol (like IPsec ESP) on top of GRE.
 
@@ -71,7 +70,7 @@ This process effectively creates a logical tunnel between the two endpoints – 
 
 4. **Scalability and Management:** Each GRE tunnel is a point-to-point link. Managing many tunnels (each with separate configurations) can become complex in larger networks. In a lab with a few tunnels this is fine, but for dozens of sites, administrating numerous GRE interfaces and keeping track of endpoints can be error-prone. There’s also no built-in keepalive (though Cisco and Linux support optional GRE keepalives) – so detecting a failed GRE peer might require additional monitoring or protocols.
 
-## Configuring GRE on Ubuntu (Manual Setup)
+## Configuring GRE on Ubuntu
 
 Setting up a GRE tunnel on Ubuntu manually involves using the Linux ip utility to create a tunnel interface and configuring it with the desired endpoints and IP addressing. Below are the general steps to configure a GRE tunnel manually on two Ubuntu hosts (call them Host A and Host B) using the command line:
 
@@ -79,61 +78,59 @@ _Prerequisites:_ Ensure both systems have IP connectivity between them (e.g., vi
 
 1. **Create the GRE Tunnel Interface:** On Host A, use the ip tunnel command to add a new GRE interface. For example:
 
-```bash
-sudo ip tunnel add gre0 mode gre local <HOST_A_PUBLIC_IP> remote <HOST_B_PUBLIC_IP> ttl 255
-```
+- ```bash
+  sudo ip tunnel add gre0 mode gre local <HOST_A_PUBLIC_IP> remote <HOST_B_PUBLIC_IP> ttl 255
+  ```
 
-This defines a tunnel named gre0 in GRE mode, setting Host A’s local tunnel source and Host B’s remote endpoint. The ttl 255 ensures the encapsulated packets use a TTL of 255 (you can also use inherit to copy the inner packet’s TTL). Repeat a similar command on Host B, swapping the local and remote IPs (Host B’s local IP and Host A’s as remote).
+  - This defines a tunnel named gre0 in GRE mode, setting Host A’s local tunnel source and Host B’s remote endpoint. The ttl 255 ensures the encapsulated packets use a TTL of 255 (you can also use inherit to copy the inner packet’s TTL). Repeat a similar command on Host B, swapping the local and remote IPs (Host B’s local IP and Host A’s as remote).
 
 2. **Assign IP Addresses to Tunnel Interfaces:** Decide on an IP subnet to use for the GRE tunnel itself (often a private /30 or /31 subnet for point-to-point). For instance, use 10.0.0.1/30 for Host A and 10.0.0.2/30 for Host B as tunnel interface IPs. On Host A:
 
-```bash
-sudo ip addr add 10.0.0.1/30 dev gre0
-```
+- ```bash
+  sudo ip addr add 10.0.0.1/30 dev gre0
+  ```
+- On Host B:
 
-On Host B:
-
-```bash
-sudo ip addr add 10.0.0.2/30 dev gre0
-```
-
-This assigns each end an IP inside the tunnel network. (Alternatively, you can use the peer keyword with a /32 address as shown in some documentation, but using a /30 is straightforward for labs.)
+- ```bash
+  sudo ip addr add 10.0.0.2/30 dev gre0
+  ```
+- This assigns each end an IP inside the tunnel network. (Alternatively, you can use the peer keyword with a /32 address as shown in some documentation, but using a /30 is straightforward for labs.)
 
 3. **Bring the Tunnel Interfaces Up:** Enable the interfaces with:
 
-```bash
-sudo ip link set gre0 up
-```
+- ```bash
+  sudo ip link set gre0 up
+  ```
 
-(Run on both hosts.) At this point, each host has a GRE tunnel interface up and configured. You can verify with ip addr show gre0 to see the interface and IP, and ip link show gre0 to ensure it’s UP.
+- (Run on both hosts.) At this point, each host has a GRE tunnel interface up and configured. You can verify with ip addr show gre0 to see the interface and IP, and ip link show gre0 to ensure it’s UP.
 
 4. **Update Routing (if needed):** If your goal is to route specific subnet traffic through the GRE tunnel, add static routes on each side. For example, if Host A’s side network (say 192.168.10.0/24) needs to reach Host B’s side network (192.168.20.0/24) via the tunnel, you would add on Host A:
 
-```bash
-sudo ip route add 192.168.20.0/24 via 10.0.0.2 dev gre0
-```
+- ```bash
+  sudo ip route add 192.168.20.0/24 via 10.0.0.2 dev gre0
+  ```
 
-And on Host B:
+- And on Host B:
 
-```bash
-sudo ip route add 192.168.10.0/24 via 10.0.0.1 dev gre0
-```
+- ```bash
+  sudo ip route add 192.168.10.0/24 via 10.0.0.1 dev gre0
+  ```
 
-This directs traffic for the remote LAN to go through the tunnel (using the tunnel IP of the far end as the next hop). In a simple lab test where you only care about the tunnel endpoints pinging each other, additional routes may not be necessary, but in a realistic scenario connecting networks, routes are required so that each side knows how to reach the other’s internal subnets.
+- This directs traffic for the remote LAN to go through the tunnel (using the tunnel IP of the far end as the next hop). In a simple lab test where you only care about the tunnel endpoints pinging each other, additional routes may not be necessary, but in a realistic scenario connecting networks, routes are required so that each side knows how to reach the other’s internal subnets.
 
 5. **Enable IP Forwarding (if routing between LANs):** On each host, if the host is acting as a router for a local subnet through the GRE tunnel, ensure IP forwarding is turned on:
 
-```bash
-sudo sysctl -w net.ipv4.ip_forward=1
-```
+- ```bash
+  sudo sysctl -w net.ipv4.ip_forward=1
+  ```
 
-You can make this persistent by editing /etc/sysctl.conf. Without this, the host won’t forward packets from its LAN through the tunnel.
+- You can make this persistent by editing /etc/sysctl.conf. Without this, the host won’t forward packets from its LAN through the tunnel.
 
 6. **Firewall Considerations:** If ufw or iptables is running, you might need to allow GRE protocol traffic. GRE is not UDP/TCP, so ensure any firewall allows protocol 47 from Host A to Host B and vice versa. If the GRE endpoints are behind NAT devices, those devices must support and forward GRE (which can be tricky). In lab setups on the same LAN or with public IPs, this typically isn’t an issue.
 
 After these steps, the GRE link should be established. You can test basic connectivity as described in the testing section below. For persistence, note that the above configuration will not survive a reboot. In production, you might script these ip commands in /etc/rc.local or use Ubuntu’s networking (/etc/netplan or systemd-networkd configuration, described next) to automatically recreate the tunnel on boot.
 
-## Configuring GRE via Netplan (YAML)
+## Configuring GRE via Netplan
 
 Ubuntu’s Netplan can configure GRE tunnels declaratively using YAML, which is especially handy for consistent setup across reboots. Netplan is available on Ubuntu 18.04+ and uses either NetworkManager or systemd-networkd as a backend (for server systems, networkd is typically used, and it supports tunnels like GRE). Ensure the target Ubuntu uses netplan version 0.99 or newer (WireGuard support was added in 0.99, GRE support exists in earlier versions, but we assume 20.04 with updates is sufficient).
 
@@ -169,21 +166,40 @@ One advantage of Netplan is that it will recreate the tunnel on boot (since the 
 
 ## Testing and Verifying a GRE Tunnel
 
-After configuring the GRE tunnel (manually or via Netplan), you should verify that it’s working correctly:
+After configuring the GRE tunnel (manually or via Netplan), verify it with the following checks:
 
-- Interface Status: Use ip link show gre0 (or ip addr show gre0) to verify the GRE interface is UP and has the correct IP address assigned. For example, the output should show gre0@NONE: <POINTOPOINT,...,UP,LOWER_UP> with the configured IP (10.0.0.1/30 on one side, 10.0.0.2/30 on the other).
-- PING Test: The simplest test is to ping the tunnel IP of the remote end. From Host A, try ping 10.0.0.2 (the IP of Host B’s GRE interface). Likewise from Host B, ping 10.0.0.1. Successful pings indicate that the GRE encapsulation/decapsulation is functioning and the two ends can reach each other through the tunnel. If the ping fails:
-  - Check that local and remote IPs in the tunnel config are correct (they must match the actual source IP each host uses to reach the other).
-  - Ensure firewalls aren’t blocking GRE (protocol 47). Temporaryly disable ufw/iptables to test if needed.
-  - If behind NAT, ensure GRE is forwarded or try testing with both endpoints on public IPs (NAT issues are common with GRE).
-- Route Testing: If you configured routes through the GRE (to reach remote subnets), test connectivity to those subnets. For example, ping from a host on Site A’s LAN to a host on Site B’s LAN. If it fails, use traceroute or ip route get <IP> to see if traffic is going into the tunnel. Make sure the static routes are in place on both sides and that IP forwarding is enabled so that the packets actually traverse the tunnel.
-- Inspection Tools: You can use tcpdump on the underlying network interface (e.g., eth0) to observe GRE packets in action. For instance:
+- **Interface status**
 
-```bash
-sudo tcpdump -i eth0 proto 47 -vv
-```
+  1. Use `ip link show gre0` (or `ip addr show gre0`) to verify the GRE interface is UP and has the correct tunnel IP assigned. The output should include something like `gre0@NONE: <POINTOPOINT,...,UP,LOWER_UP>` and show the configured IP (for example `10.0.0.1/30` on one side and `10.0.0.2/30` on the other).
 
-This will show GRE packets on the wire (proto 47). You should see packets when pings or other traffic go over the tunnel. This confirms that encapsulation is happening. On the receiving end, you can similarly capture and see the packets arriving.
+- **PING test**
 
-- GRE Tunnel Statistics: The command ip -s link show gre0 will display packet counters for the GRE interface. This can tell you if packets are being transmitted/received, and if errors or drops are occurring. Immediately after a ping test, you should see the RX/TX packet counts increment on both sides’ gre0 interfaces.
-- Troubleshooting Tips: If no traffic is seen, double-check that the local IP you set in the tunnel config is indeed the IP of the outgoing interface. On a multihomed system, if packets are exiting from a different IP than expected, the remote end will drop them (because the source doesn’t match the configured local). Also verify both ends configured the same GRE key if a key was used (by default no key is used in our steps; if you configure a key, both sides must match). Netplan as of this writing may not support setting a key on GRE (just a note).
+  1. Ping the remote tunnel IP from the opposite host: from Host A run `ping 10.0.0.2`, and from Host B run `ping 10.0.0.1`.
+  2. Successful pings indicate GRE encapsulation/decapsulation is working. If the ping fails, check:
+
+  - 1.  Local and remote IPs in the tunnel configuration are correct and match the actual source IP each host uses to reach the peer.
+  - 2.  Firewalls are not blocking GRE (protocol 47). Temporarily disable `ufw`/`iptables` to test if needed.
+  - 3.  If an endpoint is behind NAT, ensure GRE is forwarded or test with both endpoints on public IPs (NAT often breaks GRE).
+
+- **Route testing**
+
+  1.  If you routed subnets through the GRE tunnel, test connectivity from one LAN to the other (e.g., ping a host on Site B’s LAN from Site A). If it fails, run `traceroute` or `ip route get <IP>` to confirm traffic is entering the tunnel.
+  2.  Ensure static routes are present on both sides and that IP forwarding (`net.ipv4.ip_forward`) is enabled when routing between LANs.
+
+- **Inspection tools**
+
+  1. Use `tcpdump` on the underlying interface (e.g., `eth0`) to observe GRE packets (protocol 47):
+
+  - ```bash
+    sudo tcpdump -i eth0 proto 47 -vv
+    ```
+
+    This shows GRE packets on the wire; you should see packets when you exercise the tunnel (pings or routed traffic). Capture on the receiving end to confirm decapsulation as well.
+
+- **GRE tunnel statistics**
+
+  1. Run `ip -s link show gre0` to display packet counters for the GRE interface. After a ping test you should see RX/TX counters increment on `gre0` on both sides.
+
+- **Troubleshooting tips**
+  1. If you see no traffic, confirm the local IP used in the tunnel config is the same IP packets actually leave from (on multihomed hosts, the outgoing source may differ and the peer will drop packets if the source doesn't match the configured local).
+  2. If you configured a GRE key, verify both sides use the same key (by default no key is used). Note: some Netplan versions may not expose all GRE key options.
