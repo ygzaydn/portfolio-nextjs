@@ -32,7 +32,7 @@ const Footer: React.FC = () => {
         />
       </div>
 
-      <h6 className="text-md text-center text-slate-300 mt-2">
+      <h6 className="text-md text-center text-slate-500 mt-2">
         ygzaydns@gmail.com
       </h6>
     </div>

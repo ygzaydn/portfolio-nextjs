@@ -54,7 +54,7 @@ const Blog: React.FC = () => {
           </div>
 
           <div
-            className="flex mx-auto justify-center gap-8"
+            className="flex mx-auto flex-row sm:flex-col justify-center gap-8"
             style={{ maxWidth: "1440px" }}
           >
             {/* Left nav - fixed on md+, inline on small */}

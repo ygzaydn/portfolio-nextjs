@@ -21,10 +21,58 @@ function flatten(text, child) {
     : React.Children.toArray(child.props.children).reduce(flatten, text);
 }
 
+// Slug counters for multiple slug styles (github and legacy simple)
+let slugCounters: { [kind: string]: { [key: string]: number } } = {
+  github: {},
+  simple: {},
+};
+function githubSlug(text: string) {
+  // normalize diacritics, lowercase
+  let s = text
+    .normalize("NFKD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase();
+
+  // remove characters that are not alphanumeric, space or hyphen
+  s = s.replace(/[^a-z0-9\s-]/g, "");
+
+  // replace spaces with hyphens, collapse multiple hyphens, trim
+  s = s
+    .trim()
+    .replace(/\s+/g, "-")
+    .replace(/-+/g, "-")
+    .replace(/^-+|-+$/g, "");
+  return s;
+}
+
+function makeUnique(base: string, map: { [key: string]: number }) {
+  const count = map[base] || 0;
+  const slug = count === 0 ? base : `${base}-${count}`;
+  map[base] = count + 1;
+  return slug;
+}
+
+function simpleSlug(text: string) {
+  // legacy simple slug: lowercase and replace non-word chars with hyphens
+  return text
+    .toLowerCase()
+    .replace(/\W+/g, "-")
+    .replace(/-+/g, "-")
+    .replace(/^-|-$/g, "");
+}
+
 function HeadingRenderer(props) {
-  var children = React.Children.toArray(props.children);
-  var text = children.reduce(flatten, "");
-  var slug = text.toLowerCase().replace(/\W/g, "-");
+  const children = React.Children.toArray(props.children);
+  const text = children.reduce(flatten, "");
+
+  // compute both github-style and legacy simple slugs
+  const baseGithub = githubSlug(text);
+  const baseSimple = simpleSlug(text);
+
+  // Use plain slugs (no numeric suffix) so TOC links match generated anchors
+  const idGithub = baseGithub;
+  const idSimple = baseSimple;
+
   let className = props.className ? props.className + " " : "";
   let level = Number(props.level);
   if (!level || level < 1 || level > 6) level = 2; // fallback to h2
@@ -44,10 +92,16 @@ function HeadingRenderer(props) {
     default:
       className += "font-medium";
   }
-  return React.createElement(
-    "h" + level,
-    { id: slug, className },
-    props.children
+
+  const Tag: any = `h${level}`;
+  return (
+    <>
+      {/* emit a legacy anchor for old TOC generators */}
+      <span id={idSimple} aria-hidden="true" />
+      <Tag id={idGithub} className={className}>
+        {props.children}
+      </Tag>
+    </>
   );
 }
 
@@ -67,36 +121,70 @@ const BlogPost: React.FC<BlogPostProps> = ({ file, info }) => {
   const router = useRouter();
 
   useEffect(() => {
-    let documents;
-    if (document.querySelectorAll('a[href^="#"]')) {
-      documents = document.querySelectorAll('a[href^="#"]');
+    let documents: NodeListOf<Element> | null = null;
 
-      [].forEach.call(documents, function (el) {
-        el.addEventListener("click", (e) => {
-          e.preventDefault();
-          document
-            .querySelector(e.currentTarget.getAttribute("href"))
-            .scrollIntoView({
-              behavior: "smooth",
-              block: "center",
-            });
-        });
-      });
+    function resolveAnchor(href: string): Element | null {
+      if (!href) return null;
+      // ensure leading #
+      const raw = href.startsWith("#") ? href : `#${href}`;
+      const name = raw.slice(1);
+
+      // 1) try exact id
+      let el = document.querySelector(raw);
+      if (el) return el;
+
+      // 2) try numeric suffixes up to 20 (cover wider cases)
+      for (let i = 1; i <= 20; i++) {
+        el = document.querySelector(`#${name}-${i}`);
+        if (el) return el;
+      }
+
+      // 3) try GitHub-style slug and its numbered variants
+      const gh = githubSlug(name);
+      el = document.querySelector(`#${gh}`);
+      if (el) return el;
+      for (let i = 1; i <= 20; i++) {
+        el = document.querySelector(`#${gh}-${i}`);
+        if (el) return el;
+      }
+
+      // 4) fallback: find any element whose id starts with the name or contains the name
+      // This handles cases where renderer appended a suffix we didn't anticipate.
+      el = document.querySelector(`[id^="${name}"]`);
+      if (el) return el;
+      el = document.querySelector(`[id*="${name}"]`);
+      if (el) return el;
+
+      return null;
     }
-    return () => {
-      [].forEach.call(documents, function (el) {
-        el.removeEventListener("click", (e) => {
-          e.preventDefault();
-          document
-            .querySelector(e.currentTarget.getAttribute("href"))
-            .scrollIntoView({
-              behavior: "smooth",
-              block: "center",
-            });
+
+    function onAnchorClick(e: Event) {
+      const target = e.currentTarget as HTMLAnchorElement;
+      e.preventDefault();
+      const href = target.getAttribute("href") || "";
+      const el = resolveAnchor(href);
+      if (el) {
+        (el as HTMLElement).scrollIntoView({
+          behavior: "smooth",
+          block: "center",
         });
-      });
+      }
+    }
+
+    if (typeof document !== "undefined") {
+      documents = document.querySelectorAll('a[href^="#"]');
+      documents.forEach((el) => el.addEventListener("click", onAnchorClick));
+    }
+
+    return () => {
+      if (documents)
+        documents.forEach((el) =>
+          el.removeEventListener("click", onAnchorClick)
+        );
     };
   }, []);
+
+  // no slug counters needed when using plain slugs
 
   return (
     <Layout>

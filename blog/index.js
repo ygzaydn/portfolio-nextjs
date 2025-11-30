@@ -295,6 +295,14 @@ const blogPosts = [
     createDate: "30 November 2025",
     key: "37",
   },
+  {
+    topic: "5G",
+    title: "5G Core Network Nodes",
+    name: "5g-core-network",
+    logoName: "5g-logo",
+    createDate: "30 November 2025",
+    key: "38",
+  },
 ];
 
 export default blogPosts.reverse();
