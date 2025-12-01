@@ -303,6 +303,14 @@ const blogPosts = [
     createDate: "30 November 2025",
     key: "38",
   },
+  {
+    topic: "Networking",
+    title: "Configuring OSPF and EIGRP on Cisco Layer 3 Switches",
+    name: "networking-ospf-and-eigrp",
+    logoName: "network-logo",
+    createDate: "01 December 2025",
+    key: "39",
+  },
 ];
 
 export default blogPosts.reverse();
