@@ -56,12 +56,12 @@ const LandingImage = () => {
 				>
 					Check out my blog!
 				</button>
-				<button
+				{/* <button
 					className="py-1 rounded-md text-slate-50  text-lg underline"
 					onClick={() => window.open("/cv")}
 				>
 					my resume
-				</button>
+				</button> */}
 			</div>
 		</div>
 	);
