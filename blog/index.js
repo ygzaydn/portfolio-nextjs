@@ -311,6 +311,14 @@ const blogPosts = [
     createDate: "01 December 2025",
     key: "39",
   },
+  {
+    topic: "Linux",
+    title: "Tmux in Ubuntu",
+    name: "linux-tmux",
+    logoName: "linux-logo",
+    createDate: "07 December 2025",
+    key: "40",
+  },
 ];
 
 export default blogPosts.reverse();
