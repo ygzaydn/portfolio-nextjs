@@ -327,6 +327,14 @@ const blogPosts = [
 		createDate: "08 December 2025",
 		key: "41",
 	},
+	{
+		topic: "5G",
+		title: "5G NF Registration",
+		name: "5g-nf-registration",
+		logoName: "5g-logo",
+		createDate: "16 December 2025",
+		key: "42",
+	},
 ];
 
 export default blogPosts.reverse();
