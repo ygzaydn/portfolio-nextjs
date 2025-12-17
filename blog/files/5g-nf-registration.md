@@ -36,7 +36,7 @@ Open5GS is an open source implementation of 5GC.
 
 ![open5gs](https://open5gs.org/open5gs/assets/images/Open5GS_CUPS-01.jpg)
 
-It has both LTE and 5G core deployments inside and can be easily installed from ![here](https://open5gs.org/open5gs/docs/guide/01-quickstart/).
+It has both LTE and 5G core deployments inside and can be easily installed from [here](https://open5gs.org/open5gs/docs/guide/01-quickstart/).
 
 Open5GS' 5G core consists of:
 - NRF - NF Repository Function
