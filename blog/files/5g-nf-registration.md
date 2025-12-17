@@ -28,7 +28,7 @@ SCP basically creates a bridge between NFs. With SCP, each NF has a connection p
 - Each NF requires to know **every other NF's addresses** 
 - Complex *TLS, retry, load balancing, failover* logics should be placed inside of each NF
 
-We'll be using ![open5gs](https://https://open5gs.org/) project, and it has internal SCP NF inside it. So we will work witn SCP in our NF Registration procedure.
+We'll be using [open5gs](https://https://open5gs.org/) project, and it has internal SCP NF inside it. So we will work witn SCP in our NF Registration procedure.
 
 ## Open5GS
 
