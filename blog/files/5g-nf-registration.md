@@ -87,12 +87,12 @@ When NRF starts, we can start SCP next, and wait for NF registration for SCP.
 systemctl start open5gs-scpd
 ```
 
-Observe Wireshark and we should see `POST` request for SCP registration. An example snapshot is given below:
+Observe Wireshark and we should see `PUT` request for SCP registration. An example snapshot is given below:
 
 ![5g-ssc-req](/blogPost/5gc-nf-1.png)
 
 
-When we deeply investigate post request's data, we have:
+When we deeply investigate PUT request's data, we have:
 
 ```
 Frame 60: 313 bytes on wire (2504 bits), 313 bytes captured (2504 bits) on interface -, id 0
